@@ -1,9 +1,9 @@
 {
   "name": "express-back-end",
   "version": "1.0.0",
-  "description": "Boilerplate for the Express backend in an Express-React project",
+  "description": "",
   "main": "server.js",
-  "author": "garrettgsb",
+  "author": "",
   "license": "MIT",
   "scripts": {
     "go": "nodemon server.js"
