@@ -1,4 +1,4 @@
-# Interview Scheduler API
+# Lawyer Up API
 
 ## Setup
 
