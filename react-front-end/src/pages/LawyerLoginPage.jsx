@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 
-export default function LawyerLoginPage() {
+const LawyerLoginPage = () => {
 
   return(
     <div>
@@ -26,3 +26,5 @@ export default function LawyerLoginPage() {
     </div>
   );
 }
+
+export default LawyerLoginPage;
