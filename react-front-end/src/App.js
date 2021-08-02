@@ -41,12 +41,16 @@ import { BrowserRouter as Router,
 //   }
 // }
 //Pages
-import LandingPage from './pages';
+import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/404';
 import clientRegister from './pages/clientRegister'
 import lawyerRegister from './pages/lawyerRegister';
 import { ClientHomePage } from "./components/ClientHomePage/index"; 
 import Navbar from './components/ClientHomeNavbar';
+import LawyerHome from './pages/LawyerHome';
+import ClientHome from './pages/ClientHome';
+import LawyerLoginPage from './pages/LawyerLoginPage';
+import ClientLoginPage from './pages/ClientLoginPage';
 
 class App extends Component {
   render() {
@@ -58,6 +62,10 @@ class App extends Component {
       <Route exact path="/lawyerRegister" component={lawyerRegister} />
       <Navbar /> 
       <Route exact path="/clientHomePage" component={ClientHomePage} />
+      <Route exact path="/lawyerHome" component={LawyerHome}/>
+      <Route exact path="/clientHome" component={ClientHome}/>
+      <Route exact path="/lawyerLoginPage" component={LawyerLoginPage}/>
+      <Route exact path="/clientLoginPage" component={ClientLoginPage}/>
       <Route component={NotFoundPage} /> 
       <Redirect to="/404" /> 
       </Switch>
