@@ -46,7 +46,7 @@ import NotFoundPage from './pages/404';
 import clientRegister from './pages/clientRegister'
 import lawyerRegister from './pages/lawyerRegister';
 import { ClientHomePage } from "./components/ClientHomePage/index"; 
-import Navbar from './components/ClientHomeNavbar';
+
 import LawyerHome from './pages/LawyerHome';
 import ClientHome from './pages/ClientHome';
 import LawyerLoginPage from './pages/LawyerLoginPage';
@@ -63,8 +63,7 @@ class App extends Component {
       <Route exact path="/lawyerHome" component={LawyerHome} />
       <Route exact path="/clientHome" component={ClientHome} />
       <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
-      <Route exact path="/clientLoginPage" component={ClientLoginPage} />
-      <Navbar /> 
+      <Route exact path="/clientLoginPage" component={ClientLoginPage} /> 
       <Route exact path="/clientHomePage" component={ClientHomePage} />
       <Route component={NotFoundPage} /> 
       <Redirect to="/404" /> 
