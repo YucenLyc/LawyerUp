@@ -64,7 +64,7 @@ class App extends Component {
       <Route exact path="/clientHome" component={ClientHome} />
       <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
       <Route exact path="/clientLoginPage" component={ClientLoginPage} />
-      <Navbar /> 
+
       <Route exact path="/clientHomePage" component={ClientHomePage} />
       <Route component={NotFoundPage} /> 
       <Redirect to="/404" /> 
