@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 
-export default function ClientLoginPage() {
+const ClientLoginPage = () => {
 
   return(
     <div>
@@ -26,3 +26,5 @@ export default function ClientLoginPage() {
     </div>
   );
 }
+
+export default ClientLoginPage;
