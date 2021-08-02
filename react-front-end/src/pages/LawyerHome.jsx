@@ -6,7 +6,7 @@ export default function LawyerHome({ history }) {
     <div>
       <Header />
       <div>
-        <button type="button" class="btn btn-primary btn-lg" onClick={() => history.push('/lawyerCreate')}>Create Account</button>
+        <button type="button" class="btn btn-primary btn-lg" onClick={() => history.push('/lawyerRegister')}>Create Account</button>
         <button type="button" class="btn btn-primary btn-lg" onClick={() => history.push('/lawyerLoginPage')}>Log In</button>
         <button type="button" class="btn btn-primary btn-lg" onClick={() => history.push('/')}>Back</button>
       </div>
