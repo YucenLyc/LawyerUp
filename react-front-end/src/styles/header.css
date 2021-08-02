@@ -1,0 +1,11 @@
+.ui-header {
+  -ms-grid-row: 1;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #CCD9E0;
+  display: flex;
+  grid-row: 1;
+  height: 80px;
+  justify-content: space-between;
+  padding: 32px;
+}
