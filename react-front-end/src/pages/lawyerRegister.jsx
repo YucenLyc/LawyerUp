@@ -3,12 +3,12 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import { PageContainer } from "../components/pageContainer";
 
-const ClientRegister = () => {
+const LawyerRegister = () => {
 
     return (
     <PageContainer>
     <div className="base-container">
-      <div className="header"><h1>Client Registration</h1></div>
+      <div className="header"><h1>Lawyer Registration</h1></div>
       <div className="content">
       </div>
       <div className="form">
@@ -31,6 +31,18 @@ const ClientRegister = () => {
         <div className="form-group">
         <label htmlFor="password confirmation">Password Confirmation </label>
           <input type="password confirmation" name="password confirmation" placeholder />
+        <div className="form-group">
+        <label htmlFor="specialization">Specialization </label>
+          <input type="specialization" name="specialization" placeholder />
+        </div>
+        <div className="form-group">
+        <label htmlFor="consultationRate">A short career summary (under 150 words): </label>
+          <input type="lawyerSummary" name="lawyerSummary" placeholder />
+        </div>
+        <div className="form-group">
+        <label htmlFor="consultationRate">Your Consultation Rate</label>
+          <input type="consultationRate" name="consultationRate" placeholder />
+        </div>
           <Button variant="outline-primary">Submit</Button>{' '}
         </div>
       </div>
@@ -40,4 +52,4 @@ const ClientRegister = () => {
   
 }
 
-export default ClientRegister;
+export default LawyerRegister;
