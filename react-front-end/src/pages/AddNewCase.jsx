@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import Form from "react-bootstrap/Form";
-import FloatingLabel from "react-bootstrap/esm/FloatingLabel";
 
 const AddNewCase = () => {
   return (

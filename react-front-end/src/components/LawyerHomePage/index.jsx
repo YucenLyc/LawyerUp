@@ -44,11 +44,6 @@ export default function LawyerHomePage() {
         Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
-      <div>
-        <CasePopUp>
-          <p>This is my case popup</p>
-        </CasePopUp>
-      </div>
     </div>
   );
 
