@@ -45,12 +45,13 @@ import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/404';
 import clientRegister from './pages/clientRegister'
 import lawyerRegister from './pages/lawyerRegister';
-import { ClientHomePage } from "./components/ClientHomePage/index"; 
+import ClientHomePage  from "./components/ClientHomePage/index"; 
 
 import LawyerHome from './pages/LawyerHome';
 import ClientHome from './pages/ClientHome';
 import LawyerLoginPage from './pages/LawyerLoginPage';
 import ClientLoginPage from './pages/ClientLoginPage';
+import LawyerHomePage from './components/LawyerHomePage';
 
 class App extends Component {
   render() {
@@ -65,6 +66,7 @@ class App extends Component {
       <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
       <Route exact path="/clientLoginPage" component={ClientLoginPage} /> 
       <Route exact path="/clientHomePage" component={ClientHomePage} />
+      <Route exact path="/lawyerHomePage" component={LawyerHomePage} />
       <Route component={NotFoundPage} /> 
       <Redirect to="/404" /> 
       </Switch>
