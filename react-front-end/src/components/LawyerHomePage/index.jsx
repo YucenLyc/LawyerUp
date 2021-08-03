@@ -1,8 +1,7 @@
-
-import Navbar from '../ClientHomeNavbar';
 import React from 'react';
-import '../pageContainer/Dropdown.scss'
 import Dropdown from '../pageContainer/Dropdown';
+import '../pageContainer/Dropdown.scss'
+import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 const items = [
   {
     id: 1,
@@ -34,13 +33,13 @@ const items = [
   }
 ];
 
-export default function ClientHomePage() {
+export default function LawyerHomePage() {
   return (
     
     <div className="container">
-      <Navbar />
+      <LawyerNavbar />
       <h2 style={{ textAlign: 'center' }}>
-        Egg Eggerson Homepage {' '}
+        Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
     </div>

@@ -45,16 +45,19 @@ import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/404';
 import clientRegister from './pages/clientRegister'
 import lawyerRegister from './pages/lawyerRegister';
-import { ClientHomePage } from "./components/ClientHomePage/index"; 
+import ClientHomePage  from "./components/ClientHomePage/index"; 
 
 import LawyerHome from './pages/LawyerHome';
 import ClientHome from './pages/ClientHome';
 import LawyerLoginPage from './pages/LawyerLoginPage';
 import ClientLoginPage from './pages/ClientLoginPage';
+
+import LawyerHomePage from './components/LawyerHomePage';
 import OpenCases from './pages/OpenCases';
 import ClosedCases from './pages/ClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
+
 
 class App extends Component {
   render() {
@@ -69,6 +72,7 @@ class App extends Component {
         <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
         <Route exact path="/clientLoginPage" component={ClientLoginPage} />
         <Route exact path="/clientHomePage" component={ClientHomePage} />
+        <Route exact path="/lawyerHomePage" component={LawyerHomePage} />
         <Route exact path="/openCases" component={OpenCases} />
         <Route exact path="/closedCases" component={ClosedCases} />
         <Route exact path="/addNewCase" component={AddNewCase} />
