@@ -37,7 +37,7 @@ export default function CaseItem(props) {
           </section>
           <span>SUMMARY</span>
           <section className="case-summary">
-            <p>My cat is a dog{props.case_description}</p>
+            <p>My landlord wants to kick out me or my cat or both.{props.case_description}</p>
           </section>
         </section>
       </div>

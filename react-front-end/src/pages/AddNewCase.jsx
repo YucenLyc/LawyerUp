@@ -8,13 +8,13 @@ const AddNewCase =  () => {
       <Header />
       <form>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Your Legal Name: </label>
+          <label class="col-sm-2 col-form-label">  Your Legal Name: </label>
           <div class="col-sm-10">
             <input type="legalname" class="form-control" id="name" />
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Date(the date you became involved in the case): </label>
+          <label class="col-sm-2 col-form-label">  Date(the date you became involved in the case): </label>
           <div class="col-sm-10">
             <input type="date" class="form-control" id="date" />
           </div>

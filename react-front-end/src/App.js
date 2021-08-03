@@ -57,7 +57,6 @@ import OpenCases from './pages/OpenCases';
 import ClosedCases from './pages/ClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
-import CasePopUp from './components/CasePopUp/CasePopup';
 
 
 class App extends Component {
@@ -78,7 +77,6 @@ class App extends Component {
         <Route exact path="/closedCases" component={ClosedCases} />
         <Route exact path="/addNewCase" component={AddNewCase} />
         <Route exact path="/cases" component={CaseItem} />
-        <Router exact path="/casepopup" component={CasePopUp} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>
