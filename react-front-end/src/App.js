@@ -58,6 +58,8 @@ import ClosedCases from './pages/ClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
 import ProfileImg from './components/ProfileImg';
+import LawyerList from './components/LawyerList';
+import LawyerListItem from './components/LawyerListItem';
 
 
 class App extends Component {
@@ -79,6 +81,8 @@ class App extends Component {
         <Route exact path="/addNewCase" component={AddNewCase} />
         <Route exact path="/cases" component={CaseItem} />
         <Route exact path="/profileimg" component={ProfileImg} />
+        <Route exact path="/LawyerList" component={LawyerList} />
+        <Route exact path="/LawyerListItem" component={LawyerListItem} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>
