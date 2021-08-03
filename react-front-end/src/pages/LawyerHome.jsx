@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 
-export default function LawyerHome({ history }) {
+const LawyerHome = ({ history }) => {
   return(
     <div>
       <Header />
@@ -13,3 +13,5 @@ export default function LawyerHome({ history }) {
     </div>
   );
 }
+
+export default LawyerHome;
