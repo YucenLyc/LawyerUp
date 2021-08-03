@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Modal from './LawyerInfoModal';
 
-
 const OpenCases = () => {
   const [ modalOpen, setModalOpen ] = useState(false);
 

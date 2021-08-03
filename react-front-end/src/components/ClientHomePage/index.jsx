@@ -1,4 +1,3 @@
-
 import Navbar from '../ClientHomeNavbar';
 import React from 'react';
 import '../pageContainer/Dropdown.scss'
@@ -35,6 +34,8 @@ const items = [
 ];
 
 export default function ClientHomePage() {
+
+  
   return (
     
     <div className="container">
@@ -43,7 +44,8 @@ export default function ClientHomePage() {
         Egg Eggerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
-    </div>
+    </div> 
+    
   );
 
 }
