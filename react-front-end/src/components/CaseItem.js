@@ -42,6 +42,5 @@ export default function CaseItem(props) {
         </section>
       </div>
     </main>
-
   )
 }
