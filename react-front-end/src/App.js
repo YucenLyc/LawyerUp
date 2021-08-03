@@ -57,6 +57,7 @@ import OpenCases from './pages/OpenCases';
 import ClosedCases from './pages/ClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
+import ProfileImg from './components/ProfileImg';
 
 
 class App extends Component {
@@ -77,6 +78,7 @@ class App extends Component {
         <Route exact path="/closedCases" component={ClosedCases} />
         <Route exact path="/addNewCase" component={AddNewCase} />
         <Route exact path="/cases" component={CaseItem} />
+        <Route exact path="/profileimg" component={ProfileImg} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>

@@ -2,6 +2,7 @@ import React from "react";
 //import image if you want 
 import Button from 'react-bootstrap/Button';
 import { PageContainer } from "../components/pageContainer";
+import ProfileImg from "../components/ProfileImg";
 
 const LawyerRegister = () => {
 
@@ -45,6 +46,9 @@ const LawyerRegister = () => {
         </div>
           <Button variant="outline-primary">Submit</Button>{' '}
         </div>
+      </div>
+      <div className="image">
+        <ProfileImg />
       </div>
     </div>
     </PageContainer>
