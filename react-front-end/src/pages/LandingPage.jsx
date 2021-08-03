@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 
-export default function LandingPage({ history }) {
+const LandingPage = ({ history }) => {
 
   return(
     <div>
@@ -13,3 +13,5 @@ export default function LandingPage({ history }) {
     </div>     
   );
 }
+
+export default LandingPage;

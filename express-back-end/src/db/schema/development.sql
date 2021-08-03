@@ -51,14 +51,21 @@ VALUES
 
 INSERT INTO cases (lawyer_id, client_id, name, date, description)
 VALUES
-(3, 1, 'Theft in the family', '2020-12-01', 'My sister in law is stealing from me'),
-(4, 5, 'Business tax', '2021-01-12', 'I would like to inquire about handling my company taxes'),
-(6, 9, 'Police abuse', '2021-04-22', 'A policeman kneeled on my neck and I died');
+(1, 1, 'Theft in the family', '2020-12-01', 'My sister in law is stealing from me'),
+(2, 3, 'Business tax', '2021-01-12', 'I would like to inquire about handling my company taxes'),
+(3, 6, 'Police abuse', '2021-04-22', 'A policeman kneeled on my neck and I died');
 
 INSERT INTO reviews (lawyer_id, client_id, date, content)
 VALUES
-(3, 1, '2021-01-04', 'Anderson is very helpful and compassionate in helping us dealing with our family issues'),
-(4, 5, '2021-03-24', 'very professional and knowledgable');
+(1, 1, '2021-01-04', 'Anderson is very helpful and compassionate in helping us dealing with our family issues'),
+(2, 4, '2021-03-24', 'very professional and knowledgable');
+
+INSERT INTO messages (sender_id, receiver_id, time, message)
+VALUES
+(1, 3, '2021-01-04 10:23:54', 'Hi Anderson'),
+(3, 1, '2021-03-24 10:24:04', 'Hi there, how can I help you?'),
+(1, 3, '2021-01-04 10:24:08', 'My name is Elise and I am wondering if you could help me with my case.'),
+(3, 1, '2021-03-24 10:24:15', 'Sure, I can try to take a look into your case.');
 
 INSERT INTO locations (user_id, city)
 VALUES

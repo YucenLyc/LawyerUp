@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 
-export default function ClientHome({ history }) {
+const ClientHome = ({ history }) => {
 
   return(
     <div>
@@ -14,3 +14,5 @@ export default function ClientHome({ history }) {
     </div>
   );
 }
+
+export default ClientHome;

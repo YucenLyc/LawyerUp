@@ -1,0 +1,17 @@
+.case-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 18rem;
+  width: 90%;
+  border: solid 2px;
+  margin: 10px;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 22px;
+}
+
+.case-body {
+  border-top: solid 2px;
+
+}

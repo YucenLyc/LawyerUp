@@ -51,12 +51,17 @@ import LawyerHome from './pages/LawyerHome';
 import ClientHome from './pages/ClientHome';
 import LawyerLoginPage from './pages/LawyerLoginPage';
 import ClientLoginPage from './pages/ClientLoginPage';
+import OpenCases from './pages/OpenCases';
+import ClosedCases from './pages/ClosedCases';
+import AddNewCase from './pages/AddNewCase';
+import CaseItem from './components/CaseItem';
 
 class App extends Component {
   render() {
     return (
     <Router>
       <Switch>
+<<<<<<< HEAD
       <Route exact path="/" component={LandingPage}/>
       <Route exact path="/clientRegister" component={clientRegister} /> 
       <Route exact path="/lawyerRegister" component={lawyerRegister} />
@@ -67,6 +72,22 @@ class App extends Component {
       <Route exact path="/clientHomePage" component={ClientHomePage} />
       <Route component={NotFoundPage} /> 
       <Redirect to="/404" /> 
+=======
+        <Route exact path="/" component={LandingPage}/>
+        <Route exact path="/clientRegister" component={clientRegister} /> 
+        <Route exact path="/lawyerRegister" component={lawyerRegister} />
+        <Route exact path="/lawyerHome" component={LawyerHome} />
+        <Route exact path="/clientHome" component={ClientHome} />
+        <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
+        <Route exact path="/clientLoginPage" component={ClientLoginPage} />
+        <Route exact path="/clientHomePage" component={ClientHomePage} />
+        <Route exact path="/openCases" component={OpenCases} />
+        <Route exact path="/closedCases" component={ClosedCases} />
+        <Route exact path="/addNewCase" component={AddNewCase} />
+        <Route exact path="/cases" component={CaseItem} />
+        <Route component={NotFoundPage} /> 
+        <Redirect to="/404" /> 
+>>>>>>> 294a750aa45e612fc868dac74eb4d26509259557
       </Switch>
     </Router>
     );

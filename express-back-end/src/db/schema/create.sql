@@ -43,8 +43,8 @@ CREATE TABLE user_types (
 
 CREATE TABLE cases (
   id SERIAL PRIMARY KEY NOT NULL,
-  lawyer_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  client_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  lawyer_id INTEGER REFERENCES lawyers(id) ON DELETE CASCADE,
+  client_id INTEGER REFERENCES clients(id) ON DELETE CASCADE,
   name VARCHAR(255) NOT NULL,
   date DATE,
   description TEXT
@@ -60,8 +60,8 @@ CREATE TABLE messages (
 
 CREATE TABLE reviews (
   id SERIAL PRIMARY KEY NOT NULL,
-  lawyer_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  client_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+  lawyer_id INTEGER REFERENCES lawyers(id) ON DELETE CASCADE,
+  client_id INTEGER REFERENCES clients(id) ON DELETE CASCADE,
   date DATE,
   content TEXT
 );
