@@ -61,18 +61,6 @@ class App extends Component {
     return (
     <Router>
       <Switch>
-<<<<<<< HEAD
-      <Route exact path="/" component={LandingPage}/>
-      <Route exact path="/clientRegister" component={clientRegister} /> 
-      <Route exact path="/lawyerRegister" component={lawyerRegister} />
-      <Route exact path="/lawyerHome" component={LawyerHome} />
-      <Route exact path="/clientHome" component={ClientHome} />
-      <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
-      <Route exact path="/clientLoginPage" component={ClientLoginPage} /> 
-      <Route exact path="/clientHomePage" component={ClientHomePage} />
-      <Route component={NotFoundPage} /> 
-      <Redirect to="/404" /> 
-=======
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/clientRegister" component={clientRegister} /> 
         <Route exact path="/lawyerRegister" component={lawyerRegister} />
@@ -87,7 +75,6 @@ class App extends Component {
         <Route exact path="/cases" component={CaseItem} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
->>>>>>> 294a750aa45e612fc868dac74eb4d26509259557
       </Switch>
     </Router>
     );
