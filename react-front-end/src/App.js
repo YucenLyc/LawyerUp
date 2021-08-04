@@ -33,7 +33,7 @@ import AssignCase from './components/AssignCase';
 import AllCaseList from './components/AllCaseList';
 import Review from './components/Review';
 import SameLawyerCaseList from './components/SameLawyerCaseList';
-
+import ClientLawyerListView from './pages/ClientLawyerListView';
 
 class App extends Component {
   render() {
@@ -61,6 +61,7 @@ class App extends Component {
         <Route exact path="/AllCaseList" component={AllCaseList} />
         <Route exact path="/Review" component={Review} />
         <Route exact path="/SameLawyerCaseList" component={SameLawyerCaseList} /> 
+        <Route exact path="/ClientLawyerListView" component={ClientLawyerListView} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>
