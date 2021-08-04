@@ -8,39 +8,7 @@ import { BrowserRouter as Router,
   Link, 
   Redirect 
 } from "react-router-dom";
-// class App extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       message: 'Click the button to load data!'
-//     }
-//   }
 
-//   fetchData = () => {
-//     axios.get('/api/data') // You can simply make your requests to "/api/whatever you want"
-//     .then((response) => {
-//       // handle success
-//       console.log(response.data) // The entire response from the Rails API
-
-//       console.log(response.data.message) // Just the message
-//       this.setState({
-//         message: response.data.message
-//       });
-//     }) 
-//   }
-
-//   render() {
-//     return (
-//       <div className="App">
-//         <h1>{ this.state.message }</h1>
-//         <button onClick={this.fetchData} >
-//           Fetch Data
-//         </button>        
-//       </div>
-//     );
-//   }
-// }
-//Pages
 import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/404';
 import clientRegister from './pages/clientRegister'
@@ -62,7 +30,8 @@ import lawyerProfileCard from './components/lawyerProfileCard';
 import LawyerList from './components/LawyerList';
 import LawyerListItem from './components/LawyerListItem';
 import AssignCase from './components/AssignCase';
-
+import CaseList from './components/CaseList';
+import Review from './components/Review';
 
 class App extends Component {
   render() {
@@ -87,6 +56,8 @@ class App extends Component {
         <Route exact path="/LawyerList" component={LawyerList} />
         <Route exact path="/LawyerListItem" component={LawyerListItem} />
         <Route exact path="/AssignCase" component={AssignCase} />
+        <Route exact path="/CaseList" component={CaseList} />
+        <Route exact path="/Review" component={Review} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>

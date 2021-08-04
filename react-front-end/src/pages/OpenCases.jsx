@@ -3,7 +3,6 @@ import Header from "./Header";
 //import Modal from "./LawyerInfoModal";
 import Form from "react-bootstrap/Form";
 import lawyerProfileCard from "../components/lawyerProfileCard";
-import CasePopup from "../components/CasePopUp/CasePopup";
 import Card from "../components/Card";
 
 
@@ -17,6 +16,34 @@ function OpenCases(props) {
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
+
+  // return (
+   
+  //   <div>
+  //     <Header />
+  //     <div class="caseInfo">
+  //       <label for="caseId">Case ID: </label>
+  //     </div>
+  //     <div>
+  //       <label for="caseDate">Case Date:</label>
+  //     </div>
+  //     <label for="caseId">Lawyer: </label>
+  //     <p class="lawyerInfo" >Ham Hammerson</p>&ensp;
+  //     <br></br>
+  //     <Form  onClick={togglePopup}>
+  //         {isOpen && <Card
+  //         content={<>{lawyerProfileCard}
+  //       </>}
+  //   />}  
+  //     <Form.Group as="textarea"  rows="15" className="clientCaseDescription">
+  //       {fakeClientCase.case_description}
+  //     </Form.Group>
+  //     </Form>
+      
+   
+  //   </div>
+   
+  // );
 
   return (
    
