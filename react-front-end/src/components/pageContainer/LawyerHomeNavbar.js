@@ -13,7 +13,7 @@ function LawyerNavbar() {
   }
   return (
     <>
-    <nav className='navbar'>
+    <nav className='lawyer-navbar'>
       <div className='navbar-container'>
         <Link to="/" className='navbar-logo'>
           LAWYER UP

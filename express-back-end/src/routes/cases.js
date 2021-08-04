@@ -7,12 +7,12 @@ module.exports = db => {
     `)
     .then(({ rows: cases }) => {
       // response.json(clients);
-      response.json(
-        cases.reduce(
-          (previous, current) => ({ ...previous, [current.id]: current }),
-          {}
-        )
-      );
+      response.json(cases);
+        // cases.reduce(
+        //   (previous, current) => ({ ...previous, [current.id]: current }),
+        //   {}
+        // )
+     
     });
   });
 

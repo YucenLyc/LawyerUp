@@ -3,7 +3,6 @@ import Header from "./Header";
 //import Modal from "./LawyerInfoModal";
 import Form from "react-bootstrap/Form";
 import lawyerProfileCard from "../components/lawyerProfileCard";
-import CasePopup from "../components/CasePopUp/CasePopup";
 import Card from "../components/Card";
 
 
@@ -45,7 +44,7 @@ function OpenCases(props) {
   //   </div>
    
   // );
-  
+
   return (
    
     <div>
