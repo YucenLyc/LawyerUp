@@ -21,7 +21,7 @@ export default function CaseItem(props) {
               My name is Egg Eggerson, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract didn't address anything about tenant owning pets, so I assumed it's okay for me to have a cat. I've been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance.
               Please contact me, if you're experience in handling rental dispute!! Much thanks!!
             </p>
-            <button>Message Client User</button>
+            <button className="messageClientBtn">Message Client User</button>
           </>}
           handleClose={togglePopup}
         />}
