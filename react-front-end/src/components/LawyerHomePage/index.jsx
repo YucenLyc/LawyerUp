@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
-import CaseItem from '../CaseItem';
+import CaseList from '../AllCaseList';
 
 const items = [
   {
@@ -44,7 +44,7 @@ export default function LawyerHomePage() {
         Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
-      <CaseItem /> 
+      <CaseList /> 
     </div>
   );
 

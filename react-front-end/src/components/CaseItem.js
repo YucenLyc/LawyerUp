@@ -17,14 +17,13 @@ export default function CaseItem(props) {
             <h5>Case Id:</h5>
             <h5>Date the Case is Created on the app:</h5>
             <h5>Case Description: </h5>
-            <p className="case-description">{props.description}
-            </p>
+            <p>{props.description}</p>
             <button className="messageClientBtn">Message Client User</button>
           </>}
           handleClose={togglePopup}
         />}
         <section className="case-id">
-          <h5>Case ID: 11{props.id}</h5>
+          <h5>Case ID: {props.id}</h5>
           <section className="case-date">
             <h6>date: {props.date}</h6>
           </section>

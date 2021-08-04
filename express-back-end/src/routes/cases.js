@@ -8,13 +8,7 @@ module.exports = db => {
       JOIN specialities on specialities.id = case_speciality.speciality_id;
     `)
     .then(({ rows: cases }) => {
-      // response.json(clients);
       response.json(cases);
-        // cases.reduce(
-        //   (previous, current) => ({ ...previous, [current.id]: current }),
-        //   {}
-        // )
-     
     });
   });
 
