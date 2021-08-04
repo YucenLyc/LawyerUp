@@ -15,12 +15,7 @@ module.exports = db => {
     .then(({ rows: lawyers }) => {
       console.log(response);
       // response.json(lawyers);
-      response.json(
-        lawyers.reduce(
-          (previous, current) => ({ ...previous, [current.id]: current }),
-          {}
-        )
-      );
+      response.json(lawyers);
     });
   });
 
