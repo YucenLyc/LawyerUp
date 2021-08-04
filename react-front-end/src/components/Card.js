@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Card.css'
+import './Card.scss'
 
 function Card() {
   const [name, setName] = useState('lawyer name');

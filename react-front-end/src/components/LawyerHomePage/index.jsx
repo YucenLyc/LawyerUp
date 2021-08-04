@@ -1,5 +1,4 @@
 import React from 'react';
-import CasePopUp from '../CasePopUp/CasePopup';
 import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
