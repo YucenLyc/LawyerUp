@@ -2,8 +2,7 @@ import React from 'react';
 import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
-//import CaseItem from '../CaseItem';
-import CaseList from '../CaseList';
+import CaseList from '../AllCaseList';
 
 const items = [
   {

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import SameLawyerCaseList from '../SameLawyerCaseList';
 
 
 function LawyerNavbar() {
@@ -24,7 +25,7 @@ function LawyerNavbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMenu}>
+            <Link to='/SameLawyerCaseList' className='nav-links' onClick={closeMenu}>
               My Assigned Cases
             </Link>
           </li>

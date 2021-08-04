@@ -30,8 +30,10 @@ import lawyerProfileCard from './components/lawyerProfileCard';
 import LawyerList from './components/LawyerList';
 import LawyerListItem from './components/LawyerListItem';
 import AssignCase from './components/AssignCase';
-import CaseList from './components/CaseList';
+import AllCaseList from './components/AllCaseList';
 import Review from './components/Review';
+import SameLawyerCaseList from './components/SameLawyerCaseList';
+
 
 class App extends Component {
   render() {
@@ -56,8 +58,9 @@ class App extends Component {
         <Route exact path="/LawyerList" component={LawyerList} />
         <Route exact path="/LawyerListItem" component={LawyerListItem} />
         <Route exact path="/AssignCase" component={AssignCase} />
-        <Route exact path="/CaseList" component={CaseList} />
+        <Route exact path="/AllCaseList" component={AllCaseList} />
         <Route exact path="/Review" component={Review} />
+        <Route exact path="/SameLawyerCaseList" component={SameLawyerCaseList} /> 
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>

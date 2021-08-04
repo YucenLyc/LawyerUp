@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import CaseItem from './CaseItem';
 
-//import "./CaseItem.scss";
+
 const axios = require('axios');
 
-export default function CaseList(props) {
+export default function AllCaseList(props) {
   const [cases, setCases] = useState([])
   
   useEffect(() => {
