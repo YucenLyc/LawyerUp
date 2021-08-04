@@ -60,6 +60,7 @@ import CaseItem from './components/CaseItem';
 import ProfileImg from './components/ProfileImg';
 import LawyerList from './components/LawyerList';
 import LawyerListItem from './components/LawyerListItem';
+import AssignCase from './components/AssignCase';
 
 
 class App extends Component {
@@ -83,6 +84,7 @@ class App extends Component {
         <Route exact path="/profileimg" component={ProfileImg} />
         <Route exact path="/LawyerList" component={LawyerList} />
         <Route exact path="/LawyerListItem" component={LawyerListItem} />
+        <Route exact path="/AssignCase" component={AssignCase} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>
