@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS lawyer_speciality CASCADE;
 DROP TABLE IF EXISTS specialities CASCADE;
 DROP TABLE IF EXISTS lawyers CASCADE;
 DROP TABLE IF EXISTS clients CASCADE;
@@ -31,8 +32,14 @@ CREATE TABLE lawyers (
 
 CREATE TABLE specialities (
   id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  definition text
+);
+
+CREATE TABLE lawyer_speciality (
+  id SERIAL PRIMARY KEY NOT NULL,
   lawyer_id INTEGER REFERENCES lawyers(id) ON DELETE CASCADE,
-  name VARCHAR(255) NOT NULL
+  speciality_id INTEGER REFERENCES specialities(id) ON DELETE CASCADE
 );
 
 CREATE TABLE user_types (

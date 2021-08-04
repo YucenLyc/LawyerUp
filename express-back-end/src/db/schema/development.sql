@@ -21,20 +21,31 @@ VALUES
 (6, 'I am specialized dedicated in serving civil rights related legal issues', 200, 12), 
 (9, 'I am specialized dedicated in serving environmental related legal issues', 175, 10);
 
-INSERT INTO specialities (lawyer_id, name)
+INSERT INTO specialities (name, definition)
 VALUES
-(1, 'Family Law'),
-(1, 'Business Law'),
-(1, 'Criminal Law'),
-(2, 'Corporate Law'),
-(2, 'Bankruptcy Law'),
-(2, 'Labor Law'),
-(2, 'Tax Law'),
-(3, 'Civil Rights Law'),
-(3, 'Military Law'),
-(3, 'Immigration Law'),
-(4, 'Environmental Law'),
-(4, 'Business Law');
+('Business Law', 'Corporate law involves the formation, dissolution, and all other legal aspects of the administration of corporations. Typical duties of corporate lawyers include mergers, acquisitions, internal reorganization, or disputes between corporations and individuals concerning liability, patents, and compliance with state and federal law, as well as international accords. A legal professional whose sole client is a corporation is generally known as in-house counsel.'),
+('Bankruptcy Law', 'Bankruptcy law applies to the insolvency problems of individuals as well as organizations. This type of law issues directly from the Constitution and is in the domain of Federal law, though State laws have an important effect on bankruptcy procedure.'),
+('Civil Rights Law', 'Civil rights law aims to balance competing interests between institutions of government on the one hand and individuals or groups of individuals on the other. Lawyers in such practice may work on cases involving discrimination and unfair practices that infringe on rights and liberties such as expression, employment, housing, education, or other entitlements.'),
+('Criminal Law', 'Criminal law focuses on behaviors that are sanctioned under criminal code and defined as illegal. Prosecutors and District Attorneys sanction illegal behavior, while criminal defense lawyers represent clients accused of criminal activity. Both prosecution and defense professionals deal with issues of individual liberty, basic rights, and responsibilities. In some Common Law countries other than the U.S., and in most Civil Law countries, the roles of a prosecutor (or procurator) and defense lawyer (or advocate) are separated more clearly into different professional specialties.'),
+('Environmental Law', 'Environmental law concerns a multitude of statutes, treaties, regulations, and conventions based in state, federal, or transnational law. Legal professionals practicing in this field may represent government agencies, advocacy organizations, or individuals. Environmental lawyers often focus on cases involving natural resource management, the curbing of pollution, or disputes about land and littoral use. Public health components are increasingly common in the practice of environmental law.'),
+('Family Law', 'Family law focuses on legal relations between individuals in the context of the family. Lawyers in this field typically work in smaller firms and specialize in a variety of areas ranging from child welfare, through adoption, to divorce. Child abuse, legitimacy, civil unions, domestic partnerships, and marriages are among the main aspects of family lawyers practice.'),
+('Immigration Law', 'Immigration lawyers work with individual clients at all stages of the naturalization process. Other aspects of the profession relate to refugee and asylum seekers, as well as to individuals in the country without legal permission. This field of law varies significantly from country to country. Much of its practice depends on international treaties, bilateral accords, and political conjecture.'),
+('Labor Law', 'Labor law is concerned with the relations between workers and their employers on matters ranging from wages and compensation, through harassment, to discrimination based on gender, disability, or age. Labor law often involves collective bargaining and unions. Attorneys in this field may represent individual clients, a union, a government regulatory agency, or an employer.');
+
+INSERT INTO lawyer_speciality (lawyer_id, speciality_id)
+VALUES
+(1, 1),
+(1, 4),
+(1, 6),
+(2, 1),
+(2, 2),
+(2, 7),
+(2, 8),
+(3, 3),
+(3, 4),
+(3, 7),
+(4, 1),
+(4, 5);
 
 INSERT INTO user_types (user_id, name)
 VALUES
