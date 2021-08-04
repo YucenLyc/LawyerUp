@@ -66,6 +66,12 @@ VALUES
 (2, 3, 'Business tax', '2021-01-12', 'My company is being charged for evading payment of over 2 million in taxes. I was not aware of the financial situation of my company, even though I am the sole owner. My best friend Joey handles the financial side of the business, but he recently disappeared. I am looking for a lawyer who can keep me out of jail before I find Joey. Please email me if you are interested in my case, I am not a fan of phone calls. Thanks.'),
 (3, 6, 'Police abuse', '2021-04-22', 'I was attacked by a policeman who stopped me on the street last Friday night. She showed me her badge quicky, but I did not get a good look. She then told me give my protein bar to her. She asked me if I have any more protein bars with me. I lied and said no. She did not believe me. I was body searched by her and she took away my 3 other protein bars. She drove away in a police car, I memorized the license. I would like to get compensated for this assult and for my lost. If you are experience in personal injury/assult or police brutality cases,s call me. I amusually on my phone 25/8. Cheers.');
 
+INSERT INTO case_speciality (case_id, speciality_id)
+VALUES
+(1, 3),
+(2, 1),
+(3, 3);
+
 INSERT INTO reviews (lawyer_id, client_id, date, content)
 VALUES
 (1, 1, '2021-01-04', 'Anderson is very helpful and compassionate in helping us dealing with our family issues'),
