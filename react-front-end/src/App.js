@@ -58,6 +58,7 @@ import ClosedCases from './pages/ClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
 import ProfileImg from './components/ProfileImg';
+import lawyerProfileCard from './components/lawyerProfileCard';
 import LawyerList from './components/LawyerList';
 import LawyerListItem from './components/LawyerListItem';
 import AssignCase from './components/AssignCase';
@@ -82,6 +83,7 @@ class App extends Component {
         <Route exact path="/addNewCase" component={AddNewCase} />
         <Route exact path="/cases" component={CaseItem} />
         <Route exact path="/profileimg" component={ProfileImg} />
+        <Route exact path="/lawyerProfileCard" component={lawyerProfileCard}/>
         <Route exact path="/LawyerList" component={LawyerList} />
         <Route exact path="/LawyerListItem" component={LawyerListItem} />
         <Route exact path="/AssignCase" component={AssignCase} />
