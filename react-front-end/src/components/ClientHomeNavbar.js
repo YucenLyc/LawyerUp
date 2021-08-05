@@ -32,11 +32,6 @@ function Navbar() {
               My Case History
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMenu}>
-              Messages
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>

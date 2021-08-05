@@ -2,6 +2,9 @@ import Navbar from '../ClientHomeNavbar';
 import React from 'react';
 import '../pageContainer/Dropdown.scss'
 import Dropdown from '../pageContainer/Dropdown';
+import AllCaseList from '../AllCaseList';
+import Header from '../../pages/Header';
+
 const items = [
   {
     id: 1,
@@ -37,15 +40,17 @@ export default function ClientHomePage() {
 
   
   return (
-    
+    <>
+    <Header/>
     <div className="container">
-      <Navbar />
       <h2 style={{ textAlign: 'center' }}>
         Egg Eggerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
+      <AllCaseList />
+      <Navbar />
     </div> 
-    
+    </>
   );
 
 }

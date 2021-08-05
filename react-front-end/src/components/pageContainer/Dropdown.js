@@ -22,12 +22,12 @@ function Dropdown({ title, items, multiSelect = false }) {
       }
     }
 
-    function isItemInSelection(item) {
-      if (selection.some(current => current.id === item.id)) {
-        return true;
-      }
-      return false;
-    }
+    // function isItemInSelection(item) {
+    //   if (selection.some(current => current.id === item.id)) {
+    //     return true;
+    //   }
+    //   return false;
+    // }
 
     return (
       <div className="dd-wrapper">
@@ -51,7 +51,7 @@ function Dropdown({ title, items, multiSelect = false }) {
               <li className="dd-list-item" key={item.id}>
                 <button type="button" onClick={() => handleOnClick(item)}>
                   <span>{item.value}</span>
-                  <span>{isItemInSelection(item) && 'Selected'}</span>
+                  {/* <span>{isItemInSelection(item) && 'Selected'}</span> */}
                 </button>
               </li>
             ))}
