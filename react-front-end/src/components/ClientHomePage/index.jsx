@@ -39,11 +39,12 @@ export default function ClientHomePage() {
   return (
     
     <div className="container">
-      <Navbar />
+ 
       <h2 style={{ textAlign: 'center' }}>
         Egg Eggerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
+      <Navbar />
     </div> 
     
   );

@@ -3,6 +3,8 @@ import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 import CaseList from '../AllCaseList';
+import Header from '../../pages/Header';
+
 
 const items = [
   {
@@ -37,15 +39,18 @@ const items = [
 
 export default function LawyerHomePage() {
   return (
-    
+    <>
+    <Header /> 
     <div className="container">
-      <LawyerNavbar />
+    
       <h2 style={{ textAlign: 'center' }}>
         Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={items} multiSelect />
-      <CaseList /> 
+      <CaseList />   
     </div>
+    <LawyerNavbar />
+    </>
   );
 
 }
