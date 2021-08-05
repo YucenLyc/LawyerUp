@@ -6,7 +6,7 @@ const Header = () => {
     <header class="ui-header">
       <span>Lawyer Up</span>
       <span>
-        <span class="sign-up-text">Somethong Here</span>
+        <span class="sign-up-text">ICON?</span>
       </span>
     </header>
   );

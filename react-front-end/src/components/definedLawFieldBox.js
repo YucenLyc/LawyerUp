@@ -1,22 +1,14 @@
 import React from "react";
+import"./definedLawFieldBox.scss";
 
-
-export default function definedLawField(props) {
+export default function definedLawFieldBox(props) {
   return (
     <main>
-      <section className="case-id">
-        <h5>Case ID: {props.id}</h5>
-        <section className="case-date">
-          <h6>date: {props.date}</h6>
-        </section>
-      </section>
-      <section className="case-body">
-        <section className="client-name">
-          <div>Client: Egg Eggerson</div>
-        </section>
-        <section className="case-name">
-          <span>{props.name}</span>
-        </section>
+      <section className="field-id">
+        <h5 className="header">Definition of:{props.name}</h5>
+        <section className="field-content">
+          <span>{props.definition}</span>
+          </section>
       </section>
     </main>
   )
