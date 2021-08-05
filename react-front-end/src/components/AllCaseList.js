@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import CaseItem from './CaseItem';
+import "./AllCaseList.scss";
 
 
 const axios = require('axios');
@@ -28,7 +29,7 @@ export default function AllCaseList(props) {
 
   return(
     <ul className="CaseList">
-      <h3>All the Casese Our App Has:</h3>
+      <h3>All the Cases Our App Has:</h3>
       {CaseItemList}
     </ul>
   )
