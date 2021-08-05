@@ -15,6 +15,7 @@ const lawyers = require("./routes/lawyers");
 const clients = require("./routes/clients");
 const cases = require("./routes/cases");
 const casesForSameLawyer = require("./routes/casesForSameLawyer")
+const specialities = require("./routes/specialized")
 
 
 function read(file) {
@@ -42,6 +43,7 @@ module.exports = function application(ENV) {
   app.use("/api", lawyers(db));
   app.use("/api", cases(db));
   app.use("/api", casesForSameLawyer(db));
+  app.use("/api", specialities(db))
   
   app.use('/api/data', (req, res) => res.json({
     message: "Seems to work!",

@@ -29,11 +29,6 @@ function LawyerNavbar() {
               My Assigned Cases
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMenu}>
-              Case History
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>
