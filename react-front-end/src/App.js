@@ -36,6 +36,8 @@ import SameLawyerCaseList from './components/SameLawyerCaseList';
 import ClientLawyerListView from './pages/ClientLawyerListView';
 import definedLawField from './components/definedLawFieldBox';
 import AllDefinedLawlist from './components/AllDefinedLawList';
+import summaryBox from './components/summaryBox';
+import LawyerProfilePage from './pages/LawyerProfilePage';
 
 class App extends Component {
   render() {
@@ -66,6 +68,8 @@ class App extends Component {
         <Route exact path="/ClientLawyerListView" component={ClientLawyerListView} />
         <Route exact path="/definedLawField" component={definedLawField} />
         <Route exact path="/AllDefinedLawlist" component={AllDefinedLawlist} />
+        <Route exact path="/summaryBox" component={summaryBox} />
+        <Route exact path="/lawyerProfilePage" component={LawyerProfilePage} />
         <Route component={NotFoundPage} /> 
         <Redirect to="/404" /> 
       </Switch>
