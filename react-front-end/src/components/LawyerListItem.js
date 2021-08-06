@@ -14,7 +14,9 @@ export default function LawyerListItem(props) {
     <li className="LawyerListItem" onClick={() => props.onClick}>
       <h3>Lawyer Name: {props.name}</h3>
       <h4>Specialization: {props.specialization.join(', ')}</h4>
-      <h4>Rating: {props.rating}</h4>
+      <h4>Location: {props.location}</h4>
+      <h4>Hourly Rate: {props.rating}</h4>
+      <h4>Experience: {props.experience} years</h4>
       <h4>Review: {props.review}</h4>
     </li>
   );

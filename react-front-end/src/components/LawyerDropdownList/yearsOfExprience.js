@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-const years_of_experience = () => {
+const years_of_experience = ({selected, setSelected}) => {
+  const [isActive, setIsActive] = useState(false);
+  const options = ['1 - 3', '4 - 5', '6 - 9', '10 - 15', '15+'];
   return (
-    <select name="years" id="years-of-experience">
-      <option value="yearOfExperience">Years Of Experience</option>
-      <option value="1-3">1 - 3</option>
-      <option value="4-6">4 - 6</option>
-      <option value="7-9">7 - 9</option>
-      <option value="10+">10 - 15</option>
-      <option value="10+">15+</option>
-    </select>
+    <div className="dropdown">
+      <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+        {selected}
+        <span className="fas fa-caret-down"></span>
+      </div>
+      {isActive && (
+        <div className="dropdown-content">
+          {options.map((option) => (
+            <div onClick={(e) => {
+              setSelected(option);
+              setIsActive(false);
+            }}
+            className="dropdown-item"
+            >
+              {option}
+            </div>
+            ))}
+        </div>
+      )}
+    </div>
   );
 }
 

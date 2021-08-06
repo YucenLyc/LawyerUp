@@ -8,17 +8,17 @@ import "./LawyerList.scss";
 const axios = require('axios');
 
 export default function LawyerList(props){
-  const { lawType = '' } = props;
+  const lawType = props.lawType;
   const [lawyers, setLawyers] = useState([]);
+  const location = props.location == "Choose One" ? null : props.location;
+  const rate = props.rate == "Choose One" ? null : props.rate;
+  const year = props.year == "Choose One" ? null : props.year;
   // const [lawyers, setLawyers] = useState({});
-  
   useEffect(() => {
     axios.get("/api/lawyers").then(response => {
-      console.log('response: ', response.data);
       setLawyers(response.data);
       // [{ 1: ... 2: ... }]
       // setLawyers({...response.data});
-      console.log('lawyers: ', lawyers);
     });
   }, [])
 
@@ -29,10 +29,9 @@ export default function LawyerList(props){
   //   {name: "Donkey", specialization: "Any Law", rating: 1, review : "Donkey is terrible."}
   // ]
 
-  console.log('lawyers: ', lawyers);
+  let filtered;
 
-
-  const findLawyers = (field) => {
+  const findBySpeciality = (field) => {
     let result = [];
     for (let lawyer of lawyers) {
       if (lawyer.speciality.find(elm => elm === field)) {
@@ -42,19 +41,64 @@ export default function LawyerList(props){
     return result;
   }
 
-  const filteredLawyers = findLawyers(lawType.split('-').join(' '));
-  console.log('filtered lawyers: ', findLawyers(lawType.split('-').join(' ')));
+  const findByLocation = (location) => {
+    let result = [];
+    for (let lawyer of findBySpeciality(lawType.split('-').join(' '))) {
+      if (lawyer.city == location) {
+        result.push(lawyer);
+      }
+    }
+    return result;
+  }
 
-  const LawyersListItem = filteredLawyers.map((lawyer) => {
+  const sortByRate = (sort) => {
+    let result;
+    if (sort == "High-Low") {
+      let temp = findBySpeciality(lawType.split('-').join(' '));
+      result = temp.sort((a, b) => parseFloat(b.rate) - parseFloat(a.rate));
+    } else if (sort == "Low-High") {
+      let temp = findBySpeciality(lawType.split('-').join(' '));
+      result = temp.sort((a, b) => parseFloat(a.rate) - parseFloat(b.rate));
+    }
+    return result;
+  }
+
+  const sortByYearOfExperience = (year) => { 
+    let result = [];
+    const years = year.split(' - ');
+    for (let lawyer of findBySpeciality(lawType.split('-').join(' '))) {
+      if (lawyer.years_of_experience >= parseInt(years[0]) && lawyer.years_of_experience <= parseInt(years[1])) {
+        result.push(lawyer);
+      }
+    }
+    return result;
+  }
+  
+
+  if (location != null) {
+    filtered = findByLocation(location);
+  } else if (rate != null) {
+    filtered = sortByRate(rate);
+  } else if (year != null) {
+    filtered = sortByYearOfExperience(year);
+  } else {
+    filtered = findBySpeciality(lawType.split('-').join(' '));  
+  }
+
+
+
+  const LawyersListItem = filtered.map((lawyer) => {
     return <LawyerListItem 
       name={lawyer.name}
       specialization={lawyer.speciality}
-      rating={lawyer.rating}
+      location={lawyer.city}
+      rating={lawyer.rate}
+      experience={lawyer.years_of_experience}
       review={lawyer.review}
       onClick={props.onClick}
     />
   });
-
+  
   return(
     <ul className="LawyerList">
       <h3>Our Lawyers:</h3>
