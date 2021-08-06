@@ -19,22 +19,54 @@ VALUES
 ('Holly Nitzsche', 'lindsey.barrows@marcellus.info', 'password'),
 ('Fannie Hammes', 'alden.mayer@becker.tv', 'password'),
 ('Jerrold Lindgren', 'jabari.stoltenberg@witting.biz', 'password'),
-('Dylan Pagac', 'jacobi_marie@witting.net', 'password');
+('Dylan Pagac', 'jacobi_marie@witting.net', 'password'),
+('Col Fays', 'colfff@witting.net', 'password'),
+('Lynne Decco', 'lddy@witting.net', 'password'),
+('Mal Aju', 'mala@witting.net', 'password'),
+('Fran Trik', 'frant@witting.net', 'password'),
+('Polly Pip', 'pp@witting.net', 'password'),
+('Norma Ding', 'dingdong@witting.net', 'password'),
+('Stan Mars', 'stars@witting.net', 'password'),
+('Sly Gibbson', 'hipsterrus@witting.net', 'password'),
+('Ben Doven', 'ddovee@witting.net', 'password'),
+('Mark Ash', 'actually@witting.net', 'password'),
+('Anna Townsom', 'redhead@witting.net', 'password'),
+('Saul Ma', 'bettercallsaul@witting.net', 'password'),
+('Reeve Wah', 'reevewah@witting.net', 'password'),
+('Ming Feng', 'mingfengthelegend@witting.net', 'password'),
+('Adel Adele', 'howtosaymyname@knockknock.com', 'password');
 
 
 INSERT INTO clients (user_id) VALUES (1), (2), (5), (7), (8), (10), (11), (14), (15), (17), (18);
 
 INSERT INTO lawyers (user_id, profile, rate, years_of_experience) 
 VALUES 
-(3, 'I am specialized dedicated in serving family related legal issues', 150, 8),
-(4, 'I am specialized dedicated in serving business related legal issues', 250, 15), 
-(6, 'I am specialized dedicated in serving civil rights related legal issues', 200, 12), 
-(9, 'I am specialized dedicated in serving environmental related legal issues', 175, 10),
-(12, 'I am specialized dedicated in serving family related legal issues', 150, 8),
-(13, 'I am specialized dedicated in serving business related legal issues', 250, 15), 
-(16, 'I am specialized dedicated in serving civil rights related legal issues', 200, 12), 
-(19, 'I am specialized dedicated in serving environmental related legal issues', 175, 10),
-(20, 'I am specialized dedicated in serving environmental related legal issues', 175, 10);
+(3, 'I am specialized in family law related legal issues', 150, 8),
+(4, 'I am specialized in business law related legal issues', 250, 15), 
+(6, 'I am specialized  in civil rights law related legal issues', 200, 12), 
+(9, 'I am specialized  in  environmental law related legal issues', 175, 10),
+(12, 'I am specialized  in family law related legal issues', 150, 8),
+(13, 'I am specialized  in business law related legal issues', 250, 15), 
+(16, 'I am specialized in civil rights law related legal issues', 200, 12), 
+(19, 'I am specialized in environmental law related legal issues', 175, 10),
+(20, 'I am specialized in environmental law related legal issues', 175, 10),
+(21, 'I am specialized in labor law related legal issues', 125, 3),
+(30, 'I am specialized in immigration law related legal issues', 175, 7),
+(28, 'I am specialized in banruptcy law related legal issues', 280, 17),
+(29, 'I am specialized in immigration law related legal issues', 200, 6),
+(34, 'I am specialized in criminal law related legal issues', 100, 5),
+(32, 'I am specialized in criminal law related legal issues', 130, 7),
+(25, 'I am specialized in immigration law related legal issues', 175, 8),
+(33, 'I am specialized in business law related legal issues', 300, 17),
+(22, 'I am specialized in civil right law related legal issues', 120, 12),
+(27, 'I am specialized in immigration law related legal issues', 175, 7),
+(26, 'I am specialized in criminal law related legal issues', 175, 7),
+(24, 'I am specialized in bankruptcy law related legal issues', 175, 7),
+(23, 'I am specialized in labor law related legal issues', 175, 7),
+(31, 'I am specialized in family law related legal issues', 175, 7),
+(35, 'I am specialized in civil rights law related legal issues', 175, 7);
+
+
 
 INSERT INTO specialities (name, definition)
 VALUES
@@ -72,7 +104,33 @@ VALUES
 (9, 1),
 (9, 2),
 (9, 5),
-(9, 8);
+(9, 8),
+(10, 3),
+(11, 4),
+(12, 6),
+(13, 1),
+(14, 2),
+(15, 7),
+(16, 8),
+(17, 3),
+(18, 4),
+(19, 7),
+(20, 1),
+(21, 5),
+(22, 2),
+(23, 8),
+(24, 4),
+(19, 1),
+(18, 2),
+(17, 3),
+(16, 5),
+(15, 7),
+(14, 1),
+(13, 2),
+(12, 5),
+(15, 8);
+
+-- () need to figure out how to update lawyer_id
 
 
 INSERT INTO user_types (user_id, name)
@@ -96,7 +154,23 @@ VALUES
 (17, 'Client'),
 (18, 'Client'),
 (19, 'Lawyer'),
-(20, 'Lawyer');
+(20, 'Lawyer'),
+(21, 'Lawyer'),
+(22, 'Lawyer'),
+(23, 'Lawyer'),
+(24, 'Lawyer'),
+(25, 'Lawyer'),
+(26, 'Lawyer'),
+(27, 'Lawyer'),
+(28, 'Lawyer'),
+(29, 'Lawyer'),
+(30, 'Lawyer'),
+(31, 'Lawyer'),
+(32, 'Lawyer'),
+(33, 'Lawyer'),
+(34, 'Lawyer'),
+(35, 'Lawyer');
+
 
 INSERT INTO cases (lawyer_id, client_id, name, date, description)
 VALUES
@@ -161,4 +235,19 @@ VALUES
 (17, 'Edmonton'),
 (18, 'Victoria'),
 (19, 'Vancouver'),
-(20, 'Toronto');
+(20, 'Toronto'),
+(21, 'Vancouver'),
+(22, 'Victoria'),
+(23, 'Edmonton'),
+(24, 'Calgary'),
+(25, 'Victoria'),
+(26, 'Vancouver'),
+(27, 'Toronto'),
+(28, 'Vancouver'),
+(29, 'Edmonton'),
+(30, 'Calgary'),
+(31, 'Edmonton'),
+(32, 'Vancouver'),
+(33, 'Victoria'),
+(34, 'Vancouver'),
+(35, 'Toronto');
