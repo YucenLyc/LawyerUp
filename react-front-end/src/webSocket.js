@@ -1,9 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-// import Socket from './webSocket';
-
+// import React, { Component } from 'react';
 
 // import { w3cwebsocket as W3CWebSocket } from "websocket";
 
@@ -34,13 +29,9 @@ import App from './App';
 
 //   render() {
 //     return(
-     
-//     <div> 
-//       <App / >
+//     <div>
 //       <button onClick={() => this.onButtonClicked("Hi")}>Send Message</button>
 //     </div>
 //     )
 //   }
 // }
-
-ReactDOM.render(<App />, document.getElementById('root'));
