@@ -30,7 +30,7 @@ export default function CaseItem(props) {
         </section>
         <section className="case-body">
           <section className="client-name">
-            <div>Client: Egg Eggerson</div>
+            <div>Client: {props.client}</div>
           </section>
           <section className="case-name">
             <span>{props.name}</span>

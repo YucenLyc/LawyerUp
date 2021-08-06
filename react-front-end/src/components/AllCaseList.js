@@ -21,6 +21,7 @@ export default function AllCaseList(props) {
     return <CaseItem
       name={singleCase.name}
       id={singleCase.id}
+      client={singleCase.client_name}
       date={singleCase.date}
       description={singleCase.description}
       onClick={props.onClick}
