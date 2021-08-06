@@ -54,7 +54,7 @@ export default function ClientHomePage() {
       <h2 style={{ textAlign: 'center' }}>
         Egg Eggerson Homepage {' '}
       </h2>
-      <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
+      <Dropdown title="Select A Category of Law" items={specialities} type="client"/>
       <AllCaseList />
       <Navbar />
     </div> 

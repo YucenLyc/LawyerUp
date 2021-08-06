@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 export default Dropdown; 
 
-function Dropdown({ title, items, multiSelect = false }) {
+function Dropdown({ title, items, type, multiSelect = false }) {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
 
@@ -26,7 +26,7 @@ function Dropdown({ title, items, multiSelect = false }) {
           <ul className="dd-list">
             {items.map(item => (
               <li className="dd-list-item" key={item.id}>
-                <Link to={`/clientlawyerlistview/${item.name.split(' ').join('-')}`}>
+                <Link to={type === "client" ? `/clientlawyerlistview/${item.name.split(' ').join('-')}` : `/lawyerhomepage/${item.name.split(' ').join('-')}`}>
                   <button>
                     <span>{item.name}</span>
                   </button>
