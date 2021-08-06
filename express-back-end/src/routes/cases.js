@@ -14,6 +14,17 @@ module.exports = db => {
     });
   });
 
+  router.post("/cases", (req, res) => {
+    const client_id = 3;
+
+    db.query(`
+      INSERT INTO cases (lawyer_id, client_id, name, date, description)
+      VALUES ($1, $2, $3, $4, $5)
+    `, [req.body.lawyer_id, client_id, req.body.name, req.body.date, req.body.description])
+    .then(() => {
+      res.status(201).send('successful!');
+    });
+  });
 
   return router;
 };
