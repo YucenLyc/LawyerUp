@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-const rating = () => {
+const rating = ({selected, setSelected}) => {
+  const [isActive, setIsActive] = useState(false);
+  const options = ['High-Low', 'Low-High'];
   return (
-    <select name="rating" id="rating">
-      <option value="rating">Rating</option>
-      <option value="highToLow">Highest - Lowest</option>
-    </select>
+    <div className="dropdown">
+      <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+        {selected}
+        <span className="fas fa-caret-down"></span>
+      </div>
+      {isActive && (
+        <div className="dropdown-content">
+          {options.map((option) => (
+            <div onClick={(e) => {
+              setSelected(option);
+              setIsActive(false);
+            }}
+            className="dropdown-item"
+            >
+              {option}
+            </div>
+            ))}
+        </div>
+      )}
+    </div>
   );
 }
 
