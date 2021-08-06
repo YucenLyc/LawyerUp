@@ -8,7 +8,7 @@ import "./LawyerList.scss";
 const axios = require('axios');
 
 export default function LawyerList(props){
-
+  const { lawType = '' } = props;
   const [lawyers, setLawyers] = useState([]);
   // const [lawyers, setLawyers] = useState({});
   
@@ -31,10 +31,24 @@ export default function LawyerList(props){
 
   console.log('lawyers: ', lawyers);
 
-  const LawyersListItem = lawyers.map((lawyer) => {
+
+  const findLawyers = (field) => {
+    let result = [];
+    for (let lawyer of lawyers) {
+      if (lawyer.speciality.find(elm => elm === field)) {
+        result.push(lawyer);
+      }
+    }
+    return result;
+  }
+
+  const filteredLawyers = findLawyers(lawType.split('-').join(' '));
+  console.log('filtered lawyers: ', findLawyers(lawType.split('-').join(' ')));
+
+  const LawyersListItem = filteredLawyers.map((lawyer) => {
     return <LawyerListItem 
       name={lawyer.name}
-      specialization={lawyer.speciality[0]}
+      specialization={lawyer.speciality}
       rating={lawyer.rating}
       review={lawyer.review}
       onClick={props.onClick}

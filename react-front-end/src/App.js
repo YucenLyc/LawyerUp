@@ -65,7 +65,7 @@ class App extends Component {
         <Route exact path="/AllCaseList" component={AllCaseList} />
         <Route exact path="/Review" component={Review} />
         <Route exact path="/SameLawyerCaseList" component={SameLawyerCaseList} /> 
-        <Route exact path="/ClientLawyerListView" component={ClientLawyerListView} />
+        <Route exact path="/ClientLawyerListView/:lawType" component={ClientLawyerListView} />
         <Route exact path="/definedLawField" component={definedLawField} />
         <Route exact path="/AllDefinedLawlist" component={AllDefinedLawlist} />
         <Route exact path="/summaryBox" component={summaryBox} />

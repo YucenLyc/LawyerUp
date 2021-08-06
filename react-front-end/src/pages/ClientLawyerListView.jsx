@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from "react-router-dom";
 import Header from './Header';
 import Years_of_experience from '../components/LawyerDropdownList/yearsOfExprience';
 import Locations from '../components/LawyerDropdownList/locations';
@@ -6,6 +7,8 @@ import Rating from '../components/LawyerDropdownList/rating';
 import LawyerList from '../components/LawyerList';
 
 const clientLawyerListView = () => {
+  const { lawType } = useParams();
+  console.log(lawType);
   return (
     <>
       <Header />
@@ -18,7 +21,7 @@ const clientLawyerListView = () => {
         <Rating />
       </div>
       <div>
-        <LawyerList />
+        <LawyerList lawType={lawType} />
       </div>
     </>
   );

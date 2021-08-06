@@ -23,7 +23,7 @@
 		li {
 			list-style-type: none;
 			&:first-of-type {
-				>button {
+				button {
 					border-top: 1px solid #ccc;
 					border-top-left-radius: 4px;
 					border-top-right-radius: 4px;
