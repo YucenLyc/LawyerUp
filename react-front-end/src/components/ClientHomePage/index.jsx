@@ -1,5 +1,5 @@
 import Navbar from '../ClientHomeNavbar';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../pageContainer/Dropdown.scss'
 import Dropdown from '../pageContainer/Dropdown';
 import AllCaseList from '../AllCaseList';
@@ -36,8 +36,16 @@ const items = [
   }
 ];
 
-export default function ClientHomePage() {
+const axios = require('axios');
 
+export default function ClientHomePage() {
+  const [specialities, setSpecialities] = useState([]);
+  useEffect(() => {
+    axios.get("/api/specialities").then(response => {
+      setSpecialities(response.data);
+      console.log('specialities:', specialities);
+    });
+  }, [])
   
   return (
     <>
@@ -46,7 +54,7 @@ export default function ClientHomePage() {
       <h2 style={{ textAlign: 'center' }}>
         Egg Eggerson Homepage {' '}
       </h2>
-      <Dropdown title="Select A Category of Law" items={items} multiSelect />
+      <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
       <AllCaseList />
       <Navbar />
     </div> 

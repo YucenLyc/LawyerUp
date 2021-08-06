@@ -8,10 +8,7 @@ const Modal = ( props ) => {
         <div className={ open ? 'openModal modal' : 'modal' }>
             { open ? (  
                 <section>
-                    <header>
-                        Yucen Liu
-                        <button className="close" onClick={close}> &times; </button>
-                    </header>
+                    <button className="close" onClick={close}> &times; </button>
                     <main>
                         {props.children}
                     </main>

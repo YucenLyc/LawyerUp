@@ -4,6 +4,17 @@
   width: 90%;
   margin: 25px auto;
 }
-#submit-button {
-  float: right;
+
+.col-sm-10 {
+  display: flex;
+  justify-content: flex-end;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+// .col-form-label {
+//   width: 100%;
+// }

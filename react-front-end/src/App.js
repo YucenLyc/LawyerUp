@@ -46,6 +46,7 @@ class App extends Component {
 
   render() {
     return (
+
         <div>
         <Router>
           <Switch>
@@ -82,6 +83,7 @@ class App extends Component {
         
         <MessageChat />
       </div>
+
     );
   }
 }

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import DefinedLawFieldBox from './definedLawFieldBox';
+import './AllDefinedLawlist.css';
 
 
-const axios = require('axios');
+ const axios = require('axios');
 
 export default function AllDefinedLawlist(props) {
   const [specialities, setSpecialities] = useState([])
@@ -26,10 +27,10 @@ export default function AllDefinedLawlist(props) {
   });
 
   return(
-    <ul className="DefinitionList">
-      <h3>definition of a field of law:</h3>
+    <div className="DefinitionList">
+      <h3 className="title">Definition of a field of Law</h3>
       {DefinedItemList}
-    </ul>
+    </div>
   )
 
 }
