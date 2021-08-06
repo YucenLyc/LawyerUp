@@ -1,6 +1,4 @@
 import React from 'react';
-// import '../pageContainer/Dropdown.scss'
-// import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 import Header from './Header';
 
 import SummaryDisplay from '../components/summaryDisplay';
