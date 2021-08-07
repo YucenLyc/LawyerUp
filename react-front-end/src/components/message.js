@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../styles/message.css'
+import '../styles/message.scss'
 import { w3cwebsocket as W3CWebSocket } from "websocket";
 import { Card, Avatar, Input, Typography } from 'antd';
-import '../styles/message.css';
+import '../styles/message.scss';
 
 const { Search } = Input;
 const { Text } = Typography;
@@ -22,17 +22,17 @@ class MessageChat extends Component {
   onButtonClicked = (value) => {
     client.send(JSON.stringify({
       type: "message",
-      msg: value, 
+      msg: value,
       user: this.state.userName
     }));
-    this.setState({ searchVal:''})
+    this.setState({ searchVal: '' })
   }
 
   componentWillMount() {
     client.onopen = () => {
       console.log('WebSocket Client Connected');
     };
-    
+
     client.onmessage = (message) => {
       const dataFromServer = JSON.parse(message.data);
       console.log('got reply from server!', dataFromServer);
@@ -41,7 +41,7 @@ class MessageChat extends Component {
           {
             messages: [...state.messages,
             {
-              msg: dataFromServer.msg, 
+              msg: dataFromServer.msg,
               user: dataFromServer.user
             }]
           }
@@ -52,50 +52,50 @@ class MessageChat extends Component {
 
   render() {
     return (
-    <div>
-    <div className="main-container" id='wrapper'>
-      {this.state.isLoggedIn ?
-        <div>
-          <div className="title">
-            <Text id="main-heading" type="secondary" style={{ fontSize: '36px' }}>LawyerUp Messaging: {this.state.userName}</Text>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: 50 }} id="messages">
-            {this.state.messages.map(message =>
-              <Card key={message.msg} style={{ width: 300, margin: '16px 4px 0 4px', alignSelf: this.state.userName === message.user ? 'flex-end' : 'flex-start' }} loading={false}>
-                <Meta
-                  avatar={
-                    <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>{message.user[0].toUpperCase()}</Avatar>
-                  }
-                  title={message.user + ":"}
-                  description={message.msg}
+      <div>
+        <div className="main-container" id='wrapper'>
+          {this.state.isLoggedIn ?
+            <div>
+              <div className="title">
+                <Text className="main-heading" type="secondary" >LawyerUp Messaging: {this.state.userName}</Text>
+              </div>
+              <div className="message-text">
+                {this.state.messages.map(message =>
+                  <Card key={message.msg} style={{ color: 'grey', alignSelf: this.state.userName === message.user? 'flex-end' : 'flex-start' }} loading={false}>
+                    <Meta
+                      avatar={
+                        <Avatar>{message.user[0].toUpperCase()}</Avatar>
+                      }
+                      title={message.user + ":"}
+                      description={message.msg}
+                    />
+                  </Card>
+                )}
+              </div>
+              <div className="bottom">
+                <Search
+                  placeholder="input message and send"
+                  enterButton="Send"
+                  value={this.state.searchVal}
+                  size="large"
+                  onChange={(e) => this.setState({ searchVal: e.target.value })}
+                  onSearch={value => this.onButtonClicked(value)}
                 />
-              </Card>
-            )}
-          </div>
-          <div className="bottom">
-            <Search
-              placeholder="input message and send"
-              enterButton="Send"
-              value={this.state.searchVal}
-              size="large"
-              onChange={(e) => this.setState({ searchVal: e.target.value })}
-              onSearch={value => this.onButtonClicked(value)}
-            />
-          </div>
+              </div>
+            </div>
+            :
+            <div className="search-box">
+              <Search
+                placeholder="Enter Username"
+                enterButton="Login"
+                size="large"
+                onSearch={value => this.setState({ isLoggedIn: true, userName: value })}
+              />
+            </div>
+          }
         </div>
-        :
-        <div style={{ padding: '200px 40px' }}>
-          <Search
-            placeholder="Enter Username"
-            enterButton="Login"
-            size="large"
-            onSearch={value => this.setState({ isLoggedIn: true, userName: value })}
-          />
-        </div>
-      }
-    </div>
-    </div>
-  )
+      </div>
+    )
   }
 }
 export default MessageChat;

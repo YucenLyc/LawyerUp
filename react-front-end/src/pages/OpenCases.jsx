@@ -19,10 +19,6 @@ function OpenCases(props) {
       setModalOpen(false);
   }
 
-  const [name, setName] = useState('lawyer name');
-  const [specialization, setSpecialization] = useState('lawyer specialization');
-  const [summary, setSummary] = useState('Skilled Attorney in good standing with 3+ years of experience conducting thorough legal research and defending clients in medical malpractice and premises liability trials. ');
-
   return (
    
     <div className="clientOpenCasePage">

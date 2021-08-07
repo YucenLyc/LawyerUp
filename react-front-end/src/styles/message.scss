@@ -1,0 +1,42 @@
+// body {
+//   background-color: #bae7ff;
+// }
+.main-container {
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+}
+.card {
+  height: 80px;
+  width: 100px;
+  margin: 16px 4px 0px 4px;
+  background: lightblue;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+}
+
+.message-text{
+  display: flex;
+  flex-Direction: column;
+  padding-Bottom: 50;
+}
+.title {
+  text-align: center;
+  width: 100%;
+  padding: 2%;
+  background-color: #91d5ff;
+  color: #efefef;
+}
+
+.bottom {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
