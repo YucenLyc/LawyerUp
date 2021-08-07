@@ -29,7 +29,7 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMenu}>
-              My Case History
+              Closed Cases
             </Link>
           </li>
         </ul>
