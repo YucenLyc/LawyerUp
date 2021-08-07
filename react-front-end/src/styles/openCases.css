@@ -1,0 +1,16 @@
+.clientOpenCasePage {
+  height:500px;
+}
+.clientOpenCase {
+  padding-top: 2em;
+  padding-left: 3em;
+  height: 80%;
+}
+.clientCaseDescription {
+  width: 60%;
+  height: 50%;
+}
+.clientCaseDescription > textarea {
+  height: 100%;
+  width: 100%;
+}
