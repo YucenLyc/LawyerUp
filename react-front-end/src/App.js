@@ -77,6 +77,8 @@ class App extends Component {
             <Route exact path="/summaryBox" component={summaryBox} />
             <Route exact path="/lawyerProfilePage" component={LawyerProfilePage} />
             <Route exact path="/lawyerhomepage/:lawType" component={LawyerHomePage} />
+            <Route exact path="/lawyerprofilepage/:lawyer_id" component={LawyerProfilePage} />
+
             <Route component={NotFoundPage} />
             <Redirect to="/404" />
           </Switch>
