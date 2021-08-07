@@ -27,7 +27,8 @@ export default function CaseItem(props) {
         <section className="case-id">
           <h5>Case ID: {props.id}</h5>
           <section className="case-date">
-            <h6>date: {props.date}</h6>
+            <h6>date: {new Date(props.date).toDateString()}</h6>
+            {/* <h6>date: {props.date.substr(0,10)}</h6> */}
           </section>
         </section>
         <section className="case-body">

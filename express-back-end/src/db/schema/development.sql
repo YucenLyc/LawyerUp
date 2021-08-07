@@ -184,8 +184,8 @@ VALUES
 (3, 7, 'I want to sue my previous employer', '2020-09-18', 'I would like to look into suing my previous employer. I worked for him for more than a year and he has a bad temper. I was facing verbal abuse almost every week since my sixth month there. He asked me questions like: Are you really that dumb? I have recording of him saying those kind of things to me. I would like to get some legal advice on pressing charges against him. Please contact me.'),
 (8, 4, 'looking for a civil right lawyer', '2020-06-28', 'I found out I was paid less than my colleague who has the same job postition, need some professional advice as to how to handle this injustice!!'),
 (2, 9, 'need helping bailing out my son', '2021-03-18', 'My son was been charged of theft, and this is his third offence. The judge has set the bail amount so high, I will not be able to pay. Need help quick! My son will not survive long in a holding cell.'),
-(2, 5, 'paperwork for my will', '2021-09-08', 'Rich and old, drafting my will, help needed to make it legitimate. My secretary will be in contact with you first if you are interested for the job.'),
-(6, 3, 'want a consultation on my immigration status', '2021-10-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx');
+(2, 5, 'paperwork for my will', '2020-09-08', 'Rich and old, drafting my will, help needed to make it legitimate. My secretary will be in contact with you first if you are interested for the job.'),
+(6, 3, 'want a consultation on my immigration status', '2020-10-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx');
 
 INSERT INTO case_speciality (case_id, speciality_id)
 VALUES
