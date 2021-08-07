@@ -14,8 +14,8 @@ export default function CaseItem(props) {
         {isOpen && <CasePopup
           content={<>
             <b>Here's a Single Case Popup</b>
-            <h5>Case Id:</h5>
-            <h5>Date the Case is Created on the app:</h5>
+            <h5>Case Id: {props.id}</h5>
+            <h5>Date the Case is Created on the app: {new Date(props.date).toDateString()}</h5>
             <h5>Case Description: </h5>
             <p>{props.description}</p>
             {!(props.type === "client") &&

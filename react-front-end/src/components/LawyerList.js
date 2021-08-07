@@ -28,7 +28,7 @@ export default function LawyerList(props){
   //   {name: "Jane", specialization: "Criminal Law", rating: 5, review : "Jane is good."},
   //   {name: "Donkey", specialization: "Any Law", rating: 1, review : "Donkey is terrible."}
   // ]
-
+  console.log('lawyers: ', lawyers);
   let filtered;
 
   const findBySpeciality = (field) => {
