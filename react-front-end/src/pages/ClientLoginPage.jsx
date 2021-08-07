@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { authContext } from '../providers/AuthProvider';
 import Header from './Header';
-import axios from "axios";
+import { useHistory } from 'react-router-dom';
+
 
 const ClientLoginPage = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +10,7 @@ const ClientLoginPage = () => {
   const { login } = useContext(authContext);
   const [user, setUser] = useState("");
 
+  const history = useHistory();
 
   // const onEmailChange = function (event) {
   //   setEmail(event.target.value);
@@ -20,21 +22,25 @@ const ClientLoginPage = () => {
 
   const onSubmit = function (event) {
     event.preventDefault();
-    if (email)
-      login(email, password);
+    if (email === "Egg Eggerson") {
+      history.push('/clientHomePage');
+    }
+    
+      // login(email, password);
+      
   };
 
-  const verifyClient = (email, password) => {
-    const url = "http://localhost:8000/clienthomepage";
+  // const verifyClient = (email, password) => {
+  //   const url = "http://localhost:8000/clienthomepage";
 
-    axios.get(url).then((res) => {
-      if (user.email === email && user.password === password) {
-        sessionStorage.setItem("token", user.id);
-        sessionStorage.setItem("firstName", user.first_name);
-        sessionStorage.setItem("lastName", user.last_name);
-      }
-    })
-  }
+  //   axios.get(url).then((res) => {
+  //     if (user.email === email && user.password === password) {
+  //       sessionStorage.setItem("token", user.id);
+  //       sessionStorage.setItem("firstName", user.first_name);
+  //       sessionStorage.setItem("lastName", user.last_name);
+  //     }
+  //   })
+  // }
 
   return (
     <div>
@@ -55,7 +61,7 @@ const ClientLoginPage = () => {
           <input onClick={() => setUser(email)} type="submit" name="commit" value="Login" />
         </p>
       </form>
-        {user === false? <section verifyClient={verifyClient} /> : <div> </div>}
+        {/* {user === false? <section verifyClient={verifyClient} /> : <div> </div>} */}
     </div>
     </div>
   );
