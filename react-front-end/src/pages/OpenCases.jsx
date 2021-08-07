@@ -17,34 +17,6 @@ function OpenCases(props) {
     setIsOpen(!isOpen);
   }
 
-  // return (
-   
-  //   <div>
-  //     <Header />
-  //     <div class="caseInfo">
-  //       <label for="caseId">Case ID: </label>
-  //     </div>
-  //     <div>
-  //       <label for="caseDate">Case Date:</label>
-  //     </div>
-  //     <label for="caseId">Lawyer: </label>
-  //     <p class="lawyerInfo" >Ham Hammerson</p>&ensp;
-  //     <br></br>
-  //     <Form  onClick={togglePopup}>
-  //         {isOpen && <Card
-  //         content={<>{lawyerProfileCard}
-  //       </>}
-  //   />}  
-  //     <Form.Group as="textarea"  rows="15" className="clientCaseDescription">
-  //       {fakeClientCase.case_description}
-  //     </Form.Group>
-  //     </Form>
-      
-   
-  //   </div>
-   
-  // );
-
   return (
    
     <div>
