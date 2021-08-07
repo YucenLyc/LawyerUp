@@ -20,10 +20,9 @@ import LawyerHome from './pages/LawyerHome';
 import ClientHome from './pages/ClientHome';
 import LawyerLoginPage from './pages/LawyerLoginPage';
 import ClientLoginPage from './pages/ClientLoginPage';
-
 import LawyerHomePage from './components/LawyerHomePage';
-import OpenCases from './pages/OpenCases';
-import ClosedCases from './pages/ClosedCases';
+import ClosedCase from './pages/ClosedCase';
+//import ClosedCases from './pages/ClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
 import ProfileImg from './components/ProfileImg';
@@ -59,8 +58,7 @@ class App extends Component {
             <Route exact path="/clientLoginPage" component={ClientLoginPage} />
             <Route exact path="/clientHomePage" component={ClientHomePage} />
             <Route exact path="/lawyerHomePage" component={LawyerHomePage} />
-            <Route exact path="/openCases" component={OpenCases} />
-            <Route exact path="/closedCases" component={ClosedCases} />
+            <Route exact path="/closedCase" component={ClosedCase} />
             <Route exact path="/addNewCase" component={AddNewCase} />
             <Route exact path="/cases" component={CaseItem} />
             <Route exact path="/profileimg" component={ProfileImg} />
