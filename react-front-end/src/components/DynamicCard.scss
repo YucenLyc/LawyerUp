@@ -1,0 +1,65 @@
+.Card {
+	width: 300px;
+	height: 420px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 1px 1px 10px 1px rgb(0, 77, 128);
+}
+.upper-container {
+	height: 100px;
+	background: linear-gradient(to left, blue, rgb(0, 153, 255));
+}
+.image-container {
+	img {
+		background: linen;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		padding: 5px;
+		transform: translate(95px, 45px);
+	}
+}
+img {
+	border: 2px solid rgb(182, 10, 153);
+}
+.lower-container {
+	margin-top: 40px;
+	height: 150px;
+	background: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	h4 {
+		margin: 0;
+		padding: 0;
+		color: rgb(0, 77, 128);
+		font-weight: 600;
+		font-size: 1.2rem;
+	}
+	p {
+		margin: 1rem;
+		font-weight: 300;
+		font-family: monospace;
+		color: black;
+		font-size: 0.9rem;
+		text-align: center;
+	}
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+button.visitProfileBtn {
+	margin: 1rem;
+	margin-top: 0;
+	color: rgb(182, 10, 153);
+	font: bold;
+	background-color: white;
+	border: 2px solid plum;
+	padding: 0.6rem;
+	border-radius: 6px;
+	transition-duration: 0.5s;
+	animation: ease-in-out;
+	&:hover {
+		background-image: linear-gradient(to left, blue, rgb(0, 153, 255));
+	}
+}

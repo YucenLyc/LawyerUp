@@ -14,23 +14,26 @@ export default function CaseItem(props) {
         {isOpen && <CasePopup
           content={<>
             <b>Here's a Single Case Popup</b>
-            <h5>Case Id:</h5>
-            <h5>Date the Case is Created on the app:</h5>
+            <h5>Case Id: {props.id}</h5>
+            <h5>Date the Case is Created on the app: {new Date(props.date).toDateString()}</h5>
             <h5>Case Description: </h5>
             <p>{props.description}</p>
-            <button className="messageClientBtn">Message Client User</button>
+            {!(props.type === "client") &&
+              <button className="messageClientBtn">Message Client User</button>
+            }
           </>}
           handleClose={togglePopup}
         />}
         <section className="case-id">
           <h5>Case ID: {props.id}</h5>
           <section className="case-date">
-            <h6>date: {props.date}</h6>
+            <h6>date: {new Date(props.date).toDateString()}</h6>
+            {/* <h6>date: {props.date.substr(0,10)}</h6> */}
           </section>
         </section>
         <section className="case-body">
           <section className="client-name">
-            <div>Client: Egg Eggerson</div>
+            <div>Client: {props.client}</div>
           </section>
           <section className="case-name">
             <span>{props.name}</span>

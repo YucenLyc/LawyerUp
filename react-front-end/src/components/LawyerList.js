@@ -1,7 +1,6 @@
 // import { faJournalWhills } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 
-
 import LawyerListItem from "./LawyerListItem";
 import "./LawyerList.scss";
 
@@ -13,6 +12,7 @@ export default function LawyerList(props){
   const location = props.location == "Choose One" ? null : props.location;
   const rate = props.rate == "Choose One" ? null : props.rate;
   const year = props.year == "Choose One" ? null : props.year;
+
   // const [lawyers, setLawyers] = useState({});
   useEffect(() => {
     axios.get("/api/lawyers").then(response => {
@@ -28,7 +28,7 @@ export default function LawyerList(props){
   //   {name: "Jane", specialization: "Criminal Law", rating: 5, review : "Jane is good."},
   //   {name: "Donkey", specialization: "Any Law", rating: 1, review : "Donkey is terrible."}
   // ]
-
+  console.log('lawyers: ', lawyers);
   let filtered;
 
   const findBySpeciality = (field) => {
@@ -89,13 +89,14 @@ export default function LawyerList(props){
 
   const LawyersListItem = filtered.map((lawyer) => {
     return <LawyerListItem 
+      id={lawyer.id}
       name={lawyer.name}
       specialization={lawyer.speciality}
       location={lawyer.city}
       rating={lawyer.rate}
       experience={lawyer.years_of_experience}
       review={lawyer.review}
-      onClick={props.onClick}
+      profile={lawyer.profile}
     />
   });
   
