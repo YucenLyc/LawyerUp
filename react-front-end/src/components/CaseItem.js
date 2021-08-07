@@ -18,7 +18,9 @@ export default function CaseItem(props) {
             <h5>Date the Case is Created on the app:</h5>
             <h5>Case Description: </h5>
             <p>{props.description}</p>
-            <button className="messageClientBtn">Message Client User</button>
+            {!(props.type === "client") &&
+              <button className="messageClientBtn">Message Client User</button>
+            }
           </>}
           handleClose={togglePopup}
         />}

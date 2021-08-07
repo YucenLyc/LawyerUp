@@ -9,6 +9,8 @@ export default function AllCaseList(props) {
   const [cases, setCases] = useState([])
   const [filtered, setFiltered] = useState([])
   const lawType = props.lawType;
+  const type = props.type;
+  // console.log(type);
   
   useEffect(() => {
     axios.get("/api/cases").then(response => {
@@ -47,6 +49,7 @@ export default function AllCaseList(props) {
       date={singleCase.date}
       description={singleCase.description}
       onClick={props.onClick}
+      type={type}
    />
   });
 

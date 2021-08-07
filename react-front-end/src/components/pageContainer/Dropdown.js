@@ -26,7 +26,7 @@ function Dropdown({ title, items, type, multiSelect = false }) {
           <ul className="dd-list">
             {items.map(item => (
               <li className="dd-list-item" key={item.id}>
-                <Link to={type === "client" ? `/clientlawyerlistview/${item.name.split(' ').join('-')}` : `/lawyerhomepage/${item.name.split(' ').join('-')}`}>
+                <Link to={type === "client" ? `/clientlawyerlistview/${item.name.split(' ').join('-')}` : `/lawyerhomepage/${item.name.split(' ').join('-')}`} onClick={() => toggle(!open)}>
                   <button>
                     <span>{item.name}</span>
                   </button>
