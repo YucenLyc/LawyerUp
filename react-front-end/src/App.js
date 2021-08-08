@@ -79,13 +79,14 @@ class App extends Component {
             <Route exact path="/lawyerProfilePage" component={LawyerProfilePage} />
             <Route exact path="/lawyerhomepage/:lawType" component={LawyerHomePage} />
             <Route exact path="/lawyerprofilepage/:lawyer_id" component={LawyerProfilePage} />
+            <Route exact path="/message" component={MessageChat} />
 
             <Route component={NotFoundPage} />
             <Redirect to="/404" />
           </Switch>
         </Router>
         
-        <MessageChat />
+      
       </div>
 
     );
