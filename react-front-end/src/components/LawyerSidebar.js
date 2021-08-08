@@ -18,7 +18,7 @@ export const LawyerSidebar = [
   },
   {
     title: 'Messages',
-    path: '/messages',
+    path: '/message',
     icon: <FaIcons.FaEnvelopeOpenText />,
     sName: 'nav-text'
   },

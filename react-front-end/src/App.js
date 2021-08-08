@@ -38,7 +38,7 @@ import definedLawField from './components/definedLawFieldBox';
 import AllDefinedLawlist from './components/AllDefinedLawList';
 import summaryBox from './components/summaryBox';
 import LawyerProfilePage from './pages/LawyerProfilePage';
-import MessageChat from './components/message';
+import MessageChatBox from './components/message';
 
 
 class App extends Component {
@@ -48,7 +48,7 @@ class App extends Component {
   render() {
     return (
 
-      <div>
+  
         <Router>
           <Switch>
             <Route exact path="/" component={LandingPage}/>
@@ -79,15 +79,14 @@ class App extends Component {
             <Route exact path="/lawyerProfilePage" component={LawyerProfilePage} />
             <Route exact path="/lawyerhomepage/:lawType" component={LawyerHomePage} />
             <Route exact path="/lawyerprofilepage/:lawyer_id" component={LawyerProfilePage} />
-            <Route exact path="/message" component={MessageChat} />
+            <Route exact path="/message" component={MessageChatBox} />
 
             <Route component={NotFoundPage} />
             <Redirect to="/404" />
           </Switch>
         </Router>
         
-      
-      </div>
+     
 
     );
   }
