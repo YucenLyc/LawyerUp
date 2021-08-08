@@ -43,6 +43,8 @@ import MessageChat from './components/message';
 
 class App extends Component {
 
+//create a set of react state in order to store logged in user info 
+//pass the appropriate info to messageChat 
   render() {
     return (
 

@@ -32,7 +32,8 @@ export default function LawyerHomePage() {
 
   return (
     <>
-    <Header /> 
+     <LawyerNavbar />
+  
     <div className="container">
     
       <h2 style={{ textAlign: 'center' }}>
@@ -41,7 +42,6 @@ export default function LawyerHomePage() {
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
       <AllCaseList lawType={lawType} cases={cases}/>   
     </div>
-    <LawyerNavbar />
     </>
   );
 
