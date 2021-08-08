@@ -14,13 +14,13 @@ export default function SameLawyerCaseList(props) {
     });
   }, [])
 
+  console.log("cases:", cases)
 
   const SameLawyerCaseList = cases.map((SameLawyerSingleCase) => {
     return <CaseItem
       name={SameLawyerSingleCase.name}
       id={SameLawyerSingleCase.id}
-      // client={SameLawyerCaseList.client_name}
-      
+      client={SameLawyerSingleCase.client_name}
       date={SameLawyerSingleCase.date}
       description={SameLawyerSingleCase.description}
       onClick={props.onClick}

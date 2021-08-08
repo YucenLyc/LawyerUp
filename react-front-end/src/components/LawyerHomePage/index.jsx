@@ -3,13 +3,17 @@ import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 import AllCaseList from '../AllCaseList';
-import Header from '../../pages/Header';
+//import Header from '../../pages/Header';
 import { useParams } from "react-router-dom";
 
 
 const axios = require('axios');
 
-export default function LawyerHomePage() {
+export default function LawyerHomePage(props) {
+
+  const {test} = props;
+  
+
   const { lawType } = useParams();
   const [cases, setCases] = useState([])
 
@@ -33,9 +37,9 @@ export default function LawyerHomePage() {
   return (
     <>
      <LawyerNavbar />
-  
-    <div className="container">
     
+    <div className="container">
+      <button onClick={test}>TEST</button>
       <h2 style={{ textAlign: 'center' }}>
         Lawyer Ham Hammerson Homepage {' '}
       </h2>

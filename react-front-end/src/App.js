@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.scss';
+import Approute from './AppRoute';
 
 import {
   BrowserRouter as Router,
@@ -42,50 +43,65 @@ import MessageChatBox from './components/message';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isChatBoxVisible: false};
+    this.toggleChatBoxVisible = this.toggleChatBoxVisible.bind(this);
+    this.test = this.test.bind(this);
+  }
+  
 
-//create a set of react state in order to store logged in user info 
-//pass the appropriate info to messageChat 
+  toggleChatBoxVisible = () => {
+    this.setState({ isChatBoxVisible: !this.state.isChatBoxVisible })
+  }
+  
+  test = () => {
+    alert("This is the Alert!!");
+  }
+  
+  
   render() {
     return (
 
-  
+        <div>
         <Router>
           <Switch>
-            <Route exact path="/" component={LandingPage}/>
-            <Route exact path="/clientRegister" component={clientRegister} />
-            <Route exact path="/lawyerRegister" component={lawyerRegister} />
-            <Route exact path="/lawyerHome" component={LawyerHome} />
-            <Route exact path="/clientHome" component={ClientHome} />
-            <Route exact path="/lawyerLoginPage" component={LawyerLoginPage} />
-            <Route exact path="/clientLoginPage" component={ClientLoginPage} />
-            <Route exact path="/clientHomePage" component={ClientHomePage} />
-            <Route exact path="/lawyerHomePage" component={LawyerHomePage} />
-            <Route exact path="/closedCases/:case_id" component={ClosedCase} />
-            <Route exact path="/closedCases" component={ClosedCases} />
-            <Route exact path="/addNewCase" component={AddNewCase} />
-            <Route exact path="/cases" component={CaseItem} />
-            <Route exact path="/profileimg" component={ProfileImg} />
-            <Route exact path="/lawyerProfileCard" component={lawyerProfileCard}/>
-            <Route exact path="/LawyerList" component={LawyerList} />
-            <Route exact path="/LawyerListItem" component={LawyerListItem} />
-            <Route exact path="/AssignCase" component={AssignCase} />
-            <Route exact path="/AllCaseList" component={AllCaseList} />
-            <Route exact path="/Review" component={Review} />
-            <Route exact path="/SameLawyerCaseList" component={SameLawyerCaseList} />
-            <Route exact path="/ClientLawyerListView/:lawType" component={ClientLawyerListView} />
-            <Route exact path="/definedLawField" component={definedLawField} />
-            <Route exact path="/AllDefinedLawlist" component={AllDefinedLawlist} />
-            <Route exact path="/summaryBox" component={summaryBox} />
-            <Route exact path="/lawyerProfilePage" component={LawyerProfilePage} />
-            <Route exact path="/lawyerhomepage/:lawType" component={LawyerHomePage} />
-            <Route exact path="/lawyerprofilepage/:lawyer_id" component={LawyerProfilePage} />
-            <Route exact path="/message" component={MessageChatBox} />
+            <Approute exact path="/" component={LandingPage}/>
+            <Approute exact path="/clientRegister" component={clientRegister} />
+            <Approute exact path="/lawyerRegister" component={lawyerRegister} />
+            <Approute exact path="/lawyerHome" component={LawyerHome} test={this.test} />
+            <Approute exact path="/clientHome" component={ClientHome} />
+            <Approute exact path="/lawyerLoginPage" component={LawyerLoginPage} />
+            <Approute exact path="/clientLoginPage" component={ClientLoginPage} />
+            <Approute exact path="/clientHomePage" component={ClientHomePage} />
+            <Approute exact path="/lawyerHomePage" component={LawyerHomePage} test={this.test}/>
+            <Approute exact path="/closedCases/:case_id" component={ClosedCase} />
+            <Approute exact path="/closedCases" component={ClosedCases} />
+            <Approute exact path="/addNewCase" component={AddNewCase} />
+            <Approute exact path="/cases" component={CaseItem} />
+            <Approute exact path="/profileimg" component={ProfileImg} />
+            <Approute exact path="/lawyerProfileCard" component={lawyerProfileCard}/>
+            <Approute exact path="/LawyerList" component={LawyerList} />
+            <Approute exact path="/LawyerListItem" component={LawyerListItem} />
+            <Approute exact path="/AssignCase" component={AssignCase} />
+            <Approute exact path="/AllCaseList" component={AllCaseList} />
+            <Approute exact path="/Review" component={Review} />
+            <Approute exact path="/SameLawyerCaseList" component={SameLawyerCaseList} />
+            <Approute exact path="/ClientLawyerListView/:lawType" component={ClientLawyerListView} />
+            <Approute exact path="/definedLawField" component={definedLawField} />
+            <Approute exact path="/AllDefinedLawlist" component={AllDefinedLawlist} />
+            <Approute exact path="/summaryBox" component={summaryBox} />
+            <Approute exact path="/lawyerProfilePage" component={LawyerProfilePage} />
+            <Approute exact path="/lawyerhomepage/:lawType" component={LawyerHomePage} />
+            <Approute exact path="/lawyerprofilepage/:lawyer_id" component={LawyerProfilePage} />
+            {/* <Route exact path="/message" component={MessageChatBox} /> */}
 
-            <Route component={NotFoundPage} />
+            <Approute component={NotFoundPage} />
             <Redirect to="/404" />
           </Switch>
         </Router>
-        
+        <MessageChatBox />
+        </div>
      
 
     );
