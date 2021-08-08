@@ -19,6 +19,8 @@ export default function SameLawyerCaseList(props) {
     return <CaseItem
       name={SameLawyerSingleCase.name}
       id={SameLawyerSingleCase.id}
+      // client={SameLawyerCaseList.client_name}
+      
       date={SameLawyerSingleCase.date}
       description={SameLawyerSingleCase.description}
       onClick={props.onClick}
