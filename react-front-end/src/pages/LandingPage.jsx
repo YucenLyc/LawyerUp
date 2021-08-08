@@ -29,21 +29,25 @@ const LandingPage = ({ history }) => {
       <div className="landing-body">
         <div className="user-options">
           <div className="user-type">
-            <button type="button" class="btn btn-primary btn-lg" onClick={() => history.push('/lawyerHome')}>Lawyer</button>
-            <button type="button" class="btn btn-primary btn-lg" onClick={() => history.push('/clientHome')}>Client</button>
+            <button type="button" class="btn btn-primary btn-lg" >Lawyer</button>
+            <button type="button" class="btn btn-primary btn-lg" >Client</button>
           </div>
         </div>    
         <div className="form-body">
           <form className="login-form" onSubmit={onSubmit}>
-            <div>
-              <input type="text" name="login"
-                value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Username"
-                  />
-            </div>
-            <div>
-              <input type="password" name="password"
-                value={password} placeholder="Password"
-                onChange={onPasswordChange} />
+            <div className="user-input">
+              <div className="userpass">
+                <div>Username:</div>
+                <input type="text" name="login"
+                  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Username"
+                    />
+              </div>
+              <div className="userpass">
+                <div>Password:</div>
+                <input type="password" name="password"
+                  value={password} placeholder="Password"
+                  onChange={onPasswordChange} />
+              </div>
             </div>
             <div className="buttons">
               <div className="submit">
