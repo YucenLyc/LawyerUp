@@ -22,7 +22,7 @@ import LawyerLoginPage from './pages/LawyerLoginPage';
 import ClientLoginPage from './pages/ClientLoginPage';
 import LawyerHomePage from './components/LawyerHomePage';
 import ClosedCase from './pages/ClosedCase';
-//import ClosedCases from './pages/ClosedCases';
+import ClosedCases from './components/AllClosedCases';
 import AddNewCase from './pages/AddNewCase';
 import CaseItem from './components/CaseItem';
 import ProfileImg from './components/ProfileImg';
@@ -59,6 +59,7 @@ class App extends Component {
             <Route exact path="/clientHomePage" component={ClientHomePage} />
             <Route exact path="/lawyerHomePage" component={LawyerHomePage} />
             <Route exact path="/closedCase" component={ClosedCase} />
+            <Route exact path="/closedCases" component={ClosedCases} />
             <Route exact path="/addNewCase" component={AddNewCase} />
             <Route exact path="/cases" component={CaseItem} />
             <Route exact path="/profileimg" component={ProfileImg} />

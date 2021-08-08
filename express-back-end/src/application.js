@@ -14,6 +14,8 @@ const users = require("./routes/users");
 const lawyers = require("./routes/lawyers");
 const clients = require("./routes/clients");
 const cases = require("./routes/cases");
+const closedcases = require("./routes/closedcases");
+const opencases = require("./routes/opencases");
 const casesForSameLawyer = require("./routes/casesForSameLawyer");
 const specialities = require("./routes/specialized");
 const reviews = require("./routes/reviews")
@@ -46,6 +48,8 @@ module.exports = function application(ENV) {
   app.use("/api", casesForSameLawyer(db));
   app.use("/api", specialities(db));
   app.use("/api", reviews(db));
+  app.use("/api", closedcases(db));
+  app.use("/api", opencases(db));
 
   
   app.use('/api/data', (req, res) => res.json({

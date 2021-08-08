@@ -2,25 +2,16 @@ import React, {useState, useEffect} from 'react';
 import CaseItem from './CaseItem';
 import "./AllCaseList.scss";
 
-
-const axios = require('axios');
-
 export default function AllCaseList(props) {
-  const [cases, setCases] = useState([])
-  const [filtered, setFiltered] = useState([])
   const lawType = props.lawType;
   const type = props.type;
-  // console.log(type);
-  
-  useEffect(() => {
-    axios.get("/api/cases").then(response => {
-      setCases(response.data);
-      setFiltered(response.data);
-      console.log('cases:', cases);
-    });
-  }, [])
+  const cases = props.cases;
+
 
   console.log('cases:', cases);
+
+  let filtered = cases;
+  // console.log('filtered: ', filtered);
 
   const findCaseBySpeciality = (field) => {
     let result = [];
@@ -32,14 +23,14 @@ export default function AllCaseList(props) {
     return result;
   }
 
-  useEffect(() => {
-    if (lawType) {
-      setFiltered(findCaseBySpeciality(lawType.split('-').join(' ')));
-    }
-  }, [lawType]);
 
-  console.log('lawType', props.lawType);
-  console.log('filtered cases:', cases);
+  if (lawType) {
+    filtered = findCaseBySpeciality(lawType.split('-').join(' '));
+  }
+  // console.log('filtered: ', filtered);
+  // console.log('cases: ', cases);
+  // console.log('lawType', props.lawType);
+
 
   const CaseItemList = filtered.map((singleCase) => {
     return <CaseItem

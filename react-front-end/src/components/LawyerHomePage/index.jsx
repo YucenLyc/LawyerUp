@@ -7,42 +7,11 @@ import Header from '../../pages/Header';
 import { useParams } from "react-router-dom";
 
 
-
-const items = [
-  {
-    id: 1,
-    value: 'Business Law',
-  },
-  {
-    id: 2,
-    value: 'Bankruptcy Law',
-  },
-  {
-    id: 3,
-    value: 'Civil Litigation',
-  },
-  {
-    id: 4,
-    value: 'Criminal Defence',
-  },
-  {
-    id: 5,
-    value: 'Family Law',
-  },
-  {
-    id: 6,
-    value: 'Personal Injury Law',
-  },
-  {
-    id: 7,
-    value: 'Real Estate Law',
-  }
-];
-
 const axios = require('axios');
 
 export default function LawyerHomePage() {
   const { lawType } = useParams();
+  const [cases, setCases] = useState([])
 
   const [specialities, setSpecialities] = useState([]);
   useEffect(() => {
@@ -51,6 +20,15 @@ export default function LawyerHomePage() {
       console.log('specialities:', specialities);
     });
   }, [])
+
+  useEffect(() => {
+    axios.get("/api/opencases").then(response => {
+      setCases(response.data);
+      console.log('cases:', cases);
+    });
+  }, [])
+
+  console.log('cases:', cases);
 
   return (
     <>
@@ -61,7 +39,7 @@ export default function LawyerHomePage() {
         Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
-      <AllCaseList lawType={lawType}/>   
+      <AllCaseList lawType={lawType} cases={cases}/>   
     </div>
     <LawyerNavbar />
     </>
