@@ -37,7 +37,7 @@ export default function ClientHomePage() {
         Egg Eggerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} type="client"/>
-      <AllCaseList type="client" cases={cases}/>
+      <AllCaseList cases={cases}/>
     </div> 
     </>
   );

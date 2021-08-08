@@ -40,7 +40,7 @@ export default function LawyerHomePage() {
         Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
-      <AllCaseList lawType={lawType} cases={cases}/>   
+      <AllCaseList type="lawyer" lawType={lawType} cases={cases}/>   
     </div>
     </>
   );

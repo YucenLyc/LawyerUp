@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import CasePopup from './CasePopUp/CasePopup';
 import "./CaseItem.scss";
 
 export default function CaseItem(props) {
   const [isOpen, setIsOpen] = useState(false);
+  const history = useHistory();
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -18,8 +20,11 @@ export default function CaseItem(props) {
             <h5>Date the Case is Created on the app: {new Date(props.date).toDateString()}</h5>
             <h5>Case Description: </h5>
             <p>{props.description}</p>
-            {!(props.type === "client") &&
+            {(props.type === "lawyer") &&
               <button className="messageClientBtn">Message Client User</button>
+            }
+            {(props.type === "closed") &&
+              <button className="caseDetailsBtn" onClick={() => history.push(`/closedcases/${props.id}`)}>Case Details</button>
             }
           </>}
           handleClose={togglePopup}

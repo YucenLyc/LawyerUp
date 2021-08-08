@@ -21,14 +21,14 @@ export default function ClosedCases() {
   
   return (
     <>
-    <Header/>
+    <Navbar />
+    {/* <Header/> */}
     <div className="container">
       <h2 style={{ textAlign: 'center' }}>
         Closed Cases Page
       </h2>
       {/* <Dropdown title="Select A Category of Law" items={specialities} type="client"/> */}
-      <AllCaseList type="client" cases={cases}/>
-      <Navbar />
+      <AllCaseList type="closed" cases={cases}/>
     </div> 
     </>
   );
