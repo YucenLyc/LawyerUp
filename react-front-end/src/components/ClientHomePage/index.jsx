@@ -28,6 +28,11 @@ export default function ClientHomePage() {
   }, [])
 
   console.log('cases:', cases);
+
+  console.log('user id: ', sessionStorage.token);
+  console.log('user name: ', sessionStorage.name);
+  console.log('user email: ', sessionStorage.email);
+ 
   
   return (
     <>

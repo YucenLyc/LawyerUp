@@ -1,19 +1,20 @@
 import React, { useState, useContext } from 'react';
-import { authContext } from '../providers/AuthProvider';
+// import { authContext } from '../providers/AuthProvider';
 import Header from './Header';
 import './LandingPage.scss';
 import { useHistory } from 'react-router-dom';
+import axios from "axios";
 
-const LandingPage = ({ history }) => {
+export default function LandingPage () {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useContext(authContext);
+  // const { login } = useContext(authContext);
   const [user, setUser] = useState("");
-  // const history = useHistory();
+  const history = useHistory();
 
-  const onPasswordChange = function (event) {
-    setPassword(event.target.value);
-  };
+  // const onPasswordChange = function (event) {
+  //   setPassword(event.target.value);
+  // };
 
   const onSubmit = function (event) {
     event.preventDefault();
@@ -21,6 +22,22 @@ const LandingPage = ({ history }) => {
       history.push('/clientHomePage');
     }
   };
+
+  const login = (email, password) => {
+    const url = "http://localhost:8001/api/users";
+    axios.get(url).then((res) => {
+      console.log(res.data);
+      res.data.forEach((user) => {
+        if (user.email === email && user.password === password) {
+          console.log('name', user.name);
+          sessionStorage.setItem("token", user.id);
+          sessionStorage.setItem("name", user.name);
+          sessionStorage.setItem("email", user.email);
+          history.push("/clienthomepage")
+        }
+      });
+    });
+  }
 
 
   return(
@@ -39,19 +56,19 @@ const LandingPage = ({ history }) => {
               <div className="userpass">
                 <div>Username:</div>
                 <input type="text" name="login"
-                  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Username"
+                  value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email address"
                     />
               </div>
               <div className="userpass">
                 <div>Password:</div>
                 <input type="password" name="password"
                   value={password} placeholder="Password"
-                  onChange={onPasswordChange} />
+                  onChange={(event) => setPassword(event.target.value)} />
               </div>
             </div>
             <div className="buttons">
               <div className="submit">
-                <input onClick={() => setUser(email)} type="submit" name="commit" value="Login" />
+                <input onClick={() => login (email, password)} type="submit" name="commit" value="Login" />
               </div>
               <div className="sign-up">
                 <input onClick={() => setUser(email)} type="submit" name="commit" value="Sign Up" />
@@ -63,6 +80,4 @@ const LandingPage = ({ history }) => {
       </div>
     </> 
   );
-}
-
-export default LandingPage;
+};
