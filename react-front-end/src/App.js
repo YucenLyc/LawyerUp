@@ -60,7 +60,7 @@ class App extends Component {
             <Route exact path="/clientLoginPage" component={ClientLoginPage} />
             <Route exact path="/clientHomePage" component={ClientHomePage} />
             <Route exact path="/lawyerHomePage" component={LawyerHomePage} />
-            <Route exact path="/closedCase" component={ClosedCase} />
+            <Route exact path="/closedCases/:case_id" component={ClosedCase} />
             <Route exact path="/closedCases" component={ClosedCases} />
             <Route exact path="/addNewCase" component={AddNewCase} />
             <Route exact path="/cases" component={CaseItem} />
