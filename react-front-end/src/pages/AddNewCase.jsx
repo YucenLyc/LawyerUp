@@ -21,6 +21,7 @@ const AddNewCase = () => {
     axios.post("/api/cases", {
       name,
       // date,
+      client_id: sessionStorage.token,
       lawyer_id: null,
       description,
       lawfield 

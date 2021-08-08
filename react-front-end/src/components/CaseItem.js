@@ -26,11 +26,17 @@ export default function CaseItem(props) {
             {(props.type === "closed") &&
               <button className="caseDetailsBtn" onClick={() => history.push(`/closedcases/${props.id}`)}>Case Details</button>
             }
+            {(sessionStorage.name === props.client) && !props.lawyer_id &&
+              <button className="asssignCase" onClick={() => history.push(`/assigncase`)}>Assign Case</button>
+            }
           </>}
           handleClose={togglePopup}
         />}
         <section className="case-id">
           <h5>Case ID: {props.id}</h5>
+          {(sessionStorage.name === props.client) &&
+              <div>Your Case</div>
+          }
           <section className="case-date">
             <h6>date: {new Date(props.date).toDateString()}</h6>
             {/* <h6>date: {props.date.substr(0,10)}</h6> */}

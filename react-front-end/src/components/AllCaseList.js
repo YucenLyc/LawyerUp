@@ -36,6 +36,7 @@ export default function AllCaseList(props) {
     return <CaseItem
       name={singleCase.name}
       id={singleCase.id}
+      lawyer_id={singleCase.lawyer_id}
       client={singleCase.client_name}
       date={singleCase.date}
       description={singleCase.description}

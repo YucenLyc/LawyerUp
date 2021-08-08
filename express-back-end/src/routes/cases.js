@@ -16,14 +16,14 @@ module.exports = db => {
   });
 
   router.post("/cases", (req, res) => {
-    const client_id = 3;
+    // const client_id = 3;
     console.log('coming here');
 
     db.query(`
       INSERT INTO cases (lawyer_id, client_id, name, date, description)
       VALUES ($1, $2, $3, $4, $5)
       RETURNING id;
-    `, [req.body.lawyer_id, client_id, req.body.name, new Date().toDateString(), req.body.description])
+    `, [req.body.lawyer_id, req.body.client_id, req.body.name, new Date().toDateString(), req.body.description])
     .then((result) => {
       // res.status(201).send('successful!');
       const id = result.rows[0].id;
