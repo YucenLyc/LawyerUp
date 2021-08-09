@@ -5,7 +5,6 @@ import Dropdown from '../pageContainer/Dropdown';
 import AllCaseList from '../AllCaseList';
 
 
-
 const axios = require('axios');
 
 export default function ClientHomePage() {
@@ -40,7 +39,7 @@ export default function ClientHomePage() {
       <h2 style={{ textAlign: 'center' }}>
         {sessionStorage.name} Homepage {' '}
       </h2>
-      <Dropdown title="Select A Category of Law" items={specialities} type="client"/>
+      <Dropdown title="select-cat" items={specialities} type="client"/>
       <AllCaseList cases={cases}/>
     </div> 
     </>

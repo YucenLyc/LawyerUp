@@ -5,7 +5,7 @@ VALUES
 ('Anderson Stokes', 'reichel_albina@stamm.info', 'password'),
 ('Eunice Morar', 'danielle.aufderhar@kilback.net', 'password'),
 ('Brian Jones', 'percy_ratke@cornelius.biz', 'password'),
-('Ham Hammerson', 'sawayn.sarina@yahoo.com', 'password'),
+('Ham Hammerson', 'hamandegg@yahoo.com', 'password'),
 ('Darien Luettgen', 'issac_collins@pink.io', 'password'),
 ('Irwin King', 'kody_pfannerstill@john.us', 'password'),
 ('Stan Miller', 'mcdermott.maxie@schoen.com', 'password'),
