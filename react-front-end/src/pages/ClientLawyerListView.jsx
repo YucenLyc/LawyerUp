@@ -44,15 +44,15 @@ const clientLawyerListView = () => {
           <DefinedLawFieldBox name={lawSpeciality.name} definition={lawSpeciality.definition}/>
         </div>
         <div className="dropdown-options">
-          <div>
-            <label className="years"><strong>Years_of_experience</strong></label>
+          <div className="dropdown years">
+            <label className="years"><strong>Experience</strong></label>
             <Years_of_experience selected={yearSelected} setSelected={setYearSelected} />
           </div>
-          <div>
+          <div className="dropdown locations">
             <label className="locations"><strong>Locations</strong></label>
             <Locations selected={lacationSelected} setSelected={setLoactionSelected} />
           </div>
-          <div>
+          <div className="dropdown rating">
             <label className="rating"><strong>Hourly Rate</strong></label>
             <Rating selected={rateSelected} setSelected={setRateSelected} />
           </div>
