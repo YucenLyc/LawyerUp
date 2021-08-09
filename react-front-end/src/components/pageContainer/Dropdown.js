@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 export default Dropdown; 
 
-function Dropdown({ title, items, type, multiSelect = false }) {
+function Dropdown({ title, items, type }) {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
 
