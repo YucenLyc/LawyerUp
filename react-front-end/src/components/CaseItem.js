@@ -33,10 +33,12 @@ export default function CaseItem(props) {
           handleClose={togglePopup}
         />}
         <section className="case-id">
-          <h5>Case ID: {props.id}</h5>
-          {(sessionStorage.name === props.client) &&
-              <div>Your Case</div>
-          }
+          <div className="case-header">
+            <h5>Case ID: {props.id}</h5>
+            {(sessionStorage.name === props.client) &&
+                <div className="your-case">Your Case</div>
+            }
+          </div>
           <section className="case-date">
             <h6>date: {new Date(props.date).toDateString()}</h6>
             {/* <h6>date: {props.date.substr(0,10)}</h6> */}

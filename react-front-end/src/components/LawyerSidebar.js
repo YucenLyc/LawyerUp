@@ -6,7 +6,7 @@ import * as IoIcons from 'react-icons/io';
 export const LawyerSidebar = [
   {
     title: 'Home',
-    path: '/',
+    path: '/lawyerhomepage',
     icon: <AiIcons.AiFillHome />,
     sName: 'nav-text'
   },

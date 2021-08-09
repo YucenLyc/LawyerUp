@@ -15,3 +15,16 @@
   border-top: solid 2px;
 
 }
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.your-case {
+  border: solid 3px;
+  border-color: lightcoral;
+  border-radius: 5px;
+  background-color: lightcyan;
+
+}

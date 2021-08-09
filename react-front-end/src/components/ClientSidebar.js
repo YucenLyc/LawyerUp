@@ -6,7 +6,7 @@ import * as IoIcons from 'react-icons/io';
 export const ClientSidebar = [
   {
     title: 'Home',
-    path: '/',
+    path: '/clienthomepage',
     icon: <AiIcons.AiFillHome />,
     sName: 'nav-text'
   },
