@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const locations = ({selected, setSelected}) => {
   const [isActive, setIsActive] = useState(false);
-  const options = ['Vancouver', 'Calgary', 'Edmonton', 'Toronto', 'Saskatoon', 'Victoria'];
+  const options = ['None', 'Vancouver', 'Calgary', 'Edmonton', 'Toronto', 'Saskatoon', 'Victoria'];
   return (
     <div className="dropdown">
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>

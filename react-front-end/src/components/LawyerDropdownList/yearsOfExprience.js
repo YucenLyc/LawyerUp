@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 const years_of_experience = ({selected, setSelected}) => {
   const [isActive, setIsActive] = useState(false);
-  const options = ['1 - 3', '4 - 5', '6 - 9', '10 - 15', '15+'];
+  const options = ['None', '1 - 3', '4 - 5', '6 - 9', '10 - 15', '15+'];
+
   return (
     <div className="dropdown">
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>

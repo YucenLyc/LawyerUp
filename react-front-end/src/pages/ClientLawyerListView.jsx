@@ -35,6 +35,7 @@ const clientLawyerListView = () => {
   const lawSpeciality = findSpecialityByLawType(lawType.split('-').join(' '));
   console.log(lawSpeciality);
 
+  
   return (
     <>
       <Header />
@@ -44,15 +45,15 @@ const clientLawyerListView = () => {
         </div>
         <div className="dropdown-options">
           <div>
-            <label className="years">Years_of_experience</label>
+            <label className="years"><strong>Years_of_experience</strong></label>
             <Years_of_experience selected={yearSelected} setSelected={setYearSelected} />
           </div>
           <div>
-            <label className="locations">Locations</label>
+            <label className="locations"><strong>Locations</strong></label>
             <Locations selected={lacationSelected} setSelected={setLoactionSelected} />
           </div>
           <div>
-            <label className="rating">Hourly Rate</label>
+            <label className="rating"><strong>Hourly Rate</strong></label>
             <Rating selected={rateSelected} setSelected={setRateSelected} />
           </div>
         </div>
