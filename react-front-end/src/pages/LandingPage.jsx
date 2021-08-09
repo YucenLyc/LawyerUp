@@ -10,6 +10,7 @@ export default function LandingPage () {
   const [password, setPassword] = useState("");
   // const { login } = useContext(authContext);
   const [user, setUser] = useState("");
+  const [selected, setSelected] = useState("");
   const history = useHistory();
 
   // const onPasswordChange = function (event) {
@@ -33,7 +34,11 @@ export default function LandingPage () {
           sessionStorage.setItem("token", user.id);
           sessionStorage.setItem("name", user.name);
           sessionStorage.setItem("email", user.email);
-          history.push("/clienthomepage")
+          if (selected === "Lawyer") {
+            history.push("/lawyerhomepage")
+          } else {
+            history.push("/clienthomepage")
+          }
         }
       });
     });
@@ -46,8 +51,8 @@ export default function LandingPage () {
       <div className="landing-body">
         <div className="user-options">
           <div className="user-type">
-            <button type="button" class="btn btn-primary btn-lg" >Lawyer</button>
-            <button type="button" class="btn btn-primary btn-lg" >Client</button>
+            <button type="button" onClick={() => setSelected('Lawyer')} className={selected === 'Lawyer' ? 'selected' : ''}>Lawyer</button>
+            <button type="button" onClick={() => setSelected('Client')} className={selected === 'Client' ? 'selected' : ''}>Client</button>
           </div>
         </div>    
         <div className="form-body">
