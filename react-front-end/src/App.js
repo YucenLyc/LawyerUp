@@ -86,6 +86,7 @@ class App extends Component {
             <Approute exact path="/AssignCase" component={AssignCase} />
             <Approute exact path="/AllCaseList" component={AllCaseList} />
             <Approute exact path="/Review" component={Review} />
+            <Approute exact path="/Review/:layerId" component={Review} />
             <Approute exact path="/SameLawyerCaseList" component={SameLawyerCaseList} />
             <Approute exact path="/ClientLawyerListView/:lawType" component={ClientLawyerListView} />
             <Approute exact path="/definedLawField" component={definedLawField} />
