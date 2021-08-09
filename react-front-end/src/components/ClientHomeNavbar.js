@@ -6,12 +6,12 @@ import {ClientSidebar} from './ClientSidebar';
 import '../styles/Navbar.scss';
 import { IconContext } from 'react-icons'
 
+
 function Navbar() {
 
   const [sidebar, setSidebar] = useState(false)
   
   const showSidebar = () => setSidebar(!sidebar)
-
   return (
     <>
     <IconContext.Provider value={{color:'#fff'}}> 
@@ -19,6 +19,7 @@ function Navbar() {
       <Link to="#" className='menu-bars'>
         <FaIcons.FaBars onClick={showSidebar} />
       </Link>
+      <img className='logo' src="/images/logo.png" alt="" />
     </div>
     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
       <ul className='nav-menu-items' onClick={showSidebar}>
