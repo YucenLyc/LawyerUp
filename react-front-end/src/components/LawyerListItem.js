@@ -19,6 +19,7 @@ export default function LawyerListItem(props) {
     // </li>
     <div onClick={togglePopup} >
       <li className="LawyerListItem" >
+
         <div className="lawyerlistitemheader">
           <h4>Lawyer Name: {props.name}</h4>
           <h6><b>{props.experience}</b> yrs</h6>
@@ -28,6 +29,7 @@ export default function LawyerListItem(props) {
           <h5>Location: {props.location}</h5>
           <h6><b>${props.rating}</b>/hr</h6>
         </div>
+
         <div>
         {isOpen && <ProfilePopUp 
         content={<>

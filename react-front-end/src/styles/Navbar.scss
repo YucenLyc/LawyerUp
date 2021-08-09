@@ -1,9 +1,10 @@
 .navbar {
-	background-color: blue;
+	background-color: #E9C46A;
 	height: 80px;
 	display: flex;
 	justify-content: start;
 	align-content: center;
+	opacity: 1;
 }
 .menu-bars {
 	margin-left: 2rem;
@@ -11,7 +12,7 @@
 	background: none;
 }
 .nav-menu {
-	background-color: #060b26;
+	background-color: #264653;
 	width: 250px;
 	height: 100vh;
 	display: flex;
@@ -40,7 +41,7 @@
 		height: 100%;
 		display: flex;
 		align-items: cneter;
-		padding: 0 16px;
+		padding: 25px 16px;
 		border-radius: 4px;
 		&:hover {
 			background-color: #1a83ff;
@@ -51,7 +52,7 @@
 	width: 100%;
 }
 .navbar-toggle {
-	background-color: #060b26;
+	background-color: #264653;
 	width: 100%;
 	height: 80px;
 	display: flex;

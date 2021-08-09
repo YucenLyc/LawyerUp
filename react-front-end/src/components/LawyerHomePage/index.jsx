@@ -3,7 +3,6 @@ import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 import AllCaseList from '../AllCaseList';
-//import Header from '../../pages/Header';
 import { useParams } from "react-router-dom";
 import MessageChatBox from "../message";
 

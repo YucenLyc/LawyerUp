@@ -59,7 +59,7 @@ export default function AllCaseList(props) {
 
   return(
     <ul className="CaseList">
-      <h3>All the Cases Our App Has:</h3>
+      {/* <h3>All the Cases Our App Has:</h3> */}
       {CaseItemList}
     </ul>
   )
