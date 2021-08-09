@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const rating = ({selected, setSelected}) => {
   const [isActive, setIsActive] = useState(false);
-  const options = ['High-Low', 'Low-High'];
+  const options = ['None', '100 - 150', '151 - 200', '201 - 250', '251 - 300'];
   return (
     <div className="dropdown">
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>

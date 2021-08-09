@@ -1,0 +1,37 @@
+.heading-container{
+  justify-content:center;
+  width: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 2em;
+}
+.name-and-profileImage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.speciality-and-sendMessage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-container{
+  justify-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 2em;
+}
+
+.reviews{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 2em;
+}
+.review-page{
+  width:90px;
+  border-radius: 20px;
+  border: 2px solid blue;
+  margin-left: 50px;
+}

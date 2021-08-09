@@ -9,9 +9,9 @@ const axios = require('axios');
 export default function LawyerList(props){
   const lawType = props.lawType;
   const [lawyers, setLawyers] = useState([]);
-  const location = props.location == "Choose One" ? null : props.location;
-  const rate = props.rate == "Choose One" ? null : props.rate;
-  const year = props.year == "Choose One" ? null : props.year;
+  const location = props.location == "Choose One" || props.location == "None" ? null : props.location;
+  const rate = props.rate == "Choose One" || props.rate ==  "None" ? null : props.rate;
+  const year = props.year == "Choose One" || props.year ==  "None" ? null : props.year;
 
   // const [lawyers, setLawyers] = useState({});
   useEffect(() => {
@@ -51,14 +51,13 @@ export default function LawyerList(props){
     return result;
   }
 
-  const sortByRate = (sort) => {
-    let result;
-    if (sort == "High-Low") {
-      let temp = findBySpeciality(lawType.split('-').join(' '));
-      result = temp.sort((a, b) => parseFloat(b.rate) - parseFloat(a.rate));
-    } else if (sort == "Low-High") {
-      let temp = findBySpeciality(lawType.split('-').join(' '));
-      result = temp.sort((a, b) => parseFloat(a.rate) - parseFloat(b.rate));
+  const sortByRate = (rateRange) => {
+    let result = [];
+    const range = rateRange.split(' - ');
+    for (let lawyer of findBySpeciality(lawType.split('-').join(' '))) {
+      if (lawyer.rate >= parseInt(range[0]) && lawyer.rate <= parseInt(range[1])) {
+        result.push(lawyer);
+      }
     }
     return result;
   }
