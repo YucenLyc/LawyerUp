@@ -5,7 +5,7 @@ VALUES
 ('Anderson Stokes', 'reichel_albina@stamm.info', 'password'),
 ('Eunice Morar', 'danielle.aufderhar@kilback.net', 'password'),
 ('Brian Jones', 'percy_ratke@cornelius.biz', 'password'),
-('Herminia Smitham', 'sawayn.sarina@yahoo.com', 'password'),
+('Ham Hammerson', 'sawayn.sarina@yahoo.com', 'password'),
 ('Darien Luettgen', 'issac_collins@pink.io', 'password'),
 ('Irwin King', 'kody_pfannerstill@john.us', 'password'),
 ('Stan Miller', 'mcdermott.maxie@schoen.com', 'password'),
@@ -34,16 +34,16 @@ VALUES
 ('Saul Ma', 'bettercallsaul@witting.net', 'password'),
 ('Reeve Wah', 'reevewah@witting.net', 'password'),
 ('Ming Feng', 'mingfengthelegend@witting.net', 'password'),
-('Adel Adele', 'howtosaymyname@knockknock.com', 'password');
+('Adel Adele', 'howtosaymyname@knockknock.com', 'password'),
+('Egg Eggerson', 'friedEgg99@hotmail.com', 'password');
 
-
-INSERT INTO clients (user_id) VALUES (1), (2), (5), (7), (8), (10), (11), (14), (15), (17), (18);
+INSERT INTO clients (user_id) VALUES (1), (2), (5), (7), (8), (10), (11), (14), (15), (17), (18), (36);
 
 INSERT INTO lawyers (user_id, profile, rate, years_of_experience) 
 VALUES 
 (3, 'I am specialized in family law related legal issues', 150, 8),
 (4, 'I am specialized in business law related legal issues', 250, 15), 
-(6, 'I am specialized  in civil rights law related legal issues', 200, 12), 
+(6, 'I have been practicing law for over 10+ years. I have a decent amount of experience in various fields of law. After graduating law school, I spent 5 years conducting legal research and defending clients in medical malpractice and premises liability trails. I entered the field of business law afterwards, and had been helping start-up companies with their legal contracts. I am also experienced in criminal defense. I have successfully helped several high profile clients to regain freedom after been charged with serious crimes. I do not have a personal life. My work is my life. If you trust me with your case, I will work night and day to get it done. I am resourceful after being in this field for more than a decade, and I offer a competitive price when it comes to consultation. Contact me through in app messaging or email, and I shall get back to you within 24 hours. Looking forward to hear from you. ', 200, 12), 
 (9, 'I am specialized  in  environmental law related legal issues', 175, 10),
 (12, 'I am specialized  in family law related legal issues', 150, 8),
 (13, 'I am specialized  in business law related legal issues', 250, 15), 
@@ -96,6 +96,10 @@ VALUES
 (5, 2),
 (5, 8),
 (6, 4),
+(6, 1),
+(6, 4),
+(6, 2),
+(6, 6),
 (7, 1),
 (7, 2),
 (8, 3),
@@ -130,7 +134,6 @@ VALUES
 (12, 5),
 (15, 8);
 
--- () need to figure out how to update lawyer_id
 
 
 INSERT INTO user_types (user_id, name)
@@ -169,12 +172,13 @@ VALUES
 (32, 'Lawyer'),
 (33, 'Lawyer'),
 (34, 'Lawyer'),
-(35, 'Lawyer');
+(35, 'Lawyer'),
+(36, 'Client');
 
 
 INSERT INTO cases (lawyer_id, client_id, name, date, description)
 VALUES
-(1, 1, 'rental dispute with my landlord over having a pet cat', '2020-12-01', 'My name is Egg Eggerson, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract did not address anything about tenant owning pets, so I assumed it is okay for me to have a cat. I have been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance.Please contact me, if you are experience in handling rental dispute!! Much thanks!!'),
+(1, 1, 'rental dispute with my landlord over having a pet cat', '2020-12-01', 'My name is Fay Fanning, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract did not address anything about tenant owning pets, so I assumed it is okay for me to have a cat. I have been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance.Please contact me, if you are experience in handling rental dispute!! Much thanks!!'),
 (2, 5, 'Business tax', '2021-01-12', 'My company is being charged for evading payment of over 2 million in taxes. I was not aware of the financial situation of my company, even though I am the sole owner. My best friend Joey handles the financial side of the business, but he recently disappeared. I am looking for a lawyer who can keep me out of jail before I find Joey. Please email me if you are interested in my case, I am not a fan of phone calls. Thanks.'),
 (3, 3, 'Police abuse', '2021-04-22', 'I was attacked by a policeman who stopped me on the street last Friday night. She showed me her badge quicky, but I did not get a good look. She then told me give my protein bar to her. She asked me if I have any more protein bars with me. I lied and said no. She did not believe me. I was body searched by her and she took away my 3 other protein bars. She drove away in a police car, I memorized the license. I would like to get compensated for this assult and for my lost. If you are experience in personal injury/assult or police brutality cases,s call me. I amusually on my phone 25/8. Cheers.'),
 (5, 4, 'need help with bankruptcy paperwork', '2021-04-22', 'I am filing for bankrupty, my partner took my pet turtle, my money and left me with nothing. I need someone to help me file for bankruptcy and do not worry, I can pay. Text, only, thanks.'),
@@ -185,7 +189,23 @@ VALUES
 (8, 4, 'looking for a civil right lawyer', '2020-06-28', 'I found out I was paid less than my colleague who has the same job postition, need some professional advice as to how to handle this injustice!!'),
 (2, 9, 'need helping bailing out my son', '2021-03-18', 'My son was been charged of theft, and this is his third offence. The judge has set the bail amount so high, I will not be able to pay. Need help quick! My son will not survive long in a holding cell.'),
 (2, 5, 'paperwork for my will', '2020-09-08', 'Rich and old, drafting my will, help needed to make it legitimate. My secretary will be in contact with you first if you are interested for the job.'),
-(6, 3, 'want a consultation on my immigration status', '2020-10-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx');
+(6, 3, 'want a consultation on my immigration status', '2020-10-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx'),
+
+
+(null, 11, 'need help getting restraining order against my ex partner', '2020-02-11', 'My ex partner wants to have control over everyone and is completely uncooperative, often engaging in conflict and saying inappropriate things to me and my family in front of the children and our baby turtle. We went to trail and the Honourable Judge determined that baby turtle should reside with the father and that the mother should have supervised access to her. The judge completely took away all guardianship and decision making rights from my ex partner. Now my ex partner is threatening to break into my new place and kidnap my baby tutle. Knowing her for 15 years, I believe she is truly capable of doing just that. She also lawyered up and is taking me to court for another around of custody fight. I need professional help getting this crazy out of our lives. Please contact me on this app, thanks.'),
+(null, 9, 'immigration lawyer wanted', '2020-10-11', 'I want to sue the Canadian government for delaying my PR.'),
+(null, 8, 'looking for a lawyer who specialize in business law', '2020-03-11', 'Me and 6 of my close friends started our own delivery company two years ago. Because we have a close personal relationship with each other, we did not have a founder agreement for our company. Now two of the founding friends want to leave the company and sell their share. However there are several terms we are finding trouble in reaching to an agreement. The absence of a founder agreement is making it harder to settle. If you are experienced with this type of business legal situation please contact me!'),
+(null, 7, 'lawn dispute with my neighbour', '2020-02-15', 'My neighbour damaged my lawn because he was scared by my Halloween decoration on my lawn. I would like to know how to file a charge and '),
+(null, 6, 'privacy issue with my website, clients are taking me to court', '2020-05-13', 'A website I built myself recently for people who like quirky toys, but some clients have been complaining of a leak of private information after signing up for my website. I need professional help to get me out of this mess'),
+(null, 5, 'My daughter stole my dog', '2020-11-10', 'My adult daughter took our family dog with her when she moved out of my house. I would like to look into disowning my daughter and getting my dog back'),
+(null, 4, 'getting married, need help with prenup', '2018-09-08', 'I plan to get married next year and we would like a lawyer to help us with prenup'),
+(null, 3, 'selling my company having stock share dispute with my business partner', '2020-08-12', 'I had my own business for the past 20 years with my business partner. Now I want to sell my share of the business and retire. But we are arguing over how much share I have. I believ I own 50% but my partner said it is less than that. I would like to talk with a profession and understand my options better.'),
+(null, 2, 'want a consultation on my immigration status', '2020-10-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx'),
+(null, 1, 'looking for labor law lawyer', '2020-07-10', 'I was descriminated at work due to my sexual orientation. I would like to talk to a lawyer more about it.'),
+(null, 5, 'looking for a civil right lawyer', '2020-01-11', 'My community is struggling to get recognized and treated equally at work. I would like to talk to a professional about what steps are available for us'),
+(null, 2, 'want a consultation about my case', '2020-02-11', 'I have a case that I rather not go into detail on a public page, but if you are an expert in criminal law. Contact me.'),
+(null, 7, 'professional help needed for paperwork', '2020-04-24', 'I am looking for legal help on some confidential paperwork related to business law. Please contact if you are a business law expert.');
+
 
 INSERT INTO case_speciality (case_id, speciality_id)
 VALUES
@@ -200,12 +220,28 @@ VALUES
 (9, 3),
 (10, 4),
 (11, 6),
-(12, 7);
+(12, 6),
+(13, 7),
+(14, 1),
+(15, 5),
+(16, 1),
+(17, 6),
+(18, 6),
+(19, 1),
+(20, 7),
+(21, 1),
+(22, 3),
+(23, 4),
+(24, 1);
 
 INSERT INTO reviews (lawyer_id, client_id, date, content)
 VALUES
 (1, 1, '2021-01-04', 'Anderson is very helpful and compassionate in helping us dealing with our family issues'),
-(2, 4, '2021-03-24', 'very professional and knowledgable');
+(2, 4, '2021-03-24', 'very professional and knowledgable'),
+(3, 3, '2021-01-22', 'Ham is very experienced and resourceful. He is also super quick in terms of replying. He spent a long time trying to get me understand the legal details and that really helped. I would recommend him to other clients'),
+(3, 2, '2021-01-22', 'Ham got me out of jail, need I say more?'),
+(3, 1, '2021-06-13', 'Ham has a much more reasonable consultation price compare to all the other lawyers I have dealt with. He is super experienced in business law as well. If you have a tight budget and you want to get the right help, go with Ham!'),
+(3, 5, '2017-07-07', 'I successfully sued my previous workplace and received my rightful compensation because of Ham.');
 
 INSERT INTO messages (sender_id, receiver_id, time, message)
 VALUES
@@ -250,4 +286,5 @@ VALUES
 (32, 'Vancouver'),
 (33, 'Victoria'),
 (34, 'Vancouver'),
-(35, 'Toronto');
+(35, 'Toronto'),
+(36, 'Vancouver');

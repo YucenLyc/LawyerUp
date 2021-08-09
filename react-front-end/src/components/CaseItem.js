@@ -21,7 +21,7 @@ export default function CaseItem(props) {
             <h5>Case Description: </h5>
             <p>{props.description}</p>
             {(props.type === "lawyer") &&
-              <button className="messageClientBtn">Message Client User</button>
+              <button onClick={props.chatToggleHandler} className="messageClientBtn">Message Client User</button>
             }
             {(props.type === "closed") &&
               <button className="caseDetailsBtn" onClick={() => history.push(`/closedcases/${props.id}`)}>Case Details</button>

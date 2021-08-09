@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import '../pageContainer/Dropdown.scss'
 import Dropdown from '../pageContainer/Dropdown';
 import AllCaseList from '../AllCaseList';
-import Header from '../../pages/Header';
-
 
 
 const axios = require('axios');

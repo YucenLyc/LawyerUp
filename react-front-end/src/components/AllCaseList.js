@@ -42,6 +42,7 @@ export default function AllCaseList(props) {
       description={singleCase.description}
       onClick={props.onClick}
       type={type}
+      chatToggleHandler={props.chatToggleHandler}
    />
   });
 
