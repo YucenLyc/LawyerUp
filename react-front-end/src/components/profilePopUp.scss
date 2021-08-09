@@ -17,3 +17,24 @@
   background-color: transparent;
   border: transparent;
 }
+
+.lower-container {
+	margin-top: 40px;
+    height: auto;
+    background: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+		border-radius: 10px;
+}
+.lower-container p {
+	margin: 1rem;
+	font-weight: 300;
+	font-family: monospace;
+	color: black;
+	font-size: 0.9rem;
+	text-align: center;
+}
+.upper-container {
+	height: 100px;
+	background: linear-gradient(to left, blue, #0099ff);
+}
