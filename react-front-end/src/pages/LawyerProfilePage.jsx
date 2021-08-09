@@ -80,7 +80,7 @@ console.log("reviews:   ",reviews);
           </div>
         </div>
         <div className="send-message">
-        <Link >Send Message</Link>
+        <Link>Send Message</Link>
         </div>
       </div>
       </div>
