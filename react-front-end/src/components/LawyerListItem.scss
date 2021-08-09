@@ -6,6 +6,14 @@
   padding: 10px;
   border: solid 3px;
   border-radius: 15px;
+}
 
+.lawyerlistitemheader {
+  display: flex;
+  justify-content: space-between;
+}
 
+.lawyerlistitemfooter {
+  display: flex;
+  justify-content: space-between;
 }
