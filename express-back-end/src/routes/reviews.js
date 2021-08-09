@@ -11,7 +11,6 @@ module.exports = db => {
   });
 
   router.post("/reviews", (req, res) => {
-    console.log('you are in reviews');
 
     db.query(`
       INSERT INTO reviews (lawyer_id, client_id, date, content)

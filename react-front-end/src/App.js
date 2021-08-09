@@ -86,6 +86,7 @@ class App extends Component {
             <Approute exact path="/AssignCase" component={AssignCase} />
             <Approute exact path="/AllCaseList" component={AllCaseList} />
             <Approute exact path="/Review" component={Review} />
+            <Approute exact path="/Review/:lawyerId" component={Review} />
             <Approute exact path="/SameLawyerCaseList" component={SameLawyerCaseList} />
             <Approute exact path="/ClientLawyerListView/:lawType" component={ClientLawyerListView} />
             <Approute exact path="/definedLawField" component={definedLawField} />
@@ -93,7 +94,7 @@ class App extends Component {
             <Approute exact path="/summaryBox" component={summaryBox} />
             <Approute exact path="/lawyerProfilePage" component={LawyerProfilePage} />
             <Approute exact path="/lawyerhomepage/:lawType" component={LawyerHomePage} />
-            <Approute exact path="/lawyerprofilepage/:lawyer_id" component={LawyerProfilePage} />
+            <Approute exact path="/lawyerprofilePage/:lawyer_id" component={LawyerProfilePage} />
             {/* <Route exact path="/message" component={MessageChatBox} /> */}
 
             <Approute component={NotFoundPage} />

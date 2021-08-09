@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import CasePopup from './CasePopUp/CasePopup';
+import AssignCase from './AssignCase';
 import "./CaseItem.scss";
+const axios = require('axios');
 
 export default function CaseItem(props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const history = useHistory();
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
+
+  const assignCase = (lawyer_id) => {
+    axios.put("/api/cases", {
+      id: props.id,
+      lawyer_id
+    }).then(response => {
+      console.log('response: ', response);
+      history.push('/closedcases');
+      // window.location.reload();
+    });
+  }
+
+
   return (
     <main className="case-box" onClick={togglePopup}>
       <div>
@@ -27,11 +43,15 @@ export default function CaseItem(props) {
               <button className="caseDetailsBtn" onClick={() => history.push(`/closedcases/${props.id}`)}>Case Details</button>
             }
             {(sessionStorage.name === props.client) && !props.lawyer_id &&
-              <button className="asssignCase" onClick={() => history.push(`/assigncase`)}>Assign Case</button>
+              <button className="asssignCase" onClick={() => setOpen(!open)}>Assign Case</button>
             }
           </>}
           handleClose={togglePopup}
         />}
+        {open && <CasePopup
+          content={<AssignCase onCancel={() => setOpen(!open)} onAssign={assignCase} />}
+          handleClose={() => setOpen(!open)}
+          />}
         <section className="case-id">
           <div className="case-header">
             <h5>Case ID: {props.id}</h5>

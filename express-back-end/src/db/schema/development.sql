@@ -184,10 +184,10 @@ VALUES
 (5, 4, 'need help with bankruptcy paperwork', '2021-04-22', 'I am filing for bankrupty, my partner took my pet turtle, my money and left me with nothing. I need someone to help me file for bankruptcy and do not worry, I can pay. Text, only, thanks.'),
 (3, 1, 'looking for a kickass divorce lawyer', '2017-03-16', 'My partner and I are spliting up and I do not want to split our shared property evenly with the guy. I also do not want to share custody of his 25 cats. I need help quick, call me night or day, I do not care. I will pay handsomely if you can get the job done. Man, I cannot live with 12.5 cats.'),
 (3, 2, 'starting my own company, need help with investor contracts', '2019-02-06', 'I recently started my own soap company, and I was approached by investors. I do not much when it comes to legal paperworks and I would like to have a professional to look over the contracts the investor company sent to me to sign. Lawyers with corporate law experience would be preferrable. I might not reply right away, please be patient :)'),
-(3, 9, 'I want to patent my iron man suit', '2019-02-06', 'I recently build my own iron man suit, it is super cool and better than the ones in the movies. But my friends mentioned to me that I probably should patent it. I also want to start a business selling these awesome suits, so if you are familiar with business law, that would be great. If not, please check out my instagram account: @MrCreator45903. Like and subscribe! Peace!'),
+(3, 7, 'I want to patent my iron man suit', '2019-02-06', 'I recently build my own iron man suit, it is super cool and better than the ones in the movies. But my friends mentioned to me that I probably should patent it. I also want to start a business selling these awesome suits, so if you are familiar with business law, that would be great. If not, please check out my instagram account: @MrCreator45903. Like and subscribe! Peace!'),
 (3, 7, 'I want to sue my previous employer', '2020-09-18', 'I would like to look into suing my previous employer. I worked for him for more than a year and he has a bad temper. I was facing verbal abuse almost every week since my sixth month there. He asked me questions like: Are you really that dumb? I have recording of him saying those kind of things to me. I would like to get some legal advice on pressing charges against him. Please contact me.'),
-(8, 4, 'looking for a civil right lawyer', '2020-06-28', 'I found out I was paid less than my colleague who has the same job postition, need some professional advice as to how to handle this injustice!!'),
-(2, 9, 'need helping bailing out my son', '2021-03-18', 'My son was been charged of theft, and this is his third offence. The judge has set the bail amount so high, I will not be able to pay. Need help quick! My son will not survive long in a holding cell.'),
+(8, 5, 'looking for a civil right lawyer', '2020-06-28', 'I found out I was paid less than my colleague who has the same job postition, need some professional advice as to how to handle this injustice!!'),
+(2, 8, 'need helping bailing out my son', '2021-03-18', 'My son was been charged of theft, and this is his third offence. The judge has set the bail amount so high, I will not be able to pay. Need help quick! My son will not survive long in a holding cell.'),
 (2, 5, 'paperwork for my will', '2020-09-08', 'Rich and old, drafting my will, help needed to make it legitimate. My secretary will be in contact with you first if you are interested for the job.'),
 (6, 3, 'want a consultation on my immigration status', '2020-10-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx'),
 
@@ -204,7 +204,41 @@ VALUES
 (null, 1, 'looking for labor law lawyer', '2020-07-10', 'I was descriminated at work due to my sexual orientation. I would like to talk to a lawyer more about it.'),
 (null, 5, 'looking for a civil right lawyer', '2020-01-11', 'My community is struggling to get recognized and treated equally at work. I would like to talk to a professional about what steps are available for us'),
 (null, 2, 'want a consultation about my case', '2020-02-11', 'I have a case that I rather not go into detail on a public page, but if you are an expert in criminal law. Contact me.'),
-(null, 7, 'professional help needed for paperwork', '2020-04-24', 'I am looking for legal help on some confidential paperwork related to business law. Please contact if you are a business law expert.');
+(null, 7, 'professional help needed for paperwork', '2020-04-24', 'I am looking for legal help on some confidential paperwork related to business law. Please contact if you are a business law expert.'),
+
+(null, 10, 'want a consultation on my will', '2020-09-11', 'I am deep in debt and I want to consultate with a lawyer about my will to see figure out what I could leave behind for my fam. Do not worry I still have enough to pay for consultation fees.'),
+(null, 3, 'labor law lawyer needed', '2021-01-11', 'Had a serious dispute with my previous boss and I believe I am entitled to some compensation. Please contact through messages.'),
+(null, 10, 'consultation with a criminal lawyer', '2018-02-11', 'I was in trouble with the authority a while ago and I have heard from reliabel sources recently that they might be charging me soon. I would like to talk in detail in private.'),
+(null, 8, 'legal dispute between family members', '2020-10-11', 'legal dispute between family members and some of them want to take it to court. I am so down to go down that path now that I have two restraining order on my back. I am not the crazy party I promise.'),
+(null, 1, 'prenup related legal issue', '2019-02-02', 'Fairly private issue I would rather not display it on a public page. However I do need some legal help related to marriage law and family law. Please contact if you are an export. Thank you.'),
+(null, 2, 'question about an assult that happened 20 years ago', '2019-01-03', 'During my therapy sessions I started to recall some memory related to an old crime that happened 20 years ago. I would like to know more about the legal procedure if I were to take action on these new information I have gained recently. You must have 10+ years of experience in criminal law. Please do not contact me if you are not a seasoned lawyer in criminal law. Thank you.'),
+(null, 4, 'dispute with my book publisher over the advertisement of my book', '2017-12-11', 'I think my publisher is doing false advertisement of my book. However I might have signed an unfair contract waving my right to have my say in this. Please contact if you believe you could help me out.'),
+(null, 4, 'bankruptcy lawyer needed', '2019-11-11', 'would like to have a consultation with a business law lawyer about closing my business and some finanical burdens.'),
+(null, 7, 'in search of a civil rights lawyer', '2020-03-03', 'Having some toruble related to civil rights (I think?). contact me if you are interested and you do not have be a civil rights lawyer to handle the case (I think?). Cheers.'),
+(null, 3, 'want a consultation on my immigration status', '2019-04-11', 'Having some toruble getting my PR, would like some help with the paperwork. Thx'),
+
+(null, 3, 'filing for bankruptcy', '2019-04-11', 'Closing down our family business and need some help filing for bankruptcy'),
+(null, 2, 'professional help needed navigating through bankruptch', '2017-05-11', 'looking for a bankruptcy and insolvenc laweyr to represent me during this difficult time.'),
+(null, 6, 'Commercial proposal and restructuring', '2021-02-11', 'In serious financial blackhole and need help quick.'),
+(null, 9, 'priority dispute', '2019-04-11', 'I am concerned about the priority of debts I owed in my ongoing bankruptcy. Need assistant!!'),
+(null, 8, 'discharge applications', '2020-03-11', 'I know a good discharge application would allow a debt to be completely discharged. My application was opposed by the holder of the debt and I am looking for someone to represent me on this to get it passed. Please contact through messaging.'),
+
+(null, 11, 'civil rights lawyer', '2019-04-11', 'not sure if mine is a civil rights issue to be honest, but the situtaion is that I am being descriminated at work because of my eye color?'),
+(null, 10, 'I would like to sue the RCMP for discrimination', '2020-04-11', 'I was assulted last weekend and I went to RCMP to file a report. I was treated like a sub-human there by the authority figures. I could provide more details with evidence if you contact me in private. Thanks!'),
+
+(null, 10, 'the new company that just moved into our neighbourhood is polluting our city lake', '2020-05-11', 'looking for a super experienced environmental lawyer. The case invovles highly profiled individuals.'),
+(null, 9, 'want to push city council on environmental bills', '2020-06-13', 'could use some professional opinion and guidance on this.'),
+(null, 8, 'how to build my own environmental organization and what are some legal things I need to look out for', '2020-10-11', 'like the title mentioned. If you are an environmental lawyer, please give me a shout.'),
+
+(null, 3, 'Need help moving to China', '2020-09-11', 'I filed legal documents to go work in China as a foreginer. My plan is to work there for a few years and settle down and get the Chinese citizenship. But I was told by friends that is really hard to do. I would like to consult an export on that.'),
+(null, 3, 'Immigration Status Unknown', '2020-02-11', 'My work visa will expire pretty soon. I have filed to get my PR months ago and have not yet heard back. I think I want some consultation. I would like to know the chance of me being forced to leave the country, and how to prevent that.'),
+(null, 3, 'Please contact if you are an immigration lawyer', '2020-07-11', 'legal work, paper work, all that fun stuff. I pay well.'),
+
+(null, 3, 'labor law related dispute at work', '2020-04-11', 'I was injured at work and yet did not get compensation for it. Need a professional to look into this for me.'),
+(null, 3, 'mistreatement at work', '2020-09-23', 'unfair treatment at work for many years. Would like to go down the legal path on this and get back what should be mine.'),
+(null, 3, 'looking for labor law expert', '2020-12-03', 'please contact me and I will tell you more in details in private.');
+
+
 
 
 INSERT INTO case_speciality (case_id, speciality_id)
@@ -232,7 +266,47 @@ VALUES
 (21, 1),
 (22, 3),
 (23, 4),
-(24, 1);
+(24, 1),
+(25, 1),
+(26, 6),
+(27, 8),
+(28, 4),
+(29, 6),
+(30, 4),
+(31, 4),
+(32, 1),
+(33, 2),
+(34, 3),
+(35, 7),
+
+(36, 2),
+(37, 2),
+(38, 2),
+(39, 2),
+(40, 2),
+
+(41, 3),
+(42, 3),
+
+(43, 5),
+(44, 5),
+(45, 5),
+
+(46, 7),
+(47, 7),
+(48, 7),
+
+(49, 8),
+(50, 8),
+(51, 8);
+
+
+
+
+
+
+
+
 
 INSERT INTO reviews (lawyer_id, client_id, date, content)
 VALUES
