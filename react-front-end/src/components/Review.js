@@ -19,21 +19,21 @@ const axios = require('axios');
 //   )
 // }
 
-export default function Review() {
+export default function Review({match}) {
   const history = useHistory();
-  const { lawyer_id } = useParams();
+  const { lawyerId } = useParams();
   const [content, setContent] = useState('');
 
   const submitReview = () => {
     axios.post("/api/reviews", {
-      lawyer_id: lawyer_id,
+      lawyer_id: lawyerId,
       client_id: null,
       date: new Date().toDateString(),
       content: content,
     }).then(response => {
       console.log();
       console.log('response: ', response);
-      history.push(`/lawyerprofilepage/${lawyer_id}`);
+      history.push(`/lawyerprofilepage/${lawyerId}`);
     });
   }
 
