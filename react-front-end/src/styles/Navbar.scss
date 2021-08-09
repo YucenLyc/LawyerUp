@@ -5,11 +5,19 @@
 	justify-content: start;
 	align-content: center;
 	opacity: 1;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .menu-bars {
 	margin-left: 2rem;
 	font-size: 2rem;
 	background: none;
+}
+.logo {
+	height: 50px;
+	border: none;
+	align-self: right;
+	
 }
 .nav-menu {
 	background-color: #264653;
@@ -40,16 +48,17 @@
 		width: 95%;
 		height: 100%;
 		display: flex;
-		align-items: cneter;
-		padding: 25px 16px;
+		align-items: center;
+		padding: 16px 0px;
 		border-radius: 4px;
 		&:hover {
-			background-color: #1a83ff;
+			background-color: #E9C46A;
 		}
 	}
 }
 .nav-menu-items {
 	width: 100%;
+	z-index: 999;
 }
 .navbar-toggle {
 	background-color: #264653;

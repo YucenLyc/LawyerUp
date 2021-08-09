@@ -15,12 +15,12 @@
 	}
 	.dd-list {
 		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075) !important;
-		position: absolute;
+	
 		padding: 0;
 		margin: auto;
 		width:80%;
 		margin-top: 30px;
-		z-index: 1;
+		
 		li {
 			list-style-type: none;
 			&:first-of-type {

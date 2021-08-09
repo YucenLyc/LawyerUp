@@ -22,4 +22,22 @@ export const LawyerSidebar = [
     icon: <FaIcons.FaEnvelopeOpenText />,
     sName: 'nav-text'
   },
+  {
+    title: 'About Us',
+    path: '/message',
+    icon: <FaIcons.FaRegMeh />,
+    sName: 'nav-text'
+  },
+  {
+    title: 'Setting',
+    path: '/setting',
+    icon: <FaIcons.FaRegSun />,
+    sName: 'nav-text'
+  },
+  {
+    title: 'Support',
+    path: '/support',
+    icon: <IoIcons.IoMdHelpCircle />,
+    sName: 'nav-text'
+  }
 ]
