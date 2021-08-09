@@ -51,7 +51,7 @@ export default function LawyerHomePage(props) {
     <div className="container">
       {/* <button onClick={test}>TEST</button> */}
       <h2 style={{ textAlign: 'center' }}>
-        Lawyer Ham Hammerson Homepage {' '}
+        Lawyer {sessionStorage.name} Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
       <AllCaseList chatToggleHandler={toggleChat} type="lawyer" lawType={lawType} cases={cases}/>   
