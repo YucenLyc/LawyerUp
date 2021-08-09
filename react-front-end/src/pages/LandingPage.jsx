@@ -110,6 +110,7 @@ export default function LandingPage() {
             </div>
           </form>
           {/* {user === false? <section verifyClient={verifyClient} /> : <div> </div>} */}
+
         </div>
       </div>
     </>
