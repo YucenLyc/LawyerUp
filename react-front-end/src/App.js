@@ -74,7 +74,7 @@ class App extends Component {
             <Approute exact path="/lawyerLoginPage" component={LawyerLoginPage} />
             <Approute exact path="/clientLoginPage" component={ClientLoginPage} />
             <Approute exact path="/clientHomePage" component={ClientHomePage} />
-            <Approute exact path="/lawyerHomePage" component={() => <LawyerHomePage test={() => console.log('test')} />} />
+            <Approute exact path="/lawyerHomePage" component={LawyerHomePage} />
             <Approute exact path="/closedCases/:case_id" component={ClosedCase} />
             <Approute exact path="/closedCases" component={ClosedCases} />
             <Approute exact path="/addNewCase" component={AddNewCase} />

@@ -3,7 +3,6 @@ import Dropdown from '../pageContainer/Dropdown';
 import '../pageContainer/Dropdown.scss'
 import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 import AllCaseList from '../AllCaseList';
-//import Header from '../../pages/Header';
 import { useParams } from "react-router-dom";
 import MessageChatBox from "../message";
 
@@ -52,7 +51,7 @@ export default function LawyerHomePage(props) {
     <div className="container">
       {/* <button onClick={test}>TEST</button> */}
       <h2 style={{ textAlign: 'center' }}>
-        Lawyer Ham Hammerson Homepage {' '}
+        Lawyer {sessionStorage.name} Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
       <AllCaseList chatToggleHandler={toggleChat} type="lawyer" lawType={lawType} cases={cases}/>   
