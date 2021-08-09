@@ -52,24 +52,24 @@ export default function CaseItem(props) {
           content={<AssignCase onCancel={() => setOpen(!open)} onAssign={assignCase} />}
           handleClose={() => setOpen(!open)}
           />}
-        <section className="case-id">
+        <section className="case-name">
           <div className="case-header">
-            <h5>Case ID: {props.id}</h5>
+            <h5><b>Client: {props.client}</b></h5>
             {(sessionStorage.name === props.client) &&
                 <div className="your-case">Your Case</div>
             }
           </div>
-          <section className="case-date">
-            <h6>date: {new Date(props.date).toDateString()}</h6>
-            {/* <h6>date: {props.date.substr(0,10)}</h6> */}
-          </section>
         </section>
         <section className="case-body">
-          <section className="client-name">
-            <div>Client: {props.client}</div>
+          <section className="client-id">
+            <h6>Case ID: {props.id}</h6>
           </section>
           <section className="case-name">
-            <span>{props.name}</span>
+            <h6>{props.name}</h6>
+          </section>
+          <section className="case-date">
+            <span>{new Date(props.date).toDateString()}</span>
+            {/* <h6>date: {props.date.substr(0,10)}</h6> */}
           </section>
         </section>
       </div>
