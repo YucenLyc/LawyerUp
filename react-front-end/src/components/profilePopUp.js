@@ -1,5 +1,5 @@
 import React from 'react';
-import './profilePopUp.scss';
+// import './profilePopUp.scss';
 
 const ProfilePopup = props => {
   return (
