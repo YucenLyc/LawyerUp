@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import './lawyerDropdown.scss';
+
 
 const rating = ({selected, setSelected}) => {
   const [isActive, setIsActive] = useState(false);
