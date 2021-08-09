@@ -37,7 +37,19 @@ module.exports = db => {
         res.status(201).send('successful!');
       })
     });
+  });
 
+  router.put("/cases", (req, res) => {
+    console.log('Lawyer Id', req.body.lawyer_id)
+    console.log('Case Id', req.body.id);
+    db.query(`
+      UPDATE cases
+      SET lawyer_id = $1
+      WHERE id = $2;
+    `, [req.body.lawyer_id, req.body.id])
+    .then(({ rows: cases }) => {
+      res.json(cases);
+    });
   });
 
   return router;
