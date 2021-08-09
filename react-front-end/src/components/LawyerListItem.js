@@ -19,12 +19,15 @@ export default function LawyerListItem(props) {
     // </li>
     <div onClick={togglePopup} >
       <li className="LawyerListItem" >
-        <h3>Lawyer Name: {props.name}</h3>
-        <h4>Specialization: {props.specialization.join(', ')}</h4>
-        <h4>Location: {props.location}</h4>
-        <h4>Hourly Rate: {props.rating}</h4>
-        <h4>Experience: {props.experience} years</h4>
-        <h4>Review: {props.review}</h4>
+        <div className="lawyerlistitemheader">
+          <h4>Lawyer Name: {props.name}</h4>
+          <h6><b>{props.experience}</b> yrs</h6>
+        </div>
+        <h5>Specialization: {props.specialization.join(', ')}</h5>
+        <div className="lawyerlistitemfooter">
+          <h5>Location: {props.location}</h5>
+          <h6><b>${props.rating}</b>/hr</h6>
+        </div>
         <div>
         {isOpen && <ProfilePopUp 
         content={<>

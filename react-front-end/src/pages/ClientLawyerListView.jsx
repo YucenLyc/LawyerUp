@@ -58,7 +58,7 @@ const clientLawyerListView = () => {
           </div>
         </div>
         <div className="lawyers-list">
-          <LawyerList lawType={lawType} location={lacationSelected} rate={rateSelected} year={yearSelected}/>
+          <LawyerList lawType={lawType} location={lacationSelected} rate={rateSelected} year={yearSelected} lawfield={lawSpeciality.name}/>
         </div>
       </div>
     </>
