@@ -99,6 +99,7 @@ class MessageChatBox extends Component {
   }
 }
 export default MessageChatBox;
+
 // import React, { useState, useEffect } from 'react';
 // import '../styles/message.scss'
 // import { w3cwebsocket as W3CWebSocket } from "websocket";
@@ -109,9 +110,10 @@ export default MessageChatBox;
 // const { Text } = Typography;
 // const { Meta } = Card;
 
+// const client = new W3CWebSocket('ws://127.0.0.1:8001');
 // //const client = new W3CWebSocket('ws://127.0.0.1:8001');
 // //use .ENV for the backend connection 
-// let client;
+// //let client;
 
 // export default function MessageChatBox(props) {
 //   const [state, setState] = useState({
@@ -122,7 +124,7 @@ export default MessageChatBox;
 
 //   useEffect(() => {
 //     // Anything in here is fired on component mount.
-//     const client = new W3CWebSocket('ws://127.0.0.1:8001');
+   
     
 //     return () => {
 //       // Anything in here is fired on component unmount.

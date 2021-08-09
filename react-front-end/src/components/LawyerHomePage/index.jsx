@@ -5,14 +5,18 @@ import LawyerNavbar from '../pageContainer/LawyerHomeNavbar';
 import AllCaseList from '../AllCaseList';
 //import Header from '../../pages/Header';
 import { useParams } from "react-router-dom";
+import MessageChatBox from "../message";
 
 
 const axios = require('axios');
 
 export default function LawyerHomePage(props) {
 
-  const {test} = props;
-  
+  //const {test} = props;
+
+  const [isChatVisible, setIsChatVisible] = useState(false);
+
+
 
   const { lawType } = useParams();
   const [cases, setCases] = useState([])
@@ -33,18 +37,25 @@ export default function LawyerHomePage(props) {
   }, [])
 
   console.log('cases:', cases);
-
+  const toggleChat = () => {
+    if(!isChatVisible) {
+      setIsChatVisible(true);
+    }
+    else {
+      setIsChatVisible(false);
+    }
+  }
   return (
     <>
      <LawyerNavbar />
-    
+    { isChatVisible && <MessageChatBox /> } 
     <div className="container">
-      <button onClick={test}>TEST</button>
+      {/* <button onClick={test}>TEST</button> */}
       <h2 style={{ textAlign: 'center' }}>
         Lawyer Ham Hammerson Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />
-      <AllCaseList type="lawyer" lawType={lawType} cases={cases}/>   
+      <AllCaseList chatToggleHandler={toggleChat} type="lawyer" lawType={lawType} cases={cases}/>   
     </div>
     </>
   );

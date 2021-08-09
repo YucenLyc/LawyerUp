@@ -39,7 +39,7 @@ import definedLawField from './components/definedLawFieldBox';
 import AllDefinedLawlist from './components/AllDefinedLawList';
 import summaryBox from './components/summaryBox';
 import LawyerProfilePage from './pages/LawyerProfilePage';
-import MessageChatBox from './components/message';
+//import MessageChatBox from './components/message';
 
 
 class App extends Component {
@@ -47,7 +47,7 @@ class App extends Component {
     super(props);
     this.state = { isChatBoxVisible: false};
     this.toggleChatBoxVisible = this.toggleChatBoxVisible.bind(this);
-    this.test = this.test.bind(this);
+    this.test = () => {alert("This is the Alert!!")};
   }
   
 
@@ -55,26 +55,26 @@ class App extends Component {
     this.setState({ isChatBoxVisible: !this.state.isChatBoxVisible })
   }
   
-  test = () => {
-    alert("This is the Alert!!");
-  }
+  // test = () => {
+  //   alert("This is the Alert!!");
+  // }
   
   
   render() {
     return (
 
-        <div>
+      
         <Router>
           <Switch>
             <Approute exact path="/" component={LandingPage}/>
             <Approute exact path="/clientRegister" component={clientRegister} />
             <Approute exact path="/lawyerRegister" component={lawyerRegister} />
-            <Approute exact path="/lawyerHome" component={LawyerHome} test={this.test} />
+            <Approute exact path="/lawyerHome" component={LawyerHome} />
             <Approute exact path="/clientHome" component={ClientHome} />
             <Approute exact path="/lawyerLoginPage" component={LawyerLoginPage} />
             <Approute exact path="/clientLoginPage" component={ClientLoginPage} />
             <Approute exact path="/clientHomePage" component={ClientHomePage} />
-            <Approute exact path="/lawyerHomePage" component={LawyerHomePage} test={this.test}/>
+            <Approute exact path="/lawyerHomePage" component={() => <LawyerHomePage test={() => console.log('test')} />} />
             <Approute exact path="/closedCases/:case_id" component={ClosedCase} />
             <Approute exact path="/closedCases" component={ClosedCases} />
             <Approute exact path="/addNewCase" component={AddNewCase} />
@@ -100,8 +100,8 @@ class App extends Component {
             <Redirect to="/404" />
           </Switch>
         </Router>
-        <MessageChatBox />
-        </div>
+      
+       
      
 
     );
