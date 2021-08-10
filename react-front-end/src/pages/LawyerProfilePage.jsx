@@ -14,6 +14,8 @@ import LawyerHomeNavBar from '../components/pageContainer/LawyerHomeNavbar';
 
 const axios = require('axios');
 
+const LAWYER_DEFAULT_VALUE = {};
+
 export default function LawyerProfilePage() {
   const { lawyer_id } = useParams();
   const [lawyers, setLawyers] = useState([]);
@@ -46,7 +48,7 @@ export default function LawyerProfilePage() {
 
   const filterByLawyerId = (lawyer_id) => {
   
-    return lawyers.find(e => e.id === Number(lawyer_id)) || {};
+    return lawyers.find(e => e.id === Number(lawyer_id)) || LAWYER_DEFAULT_VALUE;
     
   }
   
@@ -91,61 +93,60 @@ export default function LawyerProfilePage() {
   return (
     <>
     <LawyerHomeNavBar />
-    <div className="heading-container">
-      <div className="name-and-profileImage">
-        <div>
-          <h2 className="lawyer-name">{lawyerResult.name}</h2>
-        </div>
-        <div className="profileImage">
-        <img src="https://pbs.twimg.com/media/Crx9nxmWgAAl2BY?format=jpg&name=900x900" alt="" height="200px" width="200px" />
-        </div>
-      </div>
-        <br></br>
-      <div className="speciality-and-sendMessage">
-        <div className="speciality-list">
-          <h4>Specialization:</h4>
-          <div className="specialization">
-          {lawyerResult.speciality}
+    <div className="lawyer-profile-container">
+      <div className="heading-container">
+        <div className="name-and-profileImage">
+          <div>
+            <h2 className="lawyer-name">{lawyerResult.name}</h2>
+          </div>
+          <div className="profileImage">
+            <img src="https://pbs.twimg.com/media/Crx9nxmWgAAl2BY?format=jpg&name=900x900" alt="" height="200px" width="200px" />
           </div>
         </div>
-        <div className="send-message">
-        <button onClick={toggleChat} className="messageClientBtn">Message Client User</button>
+          <br></br>
+        <div className="speciality-and-sendMessage">
+          <div className="speciality-list">
+            <h4>Specialization:</h4>
+          <div className="specialization">
+            {lawyerResult.speciality && lawyerResult.speciality.join(', ')}
+          </div>
         </div>
-      </div>
+          <div className="send-message">
+            <button onClick={toggleChat} className="messageClientBtn">Message Client User</button>
+          </div>
+        </div>
       </div>
       <div className="content-container">
         <div>
-        <h4>My Self</h4>
-        <h5>{lawyerResult.profile}</h5>
+          <h4>My Self</h4>
+          <h5>{lawyerResult.profile}</h5>
         </div>
-      <br></br>
-
+        <br></br>
         <div className="rate">
-        <h5>Consultation Rate:</h5>
-        <strong>$ {lawyerResult.rate}</strong>
+          <h5>Consultation Rate:</h5>
+          <strong>$ {lawyerResult.rate}</strong>
+        </div>
       </div>
-      </div>
-      
       <div className="reviews">
         <h4>Review From Client</h4>
         {reviewList}
       </div>
-      { isChatVisible && <MessageChatBox /> } 
-    <br></br>
+        { isChatVisible && <MessageChatBox /> } 
+      <br></br>
       <div>
-          {isOpen && <CasePopup
-            content={
-              <Review lawyer_id={lawyer_id} lawyer={lawyerResult.name} client={sessionStorage.name} client_id={sessionStorage.token} addReview={addReview} />
-            }
+        {isOpen && <CasePopup
+           content={
+            <Review lawyer_id={lawyer_id} lawyer={lawyerResult.name} client={sessionStorage.name} client_id={sessionStorage.token} addReview={addReview} />
+          }
             handleClose={togglePopup}
-          />}
+        />}
         <button className="review-page" onClick={() => setIsOpen(!isOpen)}>
           <b>Add Review</b>
         </button>
       </div> 
-    <br></br>
-       
-    {/* <SummaryDisplay /> */}
+      <br></br>
+    </div>
+   
    
      
     </>
