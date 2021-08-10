@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+//import Header from './Header';
 import { useParams } from 'react-router-dom';
-import SummaryDisplay from '../components/summaryDisplay';
+//import SummaryDisplay from '../components/summaryDisplay';
 import ReviewList from '../components/ReviewList';
 import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
@@ -9,6 +9,8 @@ import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
 import CasePopup from '../components/CasePopUp/CasePopup';
 import Review from '../components/Review';
+import LawyerHomeNavBar from '../components/pageContainer/LawyerHomeNavbar';
+
 
 const axios = require('axios');
 
@@ -88,7 +90,7 @@ export default function LawyerProfilePage() {
   }
   return (
     <>
-    <Header />
+    <LawyerHomeNavBar />
     <div className="heading-container">
       <div className="name-and-profileImage">
         <div>

@@ -17,9 +17,15 @@ export const ClientSidebar = [
     sName: 'nav-text'
   },
   {
+    title: 'Closed Cases',
+    path: '/closedcases',
+    icon: <IoIcons.IoIosPaper />,
+    sName: 'nav-text'
+  },
+  {
     title: 'Messages',
     path: '/message',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <IoIcons.IoIosFolderOpen />,
     sName: 'nav-text'
   },
   {

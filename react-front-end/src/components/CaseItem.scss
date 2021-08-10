@@ -15,9 +15,17 @@
 .case-body:hover {
   border-top: solid 2px;
   
-
 }
 
+.client-id {
+  font-family: 'Work Sans';
+}
+.case-name {
+  font-family: 'Work Sans', cursive;
+}
+.case-date {
+  font-family: 'Bitter';
+}
 .case-header {
   display: flex;
   justify-content: space-between;

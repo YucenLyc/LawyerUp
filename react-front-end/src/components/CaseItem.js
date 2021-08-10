@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import CasePopup from './CasePopUp/CasePopup';
 import AssignCase from './AssignCase';
 import "./CaseItem.scss";
+import "../components/ClientHomeNavbar";
+
 const axios = require('axios');
 
 
@@ -30,8 +32,10 @@ export default function CaseItem(props) {
   return (
 
     
+    
     <main className="case-box" onClick={togglePopup}>
-        
+       
+     
       <div>
 
         {isOpen && <CasePopup
@@ -78,6 +82,8 @@ export default function CaseItem(props) {
           </section>
         </section>
       </div>
+      
     </main>
+   
   )
 }
