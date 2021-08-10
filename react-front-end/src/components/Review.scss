@@ -1,6 +1,6 @@
 .reviewcomponent {
 	display: flex;
-	width: 50%;
+	// width: 50%;
 	margin: auto;
 	align-items: center;
 	flex-direction: column;
@@ -21,7 +21,7 @@
 
 
 textarea {
-	width: 325px;
+	width: 25em;
 	height: 150px;
 	border-radius: 10px;;
 }
@@ -31,7 +31,7 @@ textarea {
 	border-radius: 10px;
 	// border: 2px solid blue;
 	// margin-left: 50px;
-	background-color: lightcoral;
+	background-color: green;
 	color: white;
 	padding: 3px;
 	margin: 10px;

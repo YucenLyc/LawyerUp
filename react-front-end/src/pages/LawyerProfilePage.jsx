@@ -8,6 +8,7 @@ import './LawyerProfilePage.scss';
 import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
 import CasePopup from '../components/CasePopUp/CasePopup';
+import Review from '../components/Review';
 
 const axios = require('axios');
 
@@ -80,6 +81,11 @@ export default function LawyerProfilePage() {
       setIsChatVisible(false);
     }
   }
+
+  const addReview = (newReview) => {
+    setReviews(prev => ([ ...prev, newReview]));
+    togglePopup();
+  }
   return (
     <>
     <Header />
@@ -125,13 +131,13 @@ export default function LawyerProfilePage() {
       { isChatVisible && <MessageChatBox /> } 
     <br></br>
       <div>
-        <button className="review-page">
           {isOpen && <CasePopup
             content={
-              <p>test</p>
+              <Review lawyer_id={lawyer_id} lawyer={lawyerResult.name} client={sessionStorage.name} client_id={sessionStorage.token} addReview={addReview} />
             }
             handleClose={togglePopup}
           />}
+        <button className="review-page" onClick={() => setIsOpen(!isOpen)}>
           <b>Add Review</b>
         </button>
       </div> 
