@@ -7,6 +7,7 @@ import Rating from '../components/LawyerDropdownList/rating';
 import LawyerList from '../components/LawyerList';
 import DefinedLawFieldBox from '../components/definedLawFieldBox';
 import './ClientLawyerListView.scss';
+import Navbar from '../components/ClientHomeNavbar';
 
 const axios = require('axios');
 
@@ -38,7 +39,7 @@ const clientLawyerListView = () => {
   
   return (
     <>
-      <Header />
+      <Navbar />
       <div className="client-lawyers-list">
         <div className="definition-of-law">
           <DefinedLawFieldBox name={lawSpeciality.name} definition={lawSpeciality.definition}/>
