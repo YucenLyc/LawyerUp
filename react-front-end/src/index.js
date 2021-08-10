@@ -10,3 +10,5 @@ ReactDOM.render(
   <App />
 </AuthProvider>,
 document.getElementById('root'));
+
+console.log('test');
