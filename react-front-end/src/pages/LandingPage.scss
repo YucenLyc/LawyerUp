@@ -4,19 +4,23 @@
   // min-height: 100vh;
   width: 25%;
   border: solid 2px;
+  // margin: 50px;
+  border-radius: 10px;
 }
 
-.user-options {
+.useroptions {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8em;
+
+  height: 7em;
+  
 }
 
-.user-type {
+.usertype {
   display: flex;
   justify-content: space-evenly;
-  width: 30%;
+  width: 100%;
   margin: auto;
 }
 
@@ -37,7 +41,7 @@
   height: 15em;
 }
 
-.lawyer-buttons {
+.buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,4 +67,18 @@
   // color: white;
 }
 
+.landingbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+input {
+  width: auto;
+}
+
+.submit {
+  width: 100px;
+  border-radius: 5px;
+}
