@@ -1,3 +1,6 @@
+.html{
+  width: 110px;
+}
 .NewCase {
   display: flex;
   flex-direction: column;
@@ -15,6 +18,23 @@
   flex-direction: column;
 }
 
-// .col-form-label {
-//   width: 100%;
-// }
+.submit-form {
+  font-family: 'Work Sans';
+}
+
+.legal-name {
+  font-family: 'Bitter';
+}
+
+.case-title {
+  font-family: 'Bitter';
+}
+
+
+.short-description {
+  font-family: 'Bitter';
+}
+
+.law-field-selection {
+  font-family: 'Bitter';
+}
