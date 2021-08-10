@@ -5,6 +5,7 @@ import SummaryDisplay from '../components/summaryDisplay';
 import ReviewList from '../components/ReviewList';
 import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
+import { useHistory } from 'react-router-dom';
 
 const axios = require('axios');
 
@@ -12,6 +13,7 @@ export default function LawyerProfilePage() {
   const { lawyer_id } = useParams();
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const history = useHistory();
 
 
   useEffect(() => {
@@ -26,7 +28,8 @@ export default function LawyerProfilePage() {
       setReviews(response.data);
     });
   }, []);
-console.log("reviews:   ",reviews);
+
+  console.log("reviews:   ",reviews);
   console.log('lawyers= ', lawyers);
   console.log('lawyer_id', lawyer_id);
 
@@ -37,6 +40,8 @@ console.log("reviews:   ",reviews);
   }
   
   const lawyerResult = filterByLawyerId(lawyer_id);
+
+  console.log('specialities: ', lawyerResult.speciality);
 
   const getReviewByLawyerId = (lawyer_id) => {
     let result = [];
@@ -102,8 +107,8 @@ console.log("reviews:   ",reviews);
         {reviewList}
       </div>
     <br></br>
-      <div className="review-page">
-        <Link to={`/review/${lawyer_id}`}>Add Review</Link>
+      <div>
+        <button className="review-page" onClick={() => {history.push(`/review/${lawyer_id}`)}}><b>Add Review</b></button>
       </div> 
     <br></br>
        
