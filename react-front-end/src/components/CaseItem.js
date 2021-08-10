@@ -5,6 +5,7 @@ import AssignCase from './AssignCase';
 import "./CaseItem.scss";
 const axios = require('axios');
 
+
 export default function CaseItem(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
@@ -27,8 +28,12 @@ export default function CaseItem(props) {
 
 
   return (
+
+    
     <main className="case-box" onClick={togglePopup}>
+        
       <div>
+
         {isOpen && <CasePopup
           content={<>
             <b>Here's a Single Case Popup</b>

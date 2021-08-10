@@ -5,6 +5,7 @@ import SummaryDisplay from '../components/summaryDisplay';
 import ReviewList from '../components/ReviewList';
 import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
+import MessageChatBox from '../components/message';
 
 const axios = require('axios');
 
@@ -12,6 +13,8 @@ export default function LawyerProfilePage() {
   const { lawyer_id } = useParams();
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
+
+  const [isChatVisible, setIsChatVisible] = useState(false);
 
 
   useEffect(() => {
@@ -58,7 +61,15 @@ console.log("reviews:   ",reviews);
   />
   });
   
-  console.log("afsdfasf::::  ", lawyerResult.speciality)
+  //console.log("afsdfasf::::  ", lawyerResult.speciality)
+  const toggleChat = () => {
+    if(!isChatVisible) {
+      setIsChatVisible(true);
+    }
+    else {
+      setIsChatVisible(false);
+    }
+  }
   return (
     <>
     <Header />
@@ -80,7 +91,7 @@ console.log("reviews:   ",reviews);
           </div>
         </div>
         <div className="send-message">
-        <Link>Send Message</Link>
+        <button onClick={toggleChat} className="messageClientBtn">Message Client User</button>
         </div>
       </div>
       </div>
@@ -101,6 +112,7 @@ console.log("reviews:   ",reviews);
         <h4>Review From Client</h4>
         {reviewList}
       </div>
+      { isChatVisible && <MessageChatBox /> } 
     <br></br>
       <div className="review-page">
         <Link to={`/review/${lawyer_id}`}>Add Review</Link>

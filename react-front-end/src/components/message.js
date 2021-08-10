@@ -52,9 +52,9 @@ class MessageChatBox extends Component {
 
   render() {
     return (
-      <div>
+    
         <div className="main-container" id='wrapper'>
-          {this.state.isLoggedIn ?
+        
             <div>
               <div className="title">
                 <Text className="main-heading" type="secondary" >LawyerUp Messaging: {this.state.userName}</Text>
@@ -64,7 +64,7 @@ class MessageChatBox extends Component {
                   <Card key={message.msg} style={{ color: 'grey', alignSelf: this.state.userName === message.user? 'flex-end' : 'flex-start' }} loading={false}>
                     <Meta
                       avatar={
-                        <Avatar>{message.user[0].toUpperCase()}</Avatar>
+                        <Avatar>{sessionStorage.name}</Avatar>
                       }
                       title={message.user + ":"}
                       description={message.msg}
@@ -83,18 +83,9 @@ class MessageChatBox extends Component {
                 />
               </div>
             </div>
-            :
-            <div className="search-box">
-              <Search
-                placeholder="Enter Username"
-                enterButton="Login"
-                size="large"
-                onSearch={value => this.setState({ isLoggedIn: true, userName: value })}
-              />
-            </div>
-          }
+            
         </div>
-      </div>
+     
     )
   }
 }
