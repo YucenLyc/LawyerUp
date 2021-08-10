@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Form from "react-bootstrap/Form";
-import lawyerProfileCard from "../components/lawyerProfileCard";
-import Card from "../components/Card";
+
 import { useParams } from "react-router-dom";
+import Navbar from "../components/ClientHomeNavbar";
 
 const axios = require('axios');
 
-const fakeClientCase = {
-  case_description: " My name is Egg Eggerson, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract didn't address anything about tenant owning pets, so I assumed it's okay for me to have a cat. I've been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance. Please contact me, if you're experience in handling rental dispute!! Much thanks!!"
-}
+// const fakeClientCase = {
+//   case_description: " My name is Egg Eggerson, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract didn't address anything about tenant owning pets, so I assumed it's okay for me to have a cat. I've been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance. Please contact me, if you're experience in handling rental dispute!! Much thanks!!"
+// }
 
 function ClosedCase(props) {
   const { case_id } = useParams();
@@ -40,7 +38,7 @@ function ClosedCase(props) {
   return (
    
     <div>
-      <Header />
+      <Navbar />
       <div class="caseInfo">
         <label for="caseId">Case ID: {closedCase.id}</label>
       </div>

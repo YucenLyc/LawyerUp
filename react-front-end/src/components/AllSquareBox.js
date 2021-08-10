@@ -1,8 +1,8 @@
 import React from 'react';
-import CaseItem from './CaseItem';
-import "./AllCaseList.scss";
+import SquareBoxItem from './squareBoxItem';
+import "./squareBoxItem.scss";
 
-export default function AllCaseList(props) {
+export default function AllSquareBox (props) {
   const lawType = props.lawType;
   const type = props.type;
   const cases = props.cases;
@@ -33,7 +33,7 @@ export default function AllCaseList(props) {
 
 
   const CaseItemList = filtered.map((singleCase) => {
-    return <CaseItem
+    return <SquareBoxItem
       name={singleCase.name}
       id={singleCase.id}
       lawyer_id={singleCase.lawyer_id}
