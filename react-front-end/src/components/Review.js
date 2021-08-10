@@ -19,9 +19,9 @@ const axios = require('axios');
 //   )
 // }
 
-export default function Review({match}) {
+export default function Review(props) {
   const history = useHistory();
-  const { lawyerId } = useParams();
+  const lawyerId = props.lawyer_id;
   const [content, setContent] = useState('');
 
   const submitReview = () => {
@@ -33,13 +33,14 @@ export default function Review({match}) {
     }).then(response => {
       console.log();
       console.log('response: ', response);
-      history.push(`/lawyerprofilepage/${lawyerId}`);
+      props.addReview(response.data)
+      // history.push(`/lawyerprofilepage/${lawyerId}`);
     });
   }
 
   return (
     <div className="reviewcomponent">
-      <div className="reviewtitle">Add Your Review</div>
+      <div className="reviewtitle">Add Your Review for {props.lawyer}</div>
       <div>
         <Form className="reviewcontent" onSubmit={(e) => {e.preventDefault();}}>
           <textarea placeholder="Please give us your feedback on this lawyer" onChange={(e) => setContent(e.target.value)}></textarea>

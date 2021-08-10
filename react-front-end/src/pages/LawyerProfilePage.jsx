@@ -7,7 +7,10 @@ import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
 import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
+import CasePopup from '../components/CasePopUp/CasePopup';
+import Review from '../components/Review';
 import LawyerHomeNavBar from '../components/pageContainer/LawyerHomeNavbar';
+
 
 const axios = require('axios');
 
@@ -16,9 +19,13 @@ export default function LawyerProfilePage() {
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
   const history = useHistory();
+  const [isOpen, setIsOpen] = useState(false);
 
   const [isChatVisible, setIsChatVisible] = useState(false);
 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
 
   useEffect(() => {
     axios.get("/api/lawyers").then(response => {
@@ -76,6 +83,11 @@ export default function LawyerProfilePage() {
       setIsChatVisible(false);
     }
   }
+
+  const addReview = (newReview) => {
+    setReviews(prev => ([ ...prev, newReview]));
+    togglePopup();
+  }
   return (
     <>
     <LawyerHomeNavBar />
@@ -121,7 +133,15 @@ export default function LawyerProfilePage() {
       { isChatVisible && <MessageChatBox /> } 
     <br></br>
       <div>
-        <button className="review-page" onClick={() => {history.push(`/review/${lawyer_id}`)}}><b>Add Review</b></button>
+          {isOpen && <CasePopup
+            content={
+              <Review lawyer_id={lawyer_id} lawyer={lawyerResult.name} client={sessionStorage.name} client_id={sessionStorage.token} addReview={addReview} />
+            }
+            handleClose={togglePopup}
+          />}
+        <button className="review-page" onClick={() => setIsOpen(!isOpen)}>
+          <b>Add Review</b>
+        </button>
       </div> 
     <br></br>
        
