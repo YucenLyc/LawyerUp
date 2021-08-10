@@ -2,18 +2,23 @@
 //   background-color: #bae7ff;
 // }
 .main-container {
+  align-content: space-between;
   background: #F3F3F3;
   border-radius: 20px;
   padding: 5px 20px;
   color: white;
-  display: inline-block;
-  max-width: 80%;
+  display: flex;
+  max-width: 30%;
+  position: fixed;
+  bottom: 3%;
+  overflow-y: auto;
+
 }
 .card {
   height: 80px;
   width: 100px;
   margin: 16px 4px 0px 4px;
-  background: lightblue;
+  background:grey;
   border-radius: 20px;
   padding: 5px 20px;
   color: white;

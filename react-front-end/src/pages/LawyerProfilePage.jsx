@@ -6,6 +6,7 @@ import ReviewList from '../components/ReviewList';
 import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
 import { useHistory } from 'react-router-dom';
+import MessageChatBox from '../components/message';
 
 const axios = require('axios');
 
@@ -14,6 +15,8 @@ export default function LawyerProfilePage() {
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
   const history = useHistory();
+
+  const [isChatVisible, setIsChatVisible] = useState(false);
 
 
   useEffect(() => {
@@ -63,7 +66,15 @@ export default function LawyerProfilePage() {
   />
   });
   
-  console.log("afsdfasf::::  ", lawyerResult.speciality)
+  //console.log("afsdfasf::::  ", lawyerResult.speciality)
+  const toggleChat = () => {
+    if(!isChatVisible) {
+      setIsChatVisible(true);
+    }
+    else {
+      setIsChatVisible(false);
+    }
+  }
   return (
     <>
     <Header />
@@ -85,7 +96,7 @@ export default function LawyerProfilePage() {
           </div>
         </div>
         <div className="send-message">
-        <Link>Send Message</Link>
+        <button onClick={toggleChat} className="messageClientBtn">Message Client User</button>
         </div>
       </div>
       </div>
@@ -106,6 +117,7 @@ export default function LawyerProfilePage() {
         <h4>Review From Client</h4>
         {reviewList}
       </div>
+      { isChatVisible && <MessageChatBox /> } 
     <br></br>
       <div>
         <button className="review-page" onClick={() => {history.push(`/review/${lawyer_id}`)}}><b>Add Review</b></button>
