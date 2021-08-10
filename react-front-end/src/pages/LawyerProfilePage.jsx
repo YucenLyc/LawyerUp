@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
 import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
+import CasePopup from '../components/CasePopUp/CasePopup';
 
 const axios = require('axios');
 
@@ -15,9 +16,13 @@ export default function LawyerProfilePage() {
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
   const history = useHistory();
+  const [isOpen, setIsOpen] = useState(false);
 
   const [isChatVisible, setIsChatVisible] = useState(false);
 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
 
   useEffect(() => {
     axios.get("/api/lawyers").then(response => {
@@ -120,7 +125,15 @@ export default function LawyerProfilePage() {
       { isChatVisible && <MessageChatBox /> } 
     <br></br>
       <div>
-        <button className="review-page" onClick={() => {history.push(`/review/${lawyer_id}`)}}><b>Add Review</b></button>
+        <button className="review-page">
+          {isOpen && <CasePopup
+            content={
+              <p>test</p>
+            }
+            handleClose={togglePopup}
+          />}
+          <b>Add Review</b>
+        </button>
       </div> 
     <br></br>
        
