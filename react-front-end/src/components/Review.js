@@ -37,18 +37,16 @@ export default function Review({match}) {
     });
   }
 
-return (
+  return (
+    <div className="reviewcomponent">
+      <div className="reviewtitle">Add Your Review</div>
+      <div>
+        <Form className="reviewcontent" onSubmit={(e) => {e.preventDefault();}}>
+          <textarea placeholder="Please give us your feedback on this lawyer" onChange={(e) => setContent(e.target.value)}></textarea>
+          <button className="submitreview" type="submit" onClick={submitReview} variant="primary"><b>Submit Review</b></button>
+        </Form>
+      </div>
+    </div>
+  )
 
-  <Card style={{ width: '30rem' }}>
-  <Card.Body>
-    <Card.Title className="title">Your Review</Card.Title>
-    <Card.Text>
-      <Form className="review-content" onSubmit={(e) => {e.preventDefault();}}>
-        <textarea placeholder="Please give us your feedback on this lawyer" onChange={(e) => setContent(e.target.value)}></textarea>
-        <Button type="submit" onClick={submitReview} variant="primary">Submit Review</Button>
-      </Form>
-    </Card.Text>
-  </Card.Body>
-</Card>
-)
 }

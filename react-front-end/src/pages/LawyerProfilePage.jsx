@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import ReviewList from '../components/ReviewList';
 import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
+import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
 import LawyerHomeNavBar from '../components/pageContainer/LawyerHomeNavbar';
 
@@ -14,6 +15,7 @@ export default function LawyerProfilePage() {
   const { lawyer_id } = useParams();
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const history = useHistory();
 
   const [isChatVisible, setIsChatVisible] = useState(false);
 
@@ -30,6 +32,7 @@ export default function LawyerProfilePage() {
       setReviews(response.data);
     });
   }, []);
+
   console.log("reviews:   ",reviews);
   console.log('lawyers= ', lawyers);
   console.log('lawyer_id', lawyer_id);
@@ -41,6 +44,8 @@ export default function LawyerProfilePage() {
   }
   
   const lawyerResult = filterByLawyerId(lawyer_id);
+
+  console.log('specialities: ', lawyerResult.speciality);
 
   const getReviewByLawyerId = (lawyer_id) => {
     let result = [];
@@ -115,8 +120,8 @@ export default function LawyerProfilePage() {
       </div>
       { isChatVisible && <MessageChatBox /> } 
     <br></br>
-      <div className="review-page">
-        <Link to={`/review/${lawyer_id}`}>Add Review</Link>
+      <div>
+        <button className="review-page" onClick={() => {history.push(`/review/${lawyer_id}`)}}><b>Add Review</b></button>
       </div> 
     <br></br>
        
