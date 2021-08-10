@@ -5,19 +5,8 @@ import Button  from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useParams, useHistory } from 'react-router-dom';
 
+
 const axios = require('axios');
-
-// export default function Review(props) {
-
-//   return (
-//     <main className="review-case" >
-//       <h3>Leave a Review For Your Lawyer Here!</h3>
-//       <div >
-//           <input className="review-textarea" placeholder="Would you recommend this lawyer to a friend? " />
-//         </div>
-//     </main>
-//   )
-// }
 
 export default function Review({match}) {
   const history = useHistory();
