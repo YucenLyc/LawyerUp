@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
-import Header from "./Header";
+import Navbar from "../components/ClientHomeNavbar";
 import "./AddNewCase.scss";
 
 const axios = require('axios');
@@ -34,7 +34,7 @@ const AddNewCase = () => {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <div className="NewCase">
         <h1 className="submit-form">Submit Your Case</h1>
         <div className="form-group row">
