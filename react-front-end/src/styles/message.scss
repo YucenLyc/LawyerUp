@@ -1,17 +1,15 @@
-// body {
-//   background-color: #bae7ff;
-// }
 .main-container {
-  align-content: space-between;
-  background: #F3F3F3;
-  border-radius: 20px;
+  
+  background: #997b66;
+  border-radius: 10px;
   padding: 5px 20px;
-  color: white;
+  
   display: flex;
   max-width: 30%;
   position: fixed;
   bottom: 3%;
-  overflow-y: auto;
+  overflow-y:visible;
+  right:0%;
 
 }
 .card {
@@ -25,23 +23,36 @@
   display: inline-block;
   max-width: 80%;
 }
-
-.message-text{
-  display: flex;
-  flex-Direction: column;
-  padding-Bottom: 50;
+.message-box {
+  display: inline-block;
+  height: 270px;
+}
+.message-text {
+  // display: flex;
+  // flex-Direction: column;
+  // padding-Bottom: 20;
+  padding: 5% 0;
+  overflow: auto;
+  flex: auto;
+  border-bottom: none;
 }
 .title {
   text-align: center;
   width: 100%;
   padding: 2%;
-  background-color: #91d5ff;
-  color: #efefef;
+  background-color: white;
+  color: black;
 }
 
 .bottom {
-  position: fixed;
+  // position: fixed;
   width: 100%;
-  left: 0;
+  display: flex;
+  right: 0%; 
   bottom: 0;
 }
+
+.input-box {
+  bottom: 0;
+}
+

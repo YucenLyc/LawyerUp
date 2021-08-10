@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import CaseItem from './CaseItem';
-
+import LawyerNavbar from './pageContainer/LawyerHomeNavbar';
 
 const axios = require('axios');
 
@@ -28,10 +28,13 @@ export default function SameLawyerCaseList(props) {
   });
 
   return(
+    <>
+    <LawyerNavbar />
     <ul className="CaseList">
       <h3>Hi Lawyer User, Here Are All Of Your Cases:</h3>
       {SameLawyerCaseList}
     </ul>
+    </>
   )
 
 }

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Header from './Header';
+//import Header from './Header';
 import { useParams } from 'react-router-dom';
-import SummaryDisplay from '../components/summaryDisplay';
+//import SummaryDisplay from '../components/summaryDisplay';
 import ReviewList from '../components/ReviewList';
 import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
 import MessageChatBox from '../components/message';
+import LawyerHomeNavBar from '../components/pageContainer/LawyerHomeNavbar';
 
 const axios = require('axios');
 
@@ -29,7 +30,7 @@ export default function LawyerProfilePage() {
       setReviews(response.data);
     });
   }, []);
-console.log("reviews:   ",reviews);
+  console.log("reviews:   ",reviews);
   console.log('lawyers= ', lawyers);
   console.log('lawyer_id', lawyer_id);
 
@@ -72,7 +73,7 @@ console.log("reviews:   ",reviews);
   }
   return (
     <>
-    <Header />
+    <LawyerHomeNavBar />
     <div className="heading-container">
       <div className="name-and-profileImage">
         <div>
