@@ -36,7 +36,7 @@ export default function SquareBoxItem(props) {
     <main className="square-box" onClick={togglePopup}>
        
      
-      <div>
+      <div className="align-date">
 
         {isOpen && <CasePopup
           content={<>

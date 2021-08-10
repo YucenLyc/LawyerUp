@@ -1,6 +1,7 @@
 import React from 'react';
 import SquareBoxItem from './squareBoxItem';
 import "./squareBoxItem.scss";
+import "./AllSquareBox.scss"
 
 export default function AllSquareBox (props) {
   const lawType = props.lawType;

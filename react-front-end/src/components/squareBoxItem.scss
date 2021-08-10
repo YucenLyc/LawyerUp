@@ -1,16 +1,26 @@
 .square-box {
   display: flex;
-  flex-direction: column;
-  min-width: 18rem;
-  width: 40%;
-  border: solid 2px;
-  margin-top: 15px;
+  flex-direction: row;
+
+  min-width: 15rem;
+  width: 45%;
+  height: 50%;
+  border: solid 1px;
+  margin: 5px;
   padding-top: 10px;
-  padding-left: 15px;
+  padding-left: 10px;
   padding-right: 15px;
   border-radius: 22px;
-  
+  background-color: #fff;
+
+  border-radius: 6px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: transform 0.5s;
+ 
 }
+
+
 
 .case-body:hover {
   border-top: solid 2px;
@@ -36,10 +46,12 @@
   border-color: lightcoral;
   border-radius: 5px;
   background-color: lightcyan;
-
 }
 
 .case-date {
   display: flex;
   justify-content: flex-end;
+}
+.align-date {
+  width: 100%;
 }
