@@ -24,9 +24,9 @@ export default function LawyerListItem(props) {
           <h4>Lawyer Name: {props.name}</h4>
           <h6><b>{props.experience}</b> yrs</h6>
         </div>
-        <h5>Specialization: {props.specialization.join(', ')}</h5>
+        <h5 className="specialization-text">Specialization: {props.specialization.join(', ')}</h5>
         <div className="lawyerlistitemfooter">
-          <h5>Location: {props.location}</h5>
+          <h5 className="location-text">Location: {props.location}</h5>
           <h6><b>${props.rating}</b>/hr</h6>
         </div>
 

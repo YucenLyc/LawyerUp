@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import Header from './Header';
 import Years_of_experience from '../components/LawyerDropdownList/yearsOfExprience';
 import Locations from '../components/LawyerDropdownList/locations';
 import Rating from '../components/LawyerDropdownList/rating';
