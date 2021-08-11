@@ -101,7 +101,7 @@ export default function LawyerList(props){
   
   return(
     <ul className="LawyerList">
-      <h3 className="lawyerlisttitle">Our lawyers that specialize in {props.lawfield}:</h3>
+      <h3 className="lawyerlisttitle">Specialized In {props.lawfield}:</h3>
       {LawyersListItem}
     </ul>
   )
