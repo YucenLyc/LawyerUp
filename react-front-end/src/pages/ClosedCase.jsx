@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { useParams } from "react-router-dom";
 import Navbar from "../components/ClientHomeNavbar";
+import './ClosedCase.scss';
 
 const axios = require("axios");
 
@@ -29,7 +30,7 @@ function ClosedCase(props) {
   };
 
   const closedCase = findCaseById(case_id);
-  console.log(closedCase);
+  console.log('closed case: ', closedCase);
 
   // const togglePopup = () => {
   //   setIsOpen(!isOpen);
@@ -38,34 +39,41 @@ function ClosedCase(props) {
   return (
     <div>
       <Navbar />
-      <header>
-        <h1>
-          Closed <strong>Cases</strong> Detail
-        </h1>
-        <p>...I came, I saw, I conquered </p>
-      </header>
-      <div class="caseInfo">
-        <label for="caseId">Case ID: {closedCase.id}</label>
+      <div className="closedcasecontainer">
+        <header>
+          <h1>
+            Closed <strong>Cases</strong> Detail
+          </h1>
+        </header>
+        <div className="closedcasebody">
+          <div className="closedcaseheader">
+            <div class="caseInfo">
+              <label for="caseId">Case ID: {closedCase.id}</label>
+            </div>
+            <div>
+              <label for="caseDate">
+                {new Date(closedCase.date).toDateString()}
+              </label>
+            </div>
+          </div>
+          <div className="closedcasecontent">
+            <div>
+              <label for="clientName"><b>Client Name:</b> {closedCase.client_name}</label>
+            </div>
+            {/* <div>
+              <label for="lawyerName">Lawyer Name: {closedCase.lawyer_name}</label>
+            </div> */}
+            <div>
+              <label for="lawField"><b>Law Field: </b>{closedCase.law_field}</label>
+            </div>
+            <div>
+              <label for="caseDesc"><b>Case Description: </b></label>
+              <p>{closedCase.description}</p>
+            </div>
+            <br></br>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="caseDate">
-          Case Date: {new Date(closedCase.date).toDateString()}
-        </label>
-      </div>
-      <div>
-        <label for="clientName">Client Name: {closedCase.client_name}</label>
-      </div>
-      <div>
-        <label for="lawyerName">Lawyer Name: {closedCase.lawyer_name}</label>
-      </div>
-      <div>
-        <label for="lawField">Law Field: {closedCase.law_field}</label>
-      </div>
-      <div>
-        <label for="caseDesc">Case Description: </label>
-        <p>{closedCase.description}</p>
-      </div>
-      <br></br>
     </div>
   );
 }
