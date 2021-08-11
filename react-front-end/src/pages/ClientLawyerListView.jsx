@@ -39,6 +39,7 @@ const clientLawyerListView = () => {
   return (
     <>
       <Navbar />
+      <main className="bg">
       <div className="client-lawyers-list">
         <div className="definition-of-law">
           <DefinedLawFieldBox name={lawSpeciality.name} definition={lawSpeciality.definition}/>
@@ -61,6 +62,7 @@ const clientLawyerListView = () => {
           <LawyerList lawType={lawType} location={lacationSelected} rate={rateSelected} year={yearSelected} lawfield={lawSpeciality.name}/>
         </div>
       </div>
+      </main>
     </>
   );
 }
