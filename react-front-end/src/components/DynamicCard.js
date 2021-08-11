@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Card(props) {
   return (
     <div className="Card">
-      <div className="upper-container">
+      <div className="uppercontainer">
         <div className='image-container'>
           <img src="https://pbs.twimg.com/profile_images/1298645851011653632/wwG2XGDD_400x400.jpg" alt="" height="100px" width="100px" />
         </div>
