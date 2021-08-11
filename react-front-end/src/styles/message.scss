@@ -1,16 +1,13 @@
 .main-container {
-  
-  background: #997b66;
+  background: #264653;
   border-radius: 10px;
   padding: 5px 20px;
-  
   display: flex;
   max-width: 30%;
   position: fixed;
   bottom: 3%;
   overflow-y:visible;
   right:0%;
-
 }
 .card {
   height: 80px;
@@ -35,6 +32,7 @@
   overflow: auto;
   flex: auto;
   border-bottom: none;
+  font-family: 'Bitter';
 }
 .title {
   text-align: center;
@@ -42,6 +40,7 @@
   padding: 2%;
   background-color: white;
   color: black;
+  font-family: 'Work Sans';
 }
 
 .bottom {

@@ -8,7 +8,7 @@ import "../components/ClientHomeNavbar";
 const axios = require('axios');
 
 
-export default function CaseItem(props) {
+export default function SquareBoxItem(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const history = useHistory();
@@ -33,10 +33,10 @@ export default function CaseItem(props) {
 
     
     
-    <main className="case-box" onClick={togglePopup}>
+    <main className="square-box" onClick={togglePopup}>
        
      
-      <div>
+      <div className="align-date">
 
         {isOpen && <CasePopup
           content={<>
