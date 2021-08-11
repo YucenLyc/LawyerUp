@@ -96,11 +96,11 @@ export default function LawyerProfilePage() {
     <div className="lawyer-profile-container">
       <div className="heading-container">
         <div className="name-and-profileImage">
-          <div>
-            <h2 className="lawyer-name">{lawyerResult.name}</h2>
+          <div className="lawyer-name">
+            <h2>{lawyerResult.name}</h2>
           </div>
           <div className="profileImage">
-            <img src="https://pbs.twimg.com/media/Crx9nxmWgAAl2BY?format=jpg&name=900x900" alt="" height="200px" width="200px" />
+            <img src="https://pbs.twimg.com/media/Crx9nxmWgAAl2BY?format=jpg&name=900x900" alt="" height="150px" width="150px" />
           </div>
         </div>
           <br></br>
