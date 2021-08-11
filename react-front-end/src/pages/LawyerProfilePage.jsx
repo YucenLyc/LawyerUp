@@ -112,7 +112,7 @@ export default function LawyerProfilePage() {
           </div>
         </div>
           <div className="send-message">
-            <button onClick={toggleChat} className="messageClientBtn">Message Client User</button>
+            <button onClick={toggleChat} className="messageBtn">Message This Lawyer</button>
           </div>
         </div>
       </div>
