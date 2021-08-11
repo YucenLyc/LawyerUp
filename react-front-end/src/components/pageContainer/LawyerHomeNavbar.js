@@ -1,14 +1,30 @@
-import React, {useState} from 'react';
+/* eslint-disable no-undef */
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 //import SameLawyerCaseList from '../SameLawyerCaseList';
 import { LawyerSidebar } from '../LawyerSidebar';
 import { IconContext } from 'react-icons';
+import { ParticleEngine } from '../ParticleEngine';
 
 function LawyerNavbar() {
 
   const [sidebar, setSidebar] = useState(false)
+
+  useEffect(() => {
+    const particles = new ParticleEngine('projector');
+    createjs.Ticker.addEventListener("tick", updateCanvas);
+    window.addEventListener('resize', resizeCanvas, false);
+
+    function updateCanvas(){
+      particles.render();
+    }
+
+    function resizeCanvas(){
+      particles.resize();
+	  }
+  }, []);
   
   const showSidebar = () => setSidebar(!sidebar)
 
@@ -16,13 +32,11 @@ function LawyerNavbar() {
     <>
     <IconContext.Provider value={{color:'#fff'}}> 
     <div className='navbar'>
+    <canvas id="projector">Your browser does not support the Canvas element.</canvas>
       <Link to="#" className='menu-bars'>
         <FaIcons.FaBars onClick={showSidebar} />
       </Link>
-      <div className="navlogo">
-        <div className="navappname">LawyerUp</div>
-        <img className='logo' src="/images/logo.png" alt="" />
-      </div>
+      <img className='logo' src="/images/logo.png" alt="" />
     </div>
     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
       <ul className='nav-menu-items' onClick={showSidebar}>
@@ -36,7 +50,7 @@ function LawyerNavbar() {
             <li key={index} className={item.sName}>
               <Link to={item.path}>
                {item.icon}
-               <span className="navbarspan">{item.title}</span>
+               <span>{item.title}</span>
               </Link>
             </li>
           )
