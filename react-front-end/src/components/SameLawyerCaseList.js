@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import CaseItem from './CaseItem';
 import LawyerNavbar from './pageContainer/LawyerHomeNavbar';
+import './SameLawyerCaseList.scss';
 
 const axios = require('axios');
 
 export default function SameLawyerCaseList(props) {
   const [cases, setCases] = useState([])
   
+  const lawyer = sessionStorage.name;
+
   useEffect(() => {
     axios.get("/api/casesForSameLawyer").then(response => {
       setCases(response.data);
@@ -30,10 +33,10 @@ export default function SameLawyerCaseList(props) {
   return(
     <>
     <LawyerNavbar />
-    <ul className="CaseList">
-      <h3>Hi Lawyer User, Here Are All Of Your Cases:</h3>
+    <div className="samelawyerlist">
+      <h3>Hi {lawyer}, Here Are All Of Your Cases:</h3>
       {SameLawyerCaseList}
-    </ul>
+    </div>
     </>
   )
 
