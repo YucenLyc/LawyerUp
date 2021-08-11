@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import '../pageContainer/Dropdown.scss'
 import Dropdown from '../pageContainer/Dropdown';
 import AllCaseList from '../AllCaseList';
-
+import './index.scss';
 
 const axios = require('axios');
 
@@ -35,13 +35,16 @@ export default function ClientHomePage() {
   return (
     <>
     <Navbar />
+    <main className="client-home-page">
     <div className="container">
       <h2 style={{ textAlign: 'center' }}>
         {sessionStorage.name} Homepage {' '}
       </h2>
       <Dropdown title="select-cat" items={specialities} type="client"/>
       <AllCaseList cases={cases}/>
-    </div> 
+    
+    </div>
+    </main>
     </>
   );
 
