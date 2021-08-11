@@ -35,7 +35,7 @@ function Navbar() {
         </Link>
         <div className="navlogo">
           <div className="navappname">LawyerUp</div>
-          <img className='logo' src="/images/logo.png" alt="" />
+          <img className='logo' src="/images/whitelogo.png" alt="" />
         </div>
       <canvas id="projector">Your browser does not support the Canvas element.</canvas>
       </div>
