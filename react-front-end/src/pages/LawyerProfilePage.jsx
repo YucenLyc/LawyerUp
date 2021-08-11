@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
 import CasePopup from '../components/CasePopUp/CasePopup';
 import Review from '../components/Review';
-import LawyerHomeNavBar from '../components/pageContainer/LawyerHomeNavbar';
+import Navbar from '../components/ClientHomeNavbar';
 
 
 const axios = require('axios');
@@ -92,7 +92,7 @@ export default function LawyerProfilePage() {
   }
   return (
     <>
-    <LawyerHomeNavBar />
+    <Navbar />
     <div className="lawyer-profile-container">
       <div className="heading-container">
         <div className="name-and-profileImage">
