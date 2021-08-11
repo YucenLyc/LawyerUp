@@ -68,6 +68,15 @@
 	justify-content: start;
 	align-items: center;
 }
-span {
+.navbarspan {
 	margin-left: 16px;
+}
+
+.ant-input {
+	width: 100%;
+	border: none;
+	border-top: solid 2px;
+	height: 3em;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }

@@ -16,7 +16,7 @@
   background:grey;
   border-radius: 20px;
   padding: 5px 20px;
-  color: white;
+  color: black;
   display: inline-block;
   max-width: 80%;
 }
@@ -33,6 +33,8 @@
   flex: auto;
   border-bottom: none;
   font-family: 'Bitter';
+  // border: solid 2px;
+  background-color: white;
 }
 .title {
   text-align: center;
@@ -41,6 +43,7 @@
   background-color: white;
   color: black;
   font-family: 'Work Sans';
+  border-bottom: solid 2px;
 }
 
 .bottom {

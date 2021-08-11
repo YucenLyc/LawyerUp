@@ -63,7 +63,7 @@ class MessageChatBox extends Component {
           <div className="message-text">
             <ScrollToBottom className="message-box">
               {this.state.messages.map(message =>
-                <div key={message.msg} style={{ color: 'white', alignSelf: this.state.userName === message.user ? 'flex-end' : 'flex-start' }} loading={false}>
+                <div key={message.msg} style={{ color: 'black', alignSelf: this.state.userName === message.user ? 'flex-end' : 'flex-start' }} loading={false}>
 
                   <div style={{ color: 'black', backgroundColor: '#E9C46A'}}>{message.user + ":"}</div>
                   {message.msg}
@@ -74,7 +74,7 @@ class MessageChatBox extends Component {
           </div>
           <div className="bottom">
             <Search className="input-box"
-              placeholder="input message and send"
+              placeholder="Put your message here"
               enterButton="Send"
               value={this.state.searchVal}
               size="large"
