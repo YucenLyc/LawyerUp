@@ -100,7 +100,7 @@ export default function LawyerProfilePage() {
             <h2>{lawyerResult.name}</h2>
           </div>
           <div className="profileImage">
-            <img src="https://pbs.twimg.com/media/Crx9nxmWgAAl2BY?format=jpg&name=900x900" alt="" height="150px" width="150px" />
+            <img src="https://pbs.twimg.com/profile_images/1298645851011653632/wwG2XGDD_400x400.jpg" alt="" height="150px" width="150px" />
           </div>
         </div>
           <br></br>
@@ -112,7 +112,7 @@ export default function LawyerProfilePage() {
           </div>
         </div>
           <div className="send-message">
-            <button onClick={toggleChat} className="messageClientBtn">Message Client User</button>
+            <button onClick={toggleChat} className="messageBtn">Message This Lawyer</button>
           </div>
         </div>
       </div>
