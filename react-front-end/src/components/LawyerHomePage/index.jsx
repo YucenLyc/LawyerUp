@@ -50,7 +50,7 @@ export default function LawyerHomePage(props) {
     { isChatVisible && <MessageChatBox /> } 
     <div className="container">
       {/* <button onClick={test}>TEST</button> */}
-      <h2 style={{ textAlign: 'center' }}>
+      <h2 className="title-lawyerHome" style={{ textAlign: 'center', fontFamily: 'Work Sans' }}>
         Lawyer {sessionStorage.name} Homepage {' '}
       </h2>
       <Dropdown title="Select A Category of Law" items={specialities} multiSelect />

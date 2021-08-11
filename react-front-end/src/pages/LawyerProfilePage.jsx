@@ -106,7 +106,7 @@ export default function LawyerProfilePage() {
           <br></br>
         <div className="speciality-and-sendMessage">
           <div className="speciality-list">
-            <h4>Specialization:</h4>
+            <h4 className="specialization-tag">Specialization:</h4>
           <div className="specialization">
             {lawyerResult.speciality && lawyerResult.speciality.join(', ')}
           </div>
@@ -118,17 +118,17 @@ export default function LawyerProfilePage() {
       </div>
       <div className="content-container">
         <div>
-          <h4>My Self</h4>
-          <h5>{lawyerResult.profile}</h5>
+          <h4 className="about-me">About Me</h4>
+          <h5 className="lawyer-summary">{lawyerResult.profile}</h5>
         </div>
         <br></br>
         <div className="rate">
-          <h5>Consultation Rate:</h5>
+          <h4 className="consultation-rate">Consultation Rate:</h4>
           <strong>$ {lawyerResult.rate}</strong>
         </div>
       </div>
       <div className="reviews">
-        <h4>Review From Client</h4>
+        <h4 className="review-tag">Review From Client</h4>
         {reviewList}
       </div>
         { isChatVisible && <MessageChatBox /> } 
@@ -141,7 +141,7 @@ export default function LawyerProfilePage() {
             handleClose={togglePopup}
         />}
         <button className="review-page" onClick={() => setIsOpen(!isOpen)}>
-          <b>Add Review</b>
+          <b className="btn-review">Add Review</b>
         </button>
       </div> 
       <br></br>
