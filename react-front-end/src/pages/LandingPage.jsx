@@ -47,6 +47,7 @@ export default function LandingPage() {
   return (
     <>
       <div className="landingbody">
+        <div className="landingtitle">LawyerUp</div>
         <div className="userlogin">
           <div className="useroptions">
             <div className="usertype">
@@ -70,7 +71,7 @@ export default function LandingPage() {
             <form className="login-form" onSubmit={onSubmit}>
               <div className="user-input">
                 <div className="userpass">
-                  <div>Username:</div>
+                  <div><b>Username:</b></div>
                   <input
                     type="text"
                     name="login"
@@ -80,7 +81,7 @@ export default function LandingPage() {
                   />
                 </div>
                 <div className="userpass">
-                  <div>Password:</div>
+                  <div><b>Password:</b></div>
                   <input
                     type="password"
                     name="password"
