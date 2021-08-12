@@ -96,6 +96,7 @@ export default function LawyerList(props){
       experience={lawyer.years_of_experience}
       review={lawyer.review}
       profile={lawyer.profile}
+      image={lawyer.image}
     />
   });
   

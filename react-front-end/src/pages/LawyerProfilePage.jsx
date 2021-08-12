@@ -54,6 +54,7 @@ export default function LawyerProfilePage() {
   
   const lawyerResult = filterByLawyerId(lawyer_id);
 
+  console.log('lawyer: ', lawyerResult);
   console.log('specialities: ', lawyerResult.speciality);
 
   const getReviewByLawyerId = (lawyer_id) => {
@@ -100,7 +101,7 @@ export default function LawyerProfilePage() {
             <h2>{lawyerResult.name}</h2>
           </div>
           <div className="profileImage">
-            <img src="https://pbs.twimg.com/profile_images/1298645851011653632/wwG2XGDD_400x400.jpg" alt="" height="150px" width="150px" />
+            <img src={lawyerResult.image ? lawyerResult.image : '/images/defaultProfile.jpeg'} alt="" height="150px" width="150px" />
           </div>
         </div>
           <br></br>

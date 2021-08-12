@@ -1,9 +1,9 @@
 INSERT INTO users (name, email, password)
 VALUES
-('Elise Carter', 'rosalinda_mclaughlin@hotmail.com', 'password'),
+('Egg Eggerson', 'friedEgg99@hotmail.com', 'password'),
 ('Micheal Schmidt', 'wilkinson.timmothy@hotmail.com', 'password'),
 ('Anderson Stokes', 'reichel_albina@stamm.info', 'password'),
-('Eunice Morar', 'danielle.aufderhar@kilback.net', 'password'),
+('Harvey Specter', 'harvey@gmail.com', 'password'),
 ('Brian Jones', 'percy_ratke@cornelius.biz', 'password'),
 ('Ham Hammerson', 'hamandegg@yahoo.com', 'password'),
 ('Darien Luettgen', 'issac_collins@pink.io', 'password'),
@@ -35,36 +35,36 @@ VALUES
 ('Reeve Wah', 'reevewah@witting.net', 'password'),
 ('Ming Feng', 'mingfengthelegend@witting.net', 'password'),
 ('Adel Adele', 'howtosaymyname@knockknock.com', 'password'),
-('Egg Eggerson', 'friedEgg99@hotmail.com', 'password');
+('Elise Carter', 'rosalinda_mclaughlin@hotmail.com', 'password');
 
 INSERT INTO clients (user_id) VALUES (1), (2), (5), (7), (8), (10), (11), (14), (15), (17), (18), (36);
 
-INSERT INTO lawyers (user_id, profile, rate, years_of_experience) 
+INSERT INTO lawyers (user_id, profile, rate, years_of_experience, image) 
 VALUES 
-(3, 'I am specialized in family law related legal issues', 150, 8),
-(4, 'I am specialized in business law related legal issues', 250, 15), 
-(6, 'I have been practicing law for over 10+ years. I have a decent amount of experience in various fields of law. After graduating law school, I spent 5 years conducting legal research and defending clients in medical malpractice and premises liability trails. I entered the field of business law afterwards, and had been helping start-up companies with their legal contracts. I am also experienced in criminal defense. I have successfully helped several high profile clients to regain freedom after been charged with serious crimes. I do not have a personal life. My work is my life. If you trust me with your case, I will work night and day to get it done. I am resourceful after being in this field for more than a decade, and I offer a competitive price when it comes to consultation. Contact me through in app messaging or email, and I shall get back to you within 24 hours. Looking forward to hear from you. ', 200, 12), 
-(9, 'I am specialized  in  environmental law related legal issues', 175, 10),
-(12, 'I am specialized  in family law related legal issues', 150, 8),
-(13, 'I am specialized  in business law related legal issues', 250, 15), 
-(16, 'I am specialized in civil rights law related legal issues', 200, 12), 
-(19, 'I am specialized in environmental law related legal issues', 175, 10),
-(20, 'I am specialized in environmental law related legal issues', 175, 10),
-(21, 'I am specialized in labor law related legal issues', 125, 3),
-(30, 'I am specialized in immigration law related legal issues', 175, 7),
-(28, 'I am specialized in banruptcy law related legal issues', 280, 17),
-(29, 'I am specialized in immigration law related legal issues', 200, 6),
-(34, 'I am specialized in criminal law related legal issues', 100, 5),
-(32, 'I am specialized in criminal law related legal issues', 130, 7),
-(25, 'I am specialized in immigration law related legal issues', 175, 8),
-(33, 'I am specialized in business law related legal issues', 300, 17),
-(22, 'I am specialized in civil right law related legal issues', 120, 12),
-(27, 'I am specialized in immigration law related legal issues', 175, 7),
-(26, 'I am specialized in criminal law related legal issues', 175, 7),
-(24, 'I am specialized in bankruptcy law related legal issues', 175, 7),
-(23, 'I am specialized in labor law related legal issues', 175, 7),
-(31, 'I am specialized in family law related legal issues', 175, 7),
-(35, 'I am specialized in civil rights law related legal issues', 175, 7);
+(3, 'I am specialized in family law related legal issues', 150, 8, null),
+(4, 'I am a former corporate attorney, one of the name partners at Specter Litt Wheeler Williams, the managing partner of Specter Litt, and a former Assistant District Attorney for the New York County District Attorney Office.', 250, 15, 'https://pbs.twimg.com/profile_images/1298645851011653632/wwG2XGDD_400x400.jpg'), 
+(6, 'I have been practicing law for over 10+ years. I have a decent amount of experience in various fields of law. After graduating law school, I spent 5 years conducting legal research and defending clients in medical malpractice and premises liability trails. I entered the field of business law afterwards, and had been helping start-up companies with their legal contracts. I am also experienced in criminal defense. I have successfully helped several high profile clients to regain freedom after been charged with serious crimes. I do not have a personal life. My work is my life. If you trust me with your case, I will work night and day to get it done. I am resourceful after being in this field for more than a decade, and I offer a competitive price when it comes to consultation. Contact me through in app messaging or email, and I shall get back to you within 24 hours. Looking forward to hear from you. ', 200, 12, null), 
+(9, 'I am specialized  in  environmental law related legal issues', 175, 10, null),
+(12, 'I am specialized  in family law related legal issues', 150, 8, null),
+(13, 'I am specialized  in business law related legal issues', 250, 15, null), 
+(16, 'I am specialized in civil rights law related legal issues', 200, 12, null), 
+(19, 'I am specialized in environmental law related legal issues', 175, 10, null),
+(20, 'I am specialized in environmental law related legal issues', 175, 10, null),
+(21, 'I am specialized in labor law related legal issues', 125, 3, null),
+(30, 'I am specialized in immigration law related legal issues', 175, 7, null),
+(28, 'I am specialized in banruptcy law related legal issues', 280, 17, null),
+(29, 'I am specialized in immigration law related legal issues', 200, 6, null),
+(34, 'I am specialized in criminal law related legal issues', 100, 5, null),
+(32, 'I am specialized in criminal law related legal issues', 130, 7, null),
+(25, 'I am specialized in immigration law related legal issues', 175, 8, null),
+(33, 'I am specialized in business law related legal issues', 300, 17, null),
+(22, 'I am specialized in civil right law related legal issues', 120, 12, null),
+(27, 'I am specialized in immigration law related legal issues', 175, 7, null),
+(26, 'I am specialized in criminal law related legal issues', 175, 7, null),
+(24, 'I am specialized in bankruptcy law related legal issues', 175, 7, null),
+(23, 'I am specialized in labor law related legal issues', 175, 7, null),
+(31, 'I am specialized in family law related legal issues', 175, 7, null),
+(35, 'I am specialized in civil rights law related legal issues', 175, 7, null);
 
 
 
@@ -178,11 +178,11 @@ VALUES
 
 INSERT INTO cases (lawyer_id, client_id, name, date, description)
 VALUES
-(1, 1, 'Rental dispute with my landlord over having a pet cat', '2020-12-01', 'My name is Fay Fanning, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract did not address anything about tenant owning pets, so I assumed it is okay for me to have a cat. I have been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance.Please contact me, if you are experience in handling rental dispute!! Much thanks!!'),
+(1, 6, 'Rental dispute with my landlord over having a pet cat', '2020-12-01', 'My name is Fay Fanning, I got into an argument with my landlord recently over my cat Smooj. When I signed the rental contract, the contract did not address anything about tenant owning pets, so I assumed it is okay for me to have a cat. I have been living in this apartment for over a year now, and recently my landlord found out from the neighbours that I have a cat. She said I could either move out this month or get rid of Smooj. Of course getting rid of Smooj is not an option for me, so I want to know if she is allowed to make me move out under this circumstance.Please contact me, if you are experience in handling rental dispute!! Much thanks!!'),
 (2, 5, 'Business tax', '2021-01-12', 'My company is being charged for evading payment of over 2 million in taxes. I was not aware of the financial situation of my company, even though I am the sole owner. My best friend Joey handles the financial side of the business, but he recently disappeared. I am looking for a lawyer who can keep me out of jail before I find Joey. Please email me if you are interested in my case, I am not a fan of phone calls. Thanks.'),
 (3, 3, 'Police abuse', '2021-04-22', 'I was attacked by a policeman who stopped me on the street last Friday night. She showed me her badge quicky, but I did not get a good look. She then told me give my protein bar to her. She asked me if I have any more protein bars with me. I lied and said no. She did not believe me. I was body searched by her and she took away my 3 other protein bars. She drove away in a police car, I memorized the license. I would like to get compensated for this assult and for my lost. If you are experience in personal injury/assult or police brutality cases,s call me. I amusually on my phone 25/8. Cheers.'),
 (5, 4, 'Need help with bankruptcy paperwork', '2021-04-22', 'I am filing for bankrupty, my partner took my pet turtle, my money and left me with nothing. I need someone to help me file for bankruptcy and do not worry, I can pay. Text, only, thanks.'),
-(3, 1, 'Looking for a kickass divorce lawyer', '2017-03-16', 'My partner and I are spliting up and I do not want to split our shared property evenly with the guy. I also do not want to share custody of his 25 cats. I need help quick, call me night or day, I do not care. I will pay handsomely if you can get the job done. Man, I cannot live with 12.5 cats.'),
+(3, 9, 'Looking for a kickass divorce lawyer', '2017-03-16', 'My partner and I are spliting up and I do not want to split our shared property evenly with the guy. I also do not want to share custody of his 25 cats. I need help quick, call me night or day, I do not care. I will pay handsomely if you can get the job done. Man, I cannot live with 12.5 cats.'),
 (3, 2, 'Starting my own company, need help with investor contracts', '2019-02-06', 'I recently started my own soap company, and I was approached by investors. I do not much when it comes to legal paperworks and I would like to have a professional to look over the contracts the investor company sent to me to sign. Lawyers with corporate law experience would be preferrable. I might not reply right away, please be patient :)'),
 (3, 7, 'I want to patent my iron man suit', '2019-02-06', 'I recently build my own iron man suit, it is super cool and better than the ones in the movies. But my friends mentioned to me that I probably should patent it. I also want to start a business selling these awesome suits, so if you are familiar with business law, that would be great. If not, please check out my instagram account: @MrCreator45903. Like and subscribe! Peace!'),
 (3, 7, 'I want to sue my previous employer', '2020-09-18', 'I would like to look into suing my previous employer. I worked for him for more than a year and he has a bad temper. I was facing verbal abuse almost every week since my sixth month there. He asked me questions like: Are you really that dumb? I have recording of him saying those kind of things to me. I would like to get some legal advice on pressing charges against him. Please contact me.'),

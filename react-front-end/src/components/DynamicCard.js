@@ -6,7 +6,7 @@ function Card(props) {
     <div className="Card">
       <div className="uppercontainer">
         <div className='image-container'>
-          <img src="https://pbs.twimg.com/profile_images/1298645851011653632/wwG2XGDD_400x400.jpg" alt="" height="100px" width="100px" />
+          <img src={props.image ? props.image : '/images/defaultProfile.jpeg'} alt="" height="100px" width="100px" />
         </div>
       </div>
       <div className="lower-container">

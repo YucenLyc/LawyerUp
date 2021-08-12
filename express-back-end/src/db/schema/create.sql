@@ -28,7 +28,8 @@ CREATE TABLE lawyers (
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   profile TEXT,
   rate INTEGER  NOT NULL DEFAULT 0,
-  years_of_experience INTEGER  NOT NULL DEFAULT 1
+  years_of_experience INTEGER  NOT NULL DEFAULT 1,
+  image TEXT
 );
 
 CREATE TABLE specialities (

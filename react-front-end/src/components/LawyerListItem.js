@@ -33,7 +33,7 @@ export default function LawyerListItem(props) {
         <div>
         {isOpen && <ProfilePopUp 
         content={<>
-        <Card id={props.id} name={props.name} specialization={props.specialization} profile={props.profile}/>
+        <Card id={props.id} name={props.name} specialization={props.specialization} profile={props.profile} image={props.image}/>
         </>} 
         handleClose={togglePopup}
         />}
