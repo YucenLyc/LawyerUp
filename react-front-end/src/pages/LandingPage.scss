@@ -22,7 +22,7 @@
 }
 
 .landingtitle {
-  margin-top: 2em;
+  margin-top: 1em;
   font-family: 'lobster', cursive;
   font-size:60px;
   color:white;
@@ -32,10 +32,10 @@
   display: flex;
   flex-direction: column;
   // min-height: 100vh;
-  width: 25%;
+  width: 20%;
   border: solid 3px;
   border-color: lightcyan;
-  margin-top: 5em;
+  margin-top: 4em;
   border-radius: 10px;
 }
 
@@ -78,6 +78,7 @@
   align-items: center;
   justify-content: space-around;
   height: 8em;
+  margin-bottom: 1em;
 }
 
 .userpass {
