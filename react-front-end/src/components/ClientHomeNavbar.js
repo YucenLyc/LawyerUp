@@ -6,24 +6,24 @@ import * as AiIcons from 'react-icons/ai';
 import {ClientSidebar} from './ClientSidebar';
 import '../styles/Navbar.scss';
 import { IconContext } from 'react-icons'
-// import { ParticleEngine } from './ParticleEngine';
+import { ParticleEngine } from './ParticleEngine';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false)
 
-  // useEffect(() => {
-  //   const particles = new ParticleEngine('projector');
-  //   createjs.Ticker.addEventListener("tick", updateCanvas);
-  //   window.addEventListener('resize', resizeCanvas, false);
+  useEffect(() => {
+    const particles = new ParticleEngine('projector');
+    createjs.Ticker.addEventListener("tick", updateCanvas);
+    window.addEventListener('resize', resizeCanvas, false);
 
-  //   function updateCanvas(){
-  //     particles.render();
-  //   }
+    function updateCanvas(){
+      particles.render();
+    }
 
-  //   function resizeCanvas(){
-  //     particles.resize();
-	//   }
-  // }, []);
+    function resizeCanvas(){
+      particles.resize();
+	  }
+  }, []);
   
   const showSidebar = () => setSidebar(!sidebar)
   return (

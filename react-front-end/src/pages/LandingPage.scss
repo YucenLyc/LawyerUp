@@ -1,6 +1,6 @@
 .landingbody {
-	background: linear-gradient(-45deg, #3c153b, #89bd9e, #f0c987, #db4c40);
-	background-size: 400% 400%;
+	background: linear-gradient(-45deg, #260c9c, #89bd9e, #f0c987, #db4c40);
+	background-size: 300% 300%;
 	animation: gradient 15s ease infinite;
   display: flex;
   flex-direction: column;
@@ -96,8 +96,12 @@
 }
 
 .selected {
-  background-color: aqua;
+  background-color: burlywood;
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   // color: white;
+
 }
 
 // .landingbody {
