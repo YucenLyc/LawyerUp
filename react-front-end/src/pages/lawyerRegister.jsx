@@ -1,5 +1,4 @@
 import React from "react";
-//import image if you want 
 import Button from 'react-bootstrap/Button';
 import { PageContainer } from "../components/pageContainer";
 import ProfileImg from "../components/ProfileImg";
@@ -53,7 +52,6 @@ const LawyerRegister = () => {
     </div>
     </PageContainer>
     )
-  
 }
 
 export default LawyerRegister;
