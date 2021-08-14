@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
-//import Header from './Header';
 import { useParams } from 'react-router-dom';
-//import SummaryDisplay from '../components/summaryDisplay';
 import ReviewList from '../components/ReviewList';
-import { Link } from 'react-router-dom';
 import './LawyerProfilePage.scss';
-import { useHistory } from 'react-router-dom';
 import MessageChatBox from '../components/message';
 import CasePopup from '../components/CasePopUp/CasePopup';
 import Review from '../components/Review';
@@ -20,7 +16,7 @@ export default function LawyerProfilePage() {
   const { lawyer_id } = useParams();
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
-  const history = useHistory();
+  //const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
 
   const [isChatVisible, setIsChatVisible] = useState(false);
@@ -77,7 +73,6 @@ export default function LawyerProfilePage() {
   />
   });
   
-  //console.log("afsdfasf::::  ", lawyerResult.speciality)
   const toggleChat = () => {
     if(!isChatVisible) {
       setIsChatVisible(true);
@@ -147,9 +142,6 @@ export default function LawyerProfilePage() {
       </div> 
       <br></br>
     </div>
-   
-   
-     
     </>
   )
 }

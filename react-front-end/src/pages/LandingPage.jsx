@@ -1,6 +1,4 @@
-import React, { useState, useContext } from "react";
-// import { authContext } from '../providers/AuthProvider';
-import Header from "./Header";
+import React, { useState } from "react";
 import "./LandingPage.scss";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -8,14 +6,9 @@ import axios from "axios";
 export default function LandingPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const { login } = useContext(authContext);
   const [user, setUser] = useState("");
   const [selected, setSelected] = useState("");
   const history = useHistory();
-
-  // const onPasswordChange = function (event) {
-  //   setPassword(event.target.value);
-  // };
 
   const onSubmit = function (event) {
     event.preventDefault();
@@ -112,7 +105,6 @@ export default function LandingPage() {
                 </div>
               </div>
             </form>
-            {/* {user === false? <section verifyClient={verifyClient} /> : <div> </div>} */}
           </div>
         </div>
       </div>
