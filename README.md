@@ -13,3 +13,8 @@ Client user could add their cases to the app for lawyer users to view and possib
 The client user could also search for a lawyer who specialize in the field of law their case is invovled in. After reaching to the lawyer's profile page, they have the option of messaging the lawyer and ask for assistance.
 
 After reaching to an agreement, if a lawyer decides to take the client's case, the client could assign the case to that lawyer and let the system know that they are no longer searching for a lawyer for that case.
+
+https://user-images.githubusercontent.com/72534921/129595250-42e412b4-84bb-4ca0-879d-c1a835c3cc4b.mov
+
+Lawyer user could search for clients/cases through law field. A business lawyer could go the business law field to view all the open cases for business law. 
+If the lawyer is interested in the case, they could take the initiative and message the client to offer their service. 
