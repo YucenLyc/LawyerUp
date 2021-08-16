@@ -6,7 +6,7 @@ LawyerUp is an LHL final project that helps lawyers and clients to connect with 
 There are two types of users on LawyerUp: lawyer user and client user.
 
 The blow video clip shows the functionality provided for the client users: 
-![Screen Shot 2021-08-16 at 8 16 42 AM](https://user-images.githubusercontent.com/72534921/129589989-a0405585-8cef-4fa4-abe9-e5a167f508e6.png)
+https://user-images.githubusercontent.com/72534921/129591579-bf6fa110-2281-4645-8383-c700ded7a3e3.mov
 
 As shown above, the client user could add their cases to the app for lawyer users to view and possibly get in touch with them if they are interested in the case. 
 
