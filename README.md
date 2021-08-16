@@ -8,7 +8,7 @@ There are two types of users on LawyerUp: lawyer user and client user.
 The blow video clip shows the functionality provided for the client users: 
 https://user-images.githubusercontent.com/72534921/129591579-bf6fa110-2281-4645-8383-c700ded7a3e3.mov
 
-As shown above, the client user could add their cases to the app for lawyer users to view and possibly get in touch with them if they are interested in the case. 
+Client user could add their cases to the app for lawyer users to view and possibly get in touch with them if they are interested in the case. 
 
 The client user could also search for a lawyer who specialize in the field of law their case is invovled in. After reaching to the lawyer's profile page, they have the option of messaging the lawyer and ask for assistance. 
 
