@@ -1,5 +1,4 @@
 import React from "react";
-//import image if you want 
 import Button from 'react-bootstrap/Button';
 import { PageContainer } from "../components/pageContainer";
 

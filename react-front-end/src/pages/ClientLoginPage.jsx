@@ -12,10 +12,6 @@ const ClientLoginPage = () => {
 
   const history = useHistory();
 
-  // const onEmailChange = function (event) {
-  //   setEmail(event.target.value);
-  // };
-
   const onPasswordChange = function (event) {
     setPassword(event.target.value);
   };

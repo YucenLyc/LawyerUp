@@ -16,7 +16,6 @@ export default function LawyerProfilePage() {
   const { lawyer_id } = useParams();
   const [lawyers, setLawyers] = useState([]);
   const [reviews, setReviews] = useState([]);
-  //const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
 
   const [isChatVisible, setIsChatVisible] = useState(false);

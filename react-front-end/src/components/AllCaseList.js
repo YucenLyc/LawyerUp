@@ -11,7 +11,6 @@ export default function AllCaseList(props) {
   console.log('cases:', cases);
 
   let filtered = cases;
-  // console.log('filtered: ', filtered);
 
   const findCaseBySpeciality = (field) => {
     let result = [];
@@ -27,9 +26,6 @@ export default function AllCaseList(props) {
   if (lawType) {
     filtered = findCaseBySpeciality(lawType.split('-').join(' '));
   }
-  // console.log('filtered: ', filtered);
-  // console.log('cases: ', cases);
-  // console.log('lawType', props.lawType);
 
 
   const CaseItemList = filtered.map((singleCase) => {
@@ -46,16 +42,6 @@ export default function AllCaseList(props) {
    />
   });
 
-  // const CaseItemList = cases.map((singleCase) => {
-  //   return <CaseItem
-  //     name={singleCase.name}
-  //     id={singleCase.id}
-  //     client={singleCase.client_name}
-  //     date={singleCase.date}
-  //     description={singleCase.description}
-  //     onClick={props.onClick}
-  //  />
-  // });
 
   return(
     <ul className="CaseList">

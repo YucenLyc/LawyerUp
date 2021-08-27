@@ -7,12 +7,10 @@ const axios = require('axios');
 
 const AddNewCase = () => {
   const [name, setName] = useState('');
-  // const [date, setDate] = useState('');
   const [description, setDescription] = useState('');
   const [lawfield, setLawfield] = useState(1);
 
   console.log(name);
-  // console.log(date);
   console.log(description);
   console.log(lawfield);
   const history = useHistory();
@@ -20,7 +18,6 @@ const AddNewCase = () => {
   const onSubmitClick = () => {
     axios.post("/api/cases", {
       name,
-      // date,
       client_id: sessionStorage.token,
       lawyer_id: null,
       description,
