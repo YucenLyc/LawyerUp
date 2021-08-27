@@ -24,7 +24,6 @@ export default function CaseItem(props) {
     }).then(response => {
       console.log('response: ', response);
       history.push('/closedcases');
-      // window.location.reload();
     });
   }
 
@@ -78,15 +77,5 @@ export default function CaseItem(props) {
         </section>
       </div>
     </main>
-    //  <div class="post">
-    //    <div class="post_header"></div>
-    //    <i class="material-icons sidebar__topAvatar">account_circle</i>
-    //    <div class="post__info">{props.name}</div>
-    //    <p></p>
-    //    <div class="post_body"></div>
-    //    <div class="feed__inputOptions">
-    //      <div class="inputOption"></div>
-    //    </div>
-    //  </div>
   )
 }

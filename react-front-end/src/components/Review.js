@@ -23,7 +23,6 @@ export default function Review(props) {
       console.log();
       console.log('response: ', response);
       props.addReview(response.data)
-      // history.push(`/lawyerprofilepage/${lawyerId}`);
     });
   }
 

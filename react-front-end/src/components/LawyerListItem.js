@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-// import classnames from 'classnames/bind';
 import Card from "../components/DynamicCard";
 import ProfilePopUp from './profilePopUp';
 import "./LawyerListItem.scss";
@@ -13,10 +12,6 @@ export default function LawyerListItem(props) {
   }
 
   return (
-    // <li className={dayClass} data-testid="day" onClick={() => props.setDay(props.name)}>
-    //   <h2>{props.name}</h2>
-    //   <h3>{formatSpots(props.spots)}</h3>
-    // </li>
     <div onClick={togglePopup} >
       <li className="LawyerListItem" >
 
