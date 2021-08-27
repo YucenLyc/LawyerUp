@@ -13,21 +13,12 @@ export default function LawyerList(props){
   const rate = props.rate == "Choose One" || props.rate ==  "None" ? null : props.rate;
   const year = props.year == "Choose One" || props.year ==  "None" ? null : props.year;
 
-  // const [lawyers, setLawyers] = useState({});
   useEffect(() => {
     axios.get("/api/lawyers").then(response => {
       setLawyers(response.data);
-      // [{ 1: ... 2: ... }]
-      // setLawyers({...response.data});
     });
   }, [])
 
-  // const lawyers = props.lawyers;
-  // const lawyers = [
-  //   {name: "John", specialization: "Family Law", rating: 4, review : "John is good."},
-  //   {name: "Jane", specialization: "Criminal Law", rating: 5, review : "Jane is good."},
-  //   {name: "Donkey", specialization: "Any Law", rating: 1, review : "Donkey is terrible."}
-  // ]
   console.log('lawyers: ', lawyers);
   let filtered;
 
